@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    background-color: #000000;
+    color: whitesmoke;
+}
+
+nav{
+    display: flex;
+    padding: 15px 30px;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #665bcc;
+    color: whitesmoke;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
