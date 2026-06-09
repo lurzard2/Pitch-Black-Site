@@ -1,0 +1,33 @@
+body {
+    color: black;
+    margin: auto;
+    padding: 10px auto;
+    width:100%;
+    font-family: 'Arial', sans-serif;
+    background-color:black;
+}
+
+.center {
+  display:block;
+    margin:20px auto;
+    width:300px;
+}
+
+#main {
+   max-width:1100px;
+   margin:50px auto;
+  }
+  
+#text-l {
+  margin:5px auto;
+	padding:5px;
+	max-width:500px;
+	text-align:left;
+  }
+  
+#text-r {
+  margin:5px auto;
+	padding:5px;
+	max-width:480px;
+	text-align:right;
+  }

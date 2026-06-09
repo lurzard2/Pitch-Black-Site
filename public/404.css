@@ -1,0 +1,23 @@
+body {
+   background-color: black;
+}
+
+#container{
+  color: whitesmoke;
+   display:flex;
+   margin: 0 auto;
+   padding: 20px;
+   justify-content: center;
+   align-items: center;
+}
+
+#box {
+   background-color: black;
+   background-image: url("/images/not-found/staticdark.gif");
+   background-repeat: repeat;
+   float:left;
+   width:855px;
+   border: 5px solid white;
+   overflow:hidden;
+   padding:5px;
+}

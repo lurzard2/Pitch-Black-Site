@@ -1,0 +1,39 @@
+#nav {
+  width: 125px;
+}
+
+.rwbox p {
+  margin: 9px 0px 5px 0px ;
+}
+
+#content {
+  float:right;
+   width:840px;
+   padding: 0px 7px 7px 7px;
+   overflow: hidden;
+}
+
+.post {
+  background-color: #020205;
+  border: 1px dotted white;
+  padding:5px;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.post:hover {
+  border: 1px dotted #d69ad6;
+}
+
+.postcontent {
+   padding: 0px 10px 0px 10px;
+}
+
+#post {
+  padding: 5px 10px 5px 10px;
+  margin: 5px;
+}
+
+#post a {
+  color: blue;
+}

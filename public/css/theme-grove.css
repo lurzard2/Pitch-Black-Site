@@ -1,0 +1,70 @@
+body {
+    font-size: 1.4rem;
+    color: black;
+    background-color: whitesmoke;
+    background-image: url("/imgs/bgs/grove.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+p {
+  white-space: normal;
+  max-width: max-content;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 200px;
+  height: auto;
+}
+
+#theimg {
+  max-width: 100px;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+#text {
+  max-width:800px;
+}
+
+#journalnav {
+  background-color: whitesmoke;
+  min-width: 300px;
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.black {
+  background-color: black;
+  border: 3px solid black;
+}
+
+.white {
+  background-color: white;
+  border: 3px solid white;
+}
+
+.limited {
+  max-width: 900px;
+}
+
+@media (max-width: 1214px) {
+  
+  img, #theimg {
+    max-width: 85%;
+  }
+  
+}
