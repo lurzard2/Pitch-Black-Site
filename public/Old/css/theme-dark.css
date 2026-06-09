@@ -1,0 +1,60 @@
+body {
+    color: whitesmoke;
+    background-image: url("/images/background-aw.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: whitesmoke;
+}
+
+a {
+    color: var(--clr-pink);
+}
+a:hover {
+    color: var(--clr-l-pink);
+}
+
+ul {
+    padding-left: 15px;
+}
+
+s {
+    color: var(--clr-grey);
+}
+
+#box {
+    background-color: black;
+}
+
+#footer {
+    background-color: black;
+}
+
+#sitebuttons, #sitelinks {
+  padding: 10px 0px;
+}
+
+.mainbox {
+    text-align: left;
+    background-color: var(--clr-black);
+    border: 1px solid var(--clr-blurple);
+    margin: 0px 0px 5px 0px;
+    overflow: auto;
+}
+
+.subheader {
+    border-bottom: 1px solid var(--clr-blurple);
+    letter-spacing:0.5;
+    font-size:14px;
+    padding:3px;
+}
+
+.subheader h2 {
+    margin:0px;
+    color: var(--clr-l-blurple);
+}
+
+.content {
+    padding: 0px 10px;
+}
