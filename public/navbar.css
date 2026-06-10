@@ -4,12 +4,6 @@ body{
     color: whitesmoke;
 }
 
-nav #logo{
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-}
-
 nav{
     display: flex;
     padding: 15px 30px;
@@ -20,12 +14,21 @@ nav{
     color: whitesmoke;
 }
 
+nav #logo{
+    font-weight: bold;]
+}
+
 nav ul{
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
     gap: 50px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 .content-frame {
