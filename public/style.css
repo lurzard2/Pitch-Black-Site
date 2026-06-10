@@ -2,25 +2,41 @@
     font-family: 'Raindondo';
     src: url('fonts/Raindondo.otf') ;
 }
-
-body{
-    color: whitesmoke;
-    text-align: left;
-    width: 85%;
-    margin: auto;
-    padding: 20px;
-    font-size: 2.5vh;
+@font-face{
+    font-family: 'RW-Dialogue';
+    src: url('fonts/rain-world-menu-font-webfont.otf.woff2');
+}
+@font-face{
+    font-family: 'FreePixel';
+    src: url('fonts/FreePixel.ttf');
 }
 
-.maintitle-b{
+.site{
+    display: flex;
+    flex-direction: column;
+    max-width: 750px;
+    
+    font-family: 'FreePixel';
+    color: whitesmoke;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 2.2dvh;
+}
+
+.center{
+    text-align: center;
+}
+
+.maintitle-parent{
     position: relative;
     text-align: center;
-    color:#28283c;
+    color: #313147;
     font-size:9vmin;
     font-weight: bold;
     font-family: nimbus-font;
 }
-.maintitle-f{
+.maintitle-child{
     position: absolute;
     text-align: center;
     top: 45px;
@@ -45,3 +61,19 @@ body{
     font-size: 3dvh;
 }
 
+.player{
+    border: #7450bc 3px solid;
+    padding: 10px;
+    aspect-ratio: 16 / 9;
+    width: 60%;
+}
+.player:hover{
+    border: #9c99ff 3px solid;
+}
+
+b {
+    color: #c2b8f6;
+}
+.mute{
+    color: #717171;
+}
