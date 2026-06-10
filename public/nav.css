@@ -4,6 +4,12 @@ body{
     color: whitesmoke;
 }
 
+nav #logo{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 nav{
     display: flex;
     padding: 15px 30px;
@@ -20,4 +26,10 @@ nav ul{
     list-style: none;
     display: flex;
     gap: 50px;
+}
+
+.content-frame {
+    width: 100%;
+    height: calc(100vh - 48px); /* Fills screen minus navbar height */
+    border: none;
 }
