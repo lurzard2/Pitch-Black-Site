@@ -1,0 +1,47 @@
+@font-face{
+    font-family: 'Raindondo';
+    src: url('fonts/Raindondo.otf') ;
+}
+
+body{
+    color: whitesmoke;
+    text-align: left;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    font-size: 2.5vh;
+}
+
+.maintitle-b{
+    position: relative;
+    text-align: center;
+    color:#28283c;
+    font-size:10vmin;
+    font-weight: bold;
+    font-family: nimbus-font;
+}
+.maintitle-f{
+    position: absolute;
+    text-align: center;
+    top: 45px;
+    width: 100%;
+    color:#e8e0ff;
+}
+
+/*temp spoiler implementation*/
+.spoiler{
+    background-color: gray;
+    color: transparent;
+    user-select: none;
+}
+.spoiler:hover{
+    background-color: inherit;
+    color: inherit;
+}
+
+.header{
+    padding: 30px 0 0 0;
+    text-align: center;
+    font-size: 3dvh;
+}
+
