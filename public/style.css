@@ -6,7 +6,7 @@
 body{
     color: whitesmoke;
     text-align: left;
-    width: 80%;
+    width: 85%;
     margin: auto;
     padding: 20px;
     font-size: 2.5vh;
@@ -16,7 +16,7 @@ body{
     position: relative;
     text-align: center;
     color:#28283c;
-    font-size:10vmin;
+    font-size:9vmin;
     font-weight: bold;
     font-family: nimbus-font;
 }
@@ -40,7 +40,7 @@ body{
 }
 
 .header{
-    padding: 30px 0 0 0;
+    padding: 30px;
     text-align: center;
     font-size: 3dvh;
 }
