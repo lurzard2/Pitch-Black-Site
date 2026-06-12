@@ -36,10 +36,7 @@ nav a:hover{
 }
 
 .content-frame {
-    display: block;
-    position: fixed;
     width: 100%;
     height: 100%; /* results in weird scrollbar and bottom of screen cutoff shenanigans tho */
     border: none;
-    overflow: hidden;
 }
