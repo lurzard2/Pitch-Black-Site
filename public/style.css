@@ -1,3 +1,10 @@
+body{
+    padding:0;
+    margin:0;
+    font-family: 'FreePixel', sans-serif;
+    background-image: linear-gradient(#000000, #170c20);
+}
+
 @font-face{
     font-family: 'Raindondo';
     src: url('fonts/Raindondo.otf') ;
@@ -14,20 +21,13 @@
 .site{
     display: flex;
     flex-direction: column;
-    max-width: 780px;
-    
-    font-family: 'FreePixel';
-    color: whitesmoke;
-    text-align: center;
+    max-width: 600px;
     margin: 0 auto;
-    padding: 0;
-    font-size: 2.2dvh;
+    
+    color: #ffffff;
 }
 
-.center{
-    text-align: center;
-}
-
+/* Old main title gimmick with overlapping text
 .maintitle-parent{
     position: relative;
     text-align: center;
@@ -44,8 +44,36 @@
     width: 100%;
     color:#e8e0ff;
 }
+*/
 
-/*temp spoiler implementation*/
+.player{
+    padding:0;
+    margin:0;
+    border: #595788 3px solid;
+    aspect-ratio: 16 / 9;
+    width: 95%;
+}
+.player:hover{
+    border: #6d8f8a 3px solid;
+}
+
+
+.center{
+    text-align: center;
+}
+.header{
+    background-image: linear-gradient(#acceff, #935dd3);
+    color: transparent;
+    background-clip: text;
+}
+b {
+    color: #d9c5ff;
+}
+.mute{
+    color: #717171;
+}
+
+/*(TEMP) SPOILER TEXT*/
 .spoiler{
     background-color: gray;
     color: transparent;
@@ -56,27 +84,3 @@
     color: inherit;
 }
 
-.header{
-    background-image: linear-gradient(#acceff, #935dd3);
-    color: transparent;
-    background-clip: text;
-    text-align: center;
-    font-size: 4dvh;
-}
-
-.player{
-    border: #595788 3px solid;
-    padding: 10px;
-    aspect-ratio: 16 / 9;
-    width: 60%;
-}
-.player:hover{
-    border: #6d8f8a 3px solid;
-}
-
-b {
-    color: #dfdfed;
-}
-.mute{
-    color: #717171;
-}

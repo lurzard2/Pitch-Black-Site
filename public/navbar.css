@@ -1,41 +1,45 @@
 body{
-    margin: 0;
-    background-color: #000000;
-    color: whitesmoke;
+    display: flex;
+    height: 100vh;
 }
 
+@media only screen and (max-width: 690px){
+    body{
+        flex-direction: column;
+    }
+    nav{
+        text-align: center;
+    }
+}
 nav{
+    padding: 10px;
     display: flex;
-    padding: 15px;
-    justify-content: center;
-    
-    background-color: #2c204e;
+    flex-direction: column;
+    background-color: #000000;
+    border: #3f2767 solid 1px;
+    position: sticky;
 }
 
 nav #logo{
     font-weight: bold;
 }
 
-nav ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-nav ul li a{
-    font-family: 'FreePixel';
-    font-size: large;
+nav a{
+    font-size: larger;
     text-decoration: none;
     color: #e5e2ff;
+    margin: 5px;
 }
-nav ul li a:hover{
-    color: #c8c3ff;
+nav a:hover{
+    color: #c3ffe1;
+    background-color: #0e0c19;
 }
 
 .content-frame {
+    display: block;
+    position: fixed;
     width: 100%;
-    height: calc(100vh - 53px); /* results in weird scrollbar and bottom of screen cutoff shenanigans tho */
+    height: 100%; /* results in weird scrollbar and bottom of screen cutoff shenanigans tho */
     border: none;
+    overflow: hidden;
 }
