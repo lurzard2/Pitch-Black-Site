@@ -69,6 +69,14 @@ body{
 b {
     color: #d9c5ff;
 }
+
+a {
+    color: #e5e2ff;
+}
+a:hover{
+    color: #c3ffe1;
+}
+
 .mute{
     color: #717171;
 }

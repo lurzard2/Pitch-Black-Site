@@ -15,9 +15,9 @@ nav{
     padding: 10px;
     display: flex;
     flex-direction: column;
+    
     background-color: #000000;
     border: #3f2767 solid 1px;
-    position: sticky;
 }
 
 nav #logo{
@@ -26,12 +26,13 @@ nav #logo{
 
 nav a{
     font-size: larger;
+    font-weight: bold;
+    letter-spacing: 1px;
     text-decoration: none;
-    color: #e5e2ff;
     margin: 5px;
+    padding: 5px;
 }
 nav a:hover{
-    color: #c3ffe1;
     background-color: #0e0c19;
 }
 
