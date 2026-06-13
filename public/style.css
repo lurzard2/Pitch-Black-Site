@@ -88,6 +88,11 @@ a:hover{
 }
 .dialogue{
     font-family: 'RW-Dialogue', sans-serif;
+    background-color: black;
+    border: 1px white solid;
+    padding: 10px 10px 5px 10px;
+    border-radius: 10px;
+    display: inline-block;
 }
 
 /*(TEMP) SPOILER TEXT*/
