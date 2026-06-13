@@ -3,6 +3,7 @@ body{
     margin:0;
     font-family: 'FreePixel', sans-serif;
     background-image: linear-gradient(#000000, #170c20);
+    color: #ffffff;
 }
 
 @font-face{
@@ -23,8 +24,7 @@ body{
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
-    
-    color: #ffffff;
+    padding: 5px;
 }
 
 /* Old main title gimmick with overlapping text
@@ -47,11 +47,9 @@ body{
 */
 
 .player{
-    padding:0;
-    margin:0;
     border: #595788 3px solid;
     aspect-ratio: 16 / 9;
-    width: 95%;
+    width: 98%;
 }
 .player:hover{
     border: #6d8f8a 3px solid;
@@ -61,10 +59,18 @@ body{
 .center{
     text-align: center;
 }
+.header2{
+    background-image: linear-gradient(#c8ffea, #6ad851);
+    color: transparent;
+    background-clip: text;
+}
 .header{
     background-image: linear-gradient(#acceff, #935dd3);
     color: transparent;
     background-clip: text;
+}
+h1{
+    margin: 5px;
 }
 b {
     color: #d9c5ff;
@@ -79,6 +85,9 @@ a:hover{
 
 .mute{
     color: #717171;
+}
+.dialogue{
+    font-family: 'RW-Dialogue', sans-serif;
 }
 
 /*(TEMP) SPOILER TEXT*/

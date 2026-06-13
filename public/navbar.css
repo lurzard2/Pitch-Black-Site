@@ -29,8 +29,6 @@ nav a{
     font-weight: bold;
     letter-spacing: 1px;
     text-decoration: none;
-    margin: 5px;
-    padding: 5px;
 }
 nav a:hover{
     background-color: #0e0c19;
