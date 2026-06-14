@@ -4,6 +4,9 @@
         text-align: center;
         align-items: center;
     }
+    #statuscafe{
+        width: 90%;
+    }
 }
 /*DESKTOP*/
 @media only screen and (min-width: 1031px){
@@ -12,6 +15,10 @@
         top: 0;
         left: 0;
         height: 100vh;
+    }
+    #statuscafe{
+        height: 100px;
+        width: 125px;
     }
 }
 nav{
@@ -40,15 +47,15 @@ nav p{
 
 /*STATUSCAFE*/
 #statuscafe {
+    display: flex;
+    flex-direction: column;
     text-align: left;
     padding: .5em;
     margin: .5em;
     background-color: #000000;
     border: 1px solid #70639e;
     color: white;
-    height: 60px;
-    width: 280px;
-    overflow-block: auto;
+    overflow: auto;
 }
 #statuscafe-username {
     color: #585761;
