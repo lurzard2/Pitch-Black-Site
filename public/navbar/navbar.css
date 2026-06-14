@@ -36,3 +36,19 @@ nav a:hover{
 nav p{
     margin: 0;
 }
+
+/*STATUSCAFE*/
+#statuscafe {
+    padding: .5em;
+    margin: .5em;
+    background-color: #000000;
+    border: 1px solid #70639e;
+    color: white;
+    height: 80px;
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+}
