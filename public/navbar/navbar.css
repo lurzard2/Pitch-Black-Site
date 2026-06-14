@@ -44,11 +44,9 @@ nav p{
     background-color: #000000;
     border: 1px solid #70639e;
     color: white;
-    height: 80px;
+    height: 60px;
 }
 #statuscafe-username {
-    margin-bottom: .5em;
 }
 #statuscafe-content {
-    margin: 0 1em 0.5em 1em;
 }
