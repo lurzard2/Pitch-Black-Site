@@ -2,6 +2,7 @@
 @media only screen and (max-width: 1030px){
     nav{
         text-align: center;
+        align-items: center;
     }
 }
 /*DESKTOP*/
@@ -39,14 +40,18 @@ nav p{
 
 /*STATUSCAFE*/
 #statuscafe {
+    text-align: left;
     padding: .5em;
     margin: .5em;
     background-color: #000000;
     border: 1px solid #70639e;
     color: white;
     height: 60px;
+    width: 280px;
+    overflow-block: auto;
 }
 #statuscafe-username {
+    color: #585761;
 }
 #statuscafe-content {
 }
