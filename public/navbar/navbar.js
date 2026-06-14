@@ -1,4 +1,5 @@
 document.getElementById("navbar").innerHTML =
+    '<div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=lurvixen" defer></script>' +
     '<p>NAVIGATION</p>' +
     '<a href="../pages/home.html">HOME</a>' +
     '<p>PROJECT: PITCH BLACK</p>' +

@@ -3,6 +3,7 @@ body{
     background-image: linear-gradient(#000000, #170c20);
     font-family: 'FreePixel', sans-serif;
     color: #ffffff;
+    height: 100%;
 }
 
 @font-face{
@@ -107,3 +108,18 @@ a:hover{
     color: inherit;
 }
 
+/*STATUSCAFE*/
+#statuscafe {
+    padding: .5em;
+    margin: .5em;
+    background-color: #000000;
+    border: 1px solid #70639e;
+    color: white;
+    height: 80px;
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+}
