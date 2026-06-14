@@ -1,6 +1,6 @@
 document.getElementById("navbar").innerHTML =
     '<p>>NAVIGATION</p>' +
-    '<a href="../pages/home.html"></a>' +
+    '<a href="../pages/home.html">HOME</a>' +
     '<p>>PROJECT: PITCH BLACK</p>' +
     '<a href="../pages/mod.html">THE MOD</a>' +
     '<a class="mute" href="../pages/ost.html">SOUNDTRACK</a>' +
