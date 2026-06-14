@@ -1,11 +1,15 @@
-@media only screen and (max-width: 930px){
+/*PHONE*/
+@media only screen and (max-width: 1030px){
     nav{
         text-align: center;
     }
 }
-@media only screen and (min-width: 931px){
+/*DESKTOP*/
+@media only screen and (min-width: 1031px){
     nav{
         position: fixed;
+        top: 0;
+        left: 0;
         height: 100vh;
     }
 }
@@ -16,10 +20,6 @@ nav{
     
     background-color: #000000;
     border: #3f2767 solid 1px;
-}
-
-nav #logo{
-    font-weight: bold;
 }
 
 nav a{

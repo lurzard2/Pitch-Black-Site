@@ -1,8 +1,8 @@
 body{
+    background-color: #000000;
     background-image: linear-gradient(#000000, #170c20);
     font-family: 'FreePixel', sans-serif;
     color: #ffffff;
-    margin: 0 auto;
 }
 
 @font-face{
@@ -19,11 +19,11 @@ body{
 }
 
 #site{
-    display: flex;
     flex-direction: column;
-    max-width: 630px;
+    display: flex;
+    max-width: 600px;
     margin: 0 auto;
-    padding: 5px;
+    padding: 8px;
 }
 
 /* Old main title gimmick with overlapping text
