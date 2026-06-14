@@ -1,14 +1,12 @@
-body{
-    display: flex;
-    height: 100vh;
-}
-
-@media only screen and (max-width: 950px){
-    body{
-        flex-direction: column;
-    }
+@media only screen and (max-width: 930px){
     nav{
         text-align: center;
+    }
+}
+@media only screen and (min-width: 931px){
+    nav{
+        position: fixed;
+        height: 100vh;
     }
 }
 nav{
@@ -25,6 +23,7 @@ nav #logo{
 }
 
 nav a{
+    padding: 3px;
     font-size: larger;
     font-weight: bold;
     letter-spacing: 1px;
@@ -34,8 +33,6 @@ nav a:hover{
     background-color: #0e0c19;
 }
 
-.content-frame {
-    width: 100%;
-    height: 100%; /* results in weird scrollbar and bottom of screen cutoff shenanigans tho */
-    border: none;
+nav p{
+    margin: 0;
 }
