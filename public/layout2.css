@@ -15,7 +15,7 @@ body{
     #nav-container{
         height: 100vh;
         position: sticky;
-        align-items: start;
+        align-self: start;
         top: 0;
     }
     #nav-links{
