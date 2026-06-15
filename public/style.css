@@ -1,5 +1,7 @@
 :root{
     --bg-gradient: linear-gradient(#000000, #0e0513, #150822, #220833);
+    --footer-gradient: linear-gradient(#000000, #0c0410, #120719, #150822);
+    --nav-mobile-gradient: linear-gradient(#150822, #000000);
     --border: #3f2767;
     --text: white;
 }
@@ -43,16 +45,27 @@ body{
 }
 */
 
-#nav-container{
-    background-color: black;
-    border-right: #3f2767 solid 1px;
+@media only screen and (min-width: 1024px) {
+    #nav-container{
+        background-color: black;
+    }
 }
+@media only screen and (max-width: 1023px) {
+    #nav-container{
+        background-image: var(--nav-mobile-gradient);
+    }
+}
+
 #main{
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
 }
 #footer{
-    background-color: #000000;
+    background-image: var(--footer-gradient);
+}
+#footer-content{
+    background-image: url('./images/water_bubbles.png');
+    background-repeat: repeat;
 }
 
 .player{

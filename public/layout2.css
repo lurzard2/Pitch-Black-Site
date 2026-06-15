@@ -67,8 +67,8 @@ body{
     #site-container{
         grid-template-areas:
                 "site-2"
-                "site-1"
-                "site-3";
+                "site-3"
+                "site-1";
     }
     #nav-container{
         grid-area: main-1;
@@ -133,6 +133,9 @@ body{
 }
 #footer{
     grid-area: site-3;
+}
+#footer-content{
+    margin: 20px;
 }
 
 #nav-container{

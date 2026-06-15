@@ -15,5 +15,10 @@ document.getElementById('header').innerHTML =
     '<div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div>';
 
 document.getElementById('footer').innerHTML =
-    '<p>meow</p>'
+    '<div id="footer-content">' +
+    '<p>meow</p>' +
+    '<ul>' +
+    '<li><a href="https://discord.gg/QgGud6sKuD">Community Discord Server</a></li>' +
+    '</ul>' +
+    '</div>'
 ;
