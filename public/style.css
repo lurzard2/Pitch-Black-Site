@@ -1,5 +1,6 @@
 :root{
     --bg-gradient: linear-gradient(#000000, #0e0513, #150822, #220833);
+    --border: #3f2767;
     --text: white;
 }
 
@@ -46,7 +47,8 @@ body{
     border-right: #3f2767 solid 1px;
 }
 #main{
-    border: 1px solid #010102;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
 #footer{
     background-color: #000000;

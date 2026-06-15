@@ -23,15 +23,11 @@ body{
         display: grid;
         padding: 15px;
     }
-    #nav-links a{
-        text-decoration: none;
-        font-size: larger;
-        font-weight: bold;
-    }
     #nav-links p{
         margin: 5px;
     }
     #nav-chat{
+        border-top: 1px solid var(--border);
         align-self: end;
         height: 280px;
     }
@@ -52,10 +48,13 @@ body{
     }
     #statuscafe{
         display: grid;
-        grid-template-columns: 230px 1fr;
+        grid-template-columns: auto auto 1fr;
         grid-auto-flow: column;
         align-items: start;
         padding: 0 5px;
+    }
+    #statuscafe-content{
+        padding-left: 15px;
     }
 }
 /*TABLET + MOBILE*/
@@ -72,6 +71,21 @@ body{
     }
     #nav-container{
         grid-area: main-1;
+        grid-template-areas:
+        "nav-2"
+        "nav-1";
+        grid-template-rows: auto 300px;
+        text-align: center;
+    }
+    #nav-links{
+        grid-area: nav-1;
+        display: grid;
+        padding-bottom: 10px;
+    }
+    #nav-chat{
+        grid-area: nav-2;
+        border: 1px solid var(--border);
+        margin: 5px;
     }
     #site-container{
         grid-area: main-2;
@@ -98,6 +112,13 @@ body{
     padding:0;
     margin: 0;
 }
+
+#nav-links a{
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bold;
+}
+
 
 #header{
     grid-area: site-1;
