@@ -133,9 +133,12 @@ body{
 }
 #footer{
     grid-area: site-3;
+    text-align: center;
 }
 #footer-content{
     margin: 20px;
+    display: grid;
+    grid-auto-flow: row;
 }
 
 #nav-container{

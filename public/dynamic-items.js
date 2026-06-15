@@ -16,9 +16,8 @@ document.getElementById('header').innerHTML =
 
 document.getElementById('footer').innerHTML =
     '<div id="footer-content">' +
-    '<p>meow</p>' +
-    '<ul>' +
-    '<li><a href="https://discord.gg/QgGud6sKuD">Community Discord Server</a></li>' +
-    '</ul>' +
+    '<p class="mute">@lurzard/@lurvixen 2025 - forever | I\'m with you in the dark </p>' +
+    '<a href="https://discord.gg/QgGud6sKuD">Community Discord Server</a>' +
+    '<a href="https://pitchblack.atabook.org/">Sign my Guestbook!</a>' +
     '</div>'
 ;
