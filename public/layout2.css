@@ -80,7 +80,8 @@ body{
     #nav-links{
         grid-area: nav-1;
         display: grid;
-        padding-bottom: 10px;
+        padding: 10px;
+        margin: 30px;
     }
     #nav-chat{
         grid-area: nav-2;
