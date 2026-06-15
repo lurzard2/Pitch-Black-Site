@@ -7,14 +7,13 @@ body{
 }
 
 /*DESKTOP*/
-@media only screen and (min-width: 600px/*1024px*/) {
+@media only screen and (min-width: 1024px) {
     #main-container{
         grid-template-columns: 230px 1fr;
         grid-auto-flow: column;
     }
     #nav-container{
         height: 100vh;
-        display: grid;
         position: sticky;
         align-items: start;
         top: 0;
@@ -37,8 +36,12 @@ body{
         height: 280px;
     }
     #site-container{
+        grid-template-areas:
+                "site-1"
+                "site-2"
+                "site-3";
         grid-auto-flow: row;
-        grid-auto-rows: 30px 1fr 1fr;
+        grid-auto-rows: auto 1fr auto;
         grid-auto-columns: 100%;
     }
     #header{
@@ -49,15 +52,31 @@ body{
     }
     #statuscafe{
         display: grid;
-        grid-template-columns: 240px 1fr;
+        grid-template-columns: 230px 1fr;
         grid-auto-flow: column;
         align-items: start;
         padding: 0 5px;
     }
 }
-/*TABLET*/
-
-/*MOBILE*/
+/*TABLET + MOBILE*/
+@media only screen and (max-width: 1023px) {
+    #main-container{
+        grid-template-areas: "main-2" "main-1";
+        grid-auto-flow: row;
+    }
+    #site-container{
+        grid-template-areas:
+                "site-2"
+                "site-1"
+                "site-3";
+    }
+    #nav-container{
+        grid-area: main-1;
+    }
+    #site-container{
+        grid-area: main-2;
+    }
+}
 
 /* 📱 Mobile landscape / Large phones
 @media (min-width: 480px) { ... }
@@ -80,17 +99,27 @@ body{
     margin: 0;
 }
 
+#header{
+    grid-area: site-1;
+}
 #main{
+    grid-area: site-2;
     padding: 10px;
     
+}
+#footer{
+    grid-area: site-3;
+}
+
+#nav-container{
+    display: grid;
 }
 
 #site-container{
     display: grid;
-    grid-template-rows: auto 1fr auto;
 }
 
 .embed{
-    width: 100%;
+    width: 95%;
     max-width: 600px;
 }
