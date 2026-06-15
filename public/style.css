@@ -1,9 +1,12 @@
+:root{
+    --bg-gradient: linear-gradient(#000000, #0e0513, #150822, #220833);
+    --text: white;
+}
+
 body{
-    background-color: #000000;
-    background-image: linear-gradient(#000000, #170c20);
+    color: var(--text);
+    background-image: var(--bg-gradient);
     font-family: 'FreePixel', sans-serif;
-    color: #ffffff;
-    height: 100%;
 }
 
 @font-face{
@@ -17,14 +20,6 @@ body{
 @font-face{
     font-family: 'FreePixel';
     src: url('fonts/FreePixel.ttf');
-}
-
-#site{
-    flex-direction: column;
-    display: flex;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 8px;
 }
 
 /* Old main title gimmick with overlapping text
@@ -46,10 +41,20 @@ body{
 }
 */
 
+#nav-container{
+    background-color: black;
+    border-right: #3f2767 solid 1px;
+}
+#main{
+    border: 1px solid #010102;
+}
+#footer{
+    background-color: #000000;
+}
+
 .player{
     border: #595788 3px solid;
     aspect-ratio: 16 / 9;
-    width: 98%;
 }
 .player:hover{
     border: #6d8f8a 3px solid;
