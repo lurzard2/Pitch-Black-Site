@@ -8,6 +8,7 @@ body{
     color: var(--text);
     background-image: var(--bg-gradient);
     font-family: 'FreePixel', sans-serif;
+    font-size: 1.05rem;
 }
 
 @font-face{
