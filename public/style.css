@@ -1,6 +1,6 @@
 :root{
-    --bg-gradient: linear-gradient(#000000, #0e0513, #150822, #220833);
-    --footer-gradient: linear-gradient(#000000, #0c0410, #120719, #150822);
+    --bg-gradient: linear-gradient(#000000, #0e0513, #150822);
+    --footer-gradient: linear-gradient(#000000, #0c0410, #0f0519);
     --nav-mobile-gradient: linear-gradient(#150822, #000000);
     --border: #3f2767;
     --text: white;
