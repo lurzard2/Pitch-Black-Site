@@ -117,6 +117,13 @@ a:hover{
     border-radius: 10px;
     color: white;
 }
+.dialogue-simple{
+    font-family: 'RW-Dialogue', sans-serif;
+    display: inline-block;
+
+    font-size: .85rem;
+    color: white;
+}
 
 /*(TEMP) SPOILER TEXT*/
 .spoiler{

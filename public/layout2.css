@@ -43,6 +43,7 @@ body{
     }
     #header{
         align-self: start;
+        height: 20px;
     }
     #main{
         min-height: 80vh;
@@ -52,10 +53,9 @@ body{
         grid-template-columns: auto auto 1fr;
         grid-auto-flow: column;
         align-items: start;
-        padding: 0 5px;
     }
     #statuscafe-content{
-        padding-left: 15px;
+        padding: 4px 10px;
     }
 }
 /*TABLET + MOBILE*/

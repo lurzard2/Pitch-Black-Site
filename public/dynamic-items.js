@@ -12,7 +12,7 @@ document.getElementById("nav-container").innerHTML =
 ;
 
 document.getElementById('header').innerHTML =
-    '<div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div>';
+    '<div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content" class="dialogue-simple"></div></div>';
 
 document.getElementById('footer').innerHTML =
     '<div id="footer-content">' +
