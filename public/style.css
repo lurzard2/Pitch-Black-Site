@@ -1,9 +1,12 @@
 :root{
     --bg-gradient: linear-gradient(#000000, #0e0513, #150822);
-    --footer-gradient: linear-gradient(#000000, #0c0410, #0f0519);
-    --nav-mobile-gradient: linear-gradient(#150822, #000000);
+    --footer-gradient: linear-gradient(#000000, #0c0410, #0f0519, transparent);
+    --nav-mobile-gradient: linear-gradient(transparent, #000000);
     --border: #3f2767;
+    --dark-border: #221537;
     --text: white;
+    --green-grad: linear-gradient(#c8ffea, #6ad851);
+    --purple-grad: linear-gradient(#acceff, #935dd3);
 }
 
 body{
@@ -49,18 +52,21 @@ body{
     #nav-container{
         background-color: black;
     }
+    #header{
+        border-bottom: 1px solid var(--border);
+    }
 }
 @media only screen and (max-width: 1023px) {
     #nav-container{
         background-image: var(--nav-mobile-gradient);
     }
+    #nav-chat{
+        border: 1px solid var(--dark-border);
+    }
 }
 
-#main{
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-}
 #footer{
+    border-top: 1px solid var(--border);
     background-image: var(--footer-gradient);
 }
 #footer-content{
@@ -81,12 +87,12 @@ body{
     text-align: center;
 }
 .header2{
-    background-image: linear-gradient(#c8ffea, #6ad851);
+    background-image: var(--green-grad);
     color: transparent;
     background-clip: text;
 }
 .header{
-    background-image: linear-gradient(#acceff, #935dd3);
+    background-image: var(--purple-grad);
     color: transparent;
     background-clip: text;
 }

@@ -1,4 +1,3 @@
-
 body{
     min-height: 100dvh;
     min-width: 100%;
@@ -22,6 +21,9 @@ body{
         align-self: start;
         display: grid;
         padding: 15px;
+    }
+    #nav-links a{
+        font-size: large;
     }
     #nav-links p{
         margin: 5px;
@@ -47,6 +49,7 @@ body{
     }
     #main{
         min-height: 80vh;
+        margin: 0 500px;
     }
     #statuscafe{
         display: grid;
@@ -84,9 +87,11 @@ body{
         padding: 10px;
         margin: 30px;
     }
+    #nav-links a{
+        font-size: larger;
+    }
     #nav-chat{
         grid-area: nav-2;
-        border: 1px solid var(--border);
         margin: 5px;
         height: 280px;
     }
@@ -118,7 +123,6 @@ body{
 
 #nav-links a{
     text-decoration: none;
-    font-size: larger;
     font-weight: bold;
 }
 
