@@ -49,6 +49,8 @@ body{
     }
     #main{
         min-height: 80vh;
+        max-width: 600px;
+        justify-self: center;
     }
     #statuscafe{
         display: grid;
