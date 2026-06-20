@@ -1,9 +1,11 @@
 document.getElementById("nav-container").innerHTML =
     '<div id="nav-links">' +
-    '<p>>NAVIGATION</p>' +
+    '<p class="header">NAVIGATION</p>' +
     '<a href="../pages/home.html">HOME</a>' +
-    '<p>>PROJECT: PITCH BLACK</p>' +
-    '<a href="../pages/mod.html">THE MOD</a>' +
+    '<p class="header">PROJECT: VISCERAL GROVE</p>' +
+    '<a href="../pages/grove.html">VISCERAL GROVE</a>' +
+    '<p class="header">PROJECT: PITCH BLACK</p>' +
+    '<a href="../pages/mod.html">PITCH BLACK</a>' +
     '<a class="mute" href="../pages/ost.html">SOUNDTRACK</a>' +
     '<a class="mute" href="../pages/news.html">NEWS</a>' +
     '<a class="mute" href="../pages/faq.html">FAQ</a>' +
