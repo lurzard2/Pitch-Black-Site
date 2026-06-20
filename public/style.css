@@ -70,7 +70,7 @@ body{
     background-image: var(--footer-gradient);
 }
 #footer-content{
-    background-image: url('./images/water_bubbles.png');
+    background-image: url('images/water_bubbles.png');
     background-repeat: repeat;
 }
 
