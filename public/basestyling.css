@@ -1,0 +1,24 @@
+body{
+    min-height:100dvh;
+    width: 100%;
+    background-color: #000000;
+    display: grid;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.center{
+    text-align: center;
+}
+
+.container{
+    width: 100%;
+}
+.clamp-w{
+    max-width: min(90%, 1000px);
+}
+
+.hidelink{
+    color: transparent;
+}
