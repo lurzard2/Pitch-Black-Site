@@ -1,6 +1,7 @@
 document.getElementById("nav-container").innerHTML =
     '<div id="nav-links">' +
     '<p class="header">NAVIGATION</p>' +
+    '<a href="../">LANDING</a>' +
     '<a href="../pages/home.html">HOME</a>' +
     '<p class="header">PROJECT: VISCERAL GROVE</p>' +
     '<a href="../pages/visceralgrove.html">VISCERAL GROVE</a>' +
