@@ -4,9 +4,9 @@ document.getElementById("nav-container").innerHTML =
     '<a href="../">LANDING</a>' +
     '<a href="../pages/home.html">HOME</a>' +
     '<p class="header">PROJECT: VISCERAL GROVE</p>' +
-    '<a href="../pages/visceralgrove.html">VISCERAL GROVE</a>' +
+    '<a href="./visceralgrove/ch1/p1.html">VISCERAL GROVE</a>' +
     '<p class="header">PROJECT: PITCH BLACK</p>' +
-    '<a href="../pages/pitchblack.html">PITCH BLACK</a>' +
+    '<a href="=./pitchblack.html">PITCH BLACK</a>' +
     '<a class="mute" href="../pages/ost.html">SOUNDTRACK</a>' +
     '<a class="mute" href="../pages/news.html">NEWS</a>' +
     '<a class="mute" href="../pages/faq.html">FAQ</a>' +
