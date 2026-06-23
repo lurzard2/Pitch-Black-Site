@@ -34,6 +34,11 @@ body{
     border-left: 5px #03fdfd solid;
 }
 
+.voice{
+    color: red;
+    text-align: right;
+}
+
 .container{
     justify-content: center;
 }
@@ -66,6 +71,10 @@ p{
     margin: 20px;
 }
 
-input .deadname{
+input[type="text"]{
     position: relative;
+}
+
+.redacted{
+    color: transparent;
 }
