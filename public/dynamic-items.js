@@ -6,7 +6,7 @@ document.getElementById("nav-container").innerHTML =
     '<p class="header">PROJECT: VISCERAL GROVE</p>' +
     '<a href="./visceralgrove/ch1/p1.html">VISCERAL GROVE</a>' +
     '<p class="header">PROJECT: PITCH BLACK</p>' +
-    '<a href="=./pitchblack.html">PITCH BLACK</a>' +
+    '<a href="./pitchblack.html">PITCH BLACK</a>' +
     '<a class="mute" href="../pages/ost.html">SOUNDTRACK</a>' +
     '<a class="mute" href="../pages/news.html">NEWS</a>' +
     '<a class="mute" href="../pages/faq.html">FAQ</a>' +
