@@ -7,6 +7,7 @@
     --text: white;
     --green-grad: linear-gradient(#c8ffea, #6ad851);
     --purple-grad: linear-gradient(#acceff, #935dd3);
+    --red-grad: linear-gradient(#ffa885, #ff0000);
 }
 
 body{
@@ -88,6 +89,11 @@ body{
 }
 .header2{
     background-image: var(--green-grad);
+    color: transparent;
+    background-clip: text;
+}
+.header3{
+    background-image: var(--red-grad);
     color: transparent;
     background-clip: text;
 }

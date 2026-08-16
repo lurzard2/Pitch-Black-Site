@@ -33,6 +33,10 @@ body{
     color: #94fdfd;
     border-left: 5px #03fdfd solid;
 }
+.VIX{
+    color: #fd94d3;
+    border-left: 5px #ff0088 solid;
+}
 
 .voice{
     color: red;
