@@ -6,6 +6,7 @@ body{
     font-size: 1.25rem;
     padding: 0;
     margin: 0 auto;
+    color: black;
 }
 
 /*DESKTOP*/
@@ -72,7 +73,6 @@ body{
 }
 
 p{
-    color: black;
     margin: 20px;
 }
 
