@@ -1,12 +1,12 @@
 document.getElementById("nav-container").innerHTML =
     '<div id="nav-links">' +
     '<p class="header">NAVIGATION</p>' +
-    '<a href="index.html">LANDING</a>' +
-    '<a href="home.html">HOME</a>' +
+    '<a href="/index.html">LANDING</a>' +
+    '<a href="/home.html">HOME</a>' +
     '<p class="header">PROJECT: VISCERAL GROVE</p>' +
-    '<a href="visceralgrove.html">VISCERAL GROVE</a>' +
+    '<a href="/visceralgrove.html">VISCERAL GROVE</a>' +
     '<p class="header">PROJECT: PITCH BLACK</p>' +
-    '<a href="./pitchblack.html">PITCH BLACK</a>' +
+    '<a href="/pitchblack.html">PITCH BLACK</a>' +
     '<a class="mute" href="../pages/ost.html">SOUNDTRACK</a>' +
     '<a class="mute" href="../pages/news.html">NEWS</a>' +
     '<a class="mute" href="../pages/faq.html">FAQ</a>' +
