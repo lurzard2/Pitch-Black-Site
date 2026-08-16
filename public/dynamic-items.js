@@ -4,7 +4,7 @@ document.getElementById("nav-container").innerHTML =
     '<a href="index.html">LANDING</a>' +
     '<a href="home.html">HOME</a>' +
     '<p class="header">PROJECT: VISCERAL GROVE</p>' +
-    '<a href="./visceralgrove/ch1/p1.html">VISCERAL GROVE</a>' +
+    '<a href="./visceralgrove.html">VISCERAL GROVE</a>' +
     '<p class="header">PROJECT: PITCH BLACK</p>' +
     '<a href="./pitchblack.html">PITCH BLACK</a>' +
     '<a class="mute" href="../pages/ost.html">SOUNDTRACK</a>' +
