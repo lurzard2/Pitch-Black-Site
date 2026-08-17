@@ -1,15 +1,3 @@
-//deadname
-//deadpronouns
-//name
-//pronouns
-//favdrink
-//siblingname
-
-const deadname = "deadname";
-const name = "name";
-const deadpronoun = "deadpronoun";
-const pronouns = "pronouns";
-
 const Path = {
     LOCAL: "local",
     SESSION: "session",
@@ -20,7 +8,6 @@ function cantGetStorage(){ return typeof (Storage) == "undefined"; }
 function trySaveLocal(key, value) {
     modify(true, key, value, Path.LOCAL)
 }
-
 function trySaveSession(key, value){
     modify(true, key, value, Path.SESSION);
 }
@@ -45,10 +32,11 @@ function modify(flag, key, value, path) {
         }
     } else {
         if (path === Path.LOCAL) {
-            sessionStorage.setItem(key, value);
+            return localStorage.getItem(key);
         }
         if (path === Path.SESSION) {
-            sessionStorage.setItem(key, value);
+            return sessionStorage.getItem(key);
         }
     }
 }
+
