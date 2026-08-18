@@ -1,0 +1,83 @@
+body{
+    min-height: 100dvh;
+    width: 100%;
+    font-family: "Arial", sans-serif;
+    font-size: 1.25rem;
+    padding: 0;
+    margin: 0 auto;
+    color: black;
+    justify-content: center;
+}
+
+.DWN, .LIZ, .VIX, .EVE{
+    margin-left: 60px;
+    padding: 10px;
+    background-color: black;
+}
+.DWN{
+    color: #bcbbbb;
+    border-left: 5px #bcbbbb solid;
+}
+.LIZ{
+    color: #94fdfd;
+    border-left: 5px #03fdfd solid;
+}
+.VIX{
+    color: #fd94d3;
+    border-left: 5px #ff0088 solid;
+}
+
+.interior{
+    background-color: black;
+    color: white;
+}
+
+.exterior{
+    background-color: white;
+    color: black;
+}
+
+/*DESKTOP*/
+@media only screen and (min-width: 1024px) {
+    /*p{*/
+    /*    max-width: min(90%, 1000px);*/
+    /*}*/
+}
+
+/*TABLET + MOBILE*/
+@media only screen and (max-width: 1023px) {
+
+}
+
+.center{
+    text-align: center;
+}
+.right{
+    text-align: right;
+    justify-self: right;
+}
+
+.w-full{
+    width: 100%;
+}
+.w-clamp{
+    max-width: min(90%, 1000px);
+}
+
+p{
+    padding: 20px;
+    margin: 0;
+}
+
+.m{
+    margin: 20px;
+}
+
+.hidelink{
+    color: transparent;
+}
+
+.m p{
+    margin-top:20px;
+    margin-bottom:20px;
+}

@@ -13,28 +13,28 @@ function trySaveSession(key, value){
 }
 
 function tryLoadLocal(key, value) {
-    modify(false, key, value, Path.LOCAL)
+    return modify(false, key, value, Path.LOCAL)
 }
 function tryLoadSession(key, value) {
-    modify(false, key, value, Path.SESSION);
+    return modify(false, key, value, Path.SESSION);
 }
 
-function modify(flag, key, value, path) {
+function modify(set, key, value, path) {
     if (cantGetStorage()) {
         return;
     }
-    if (flag) {
+    if (set) {
         if (path === Path.LOCAL) {
             localStorage.setItem(key, value);
         }
-        if (path === Path.SESSION) {
+        else if (path === Path.SESSION) {
             sessionStorage.setItem(key, value);
         }
     } else {
         if (path === Path.LOCAL) {
             return localStorage.getItem(key);
         }
-        if (path === Path.SESSION) {
+        else if (path === Path.SESSION) {
             return sessionStorage.getItem(key);
         }
     }
