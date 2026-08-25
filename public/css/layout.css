@@ -1,6 +1,6 @@
 @media only screen and (min-width: 1024px){ /*DESKTOP*/
     #wr{
-        padding: 100px 0;
+        padding: 100px auto;
         display: grid;
         grid-template-columns: 200px 1fr;
         grid-template-rows: 800px;
