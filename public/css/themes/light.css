@@ -1,0 +1,22 @@
+body{
+    --text: #000;
+    --mute: #9393d8;
+    --bg: #fff;
+}
+
+#side{
+    background-image: url('../../images/whiterain.gif'); /*https://tenor.com/view/static-dark-background-black-and-white-horror-gif-537857989342745980*/
+    background-size: cover;
+    animation: loop 10s linear infinite;
+
+    opacity: 0.2;
+}
+
+@keyframes loop {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -500px -500px; /* Moves 500px horizontally. Adjust to your image size */
+    }
+}

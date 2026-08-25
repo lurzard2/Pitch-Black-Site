@@ -1,9 +1,6 @@
 body{
     --text: #ffffff;
     --mute: grey;
-    color: var(--text);
-    font-family: 'FreePixel', 'Arial';
-    background-color: var(--bg);
 }
 
 #side{
@@ -26,7 +23,6 @@ body{
 
 #main{
     border: 2px dotted var(--mute);
-    padding: 10px;
 }
 
 @keyframes loop {
