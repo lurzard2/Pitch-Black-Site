@@ -1,0 +1,48 @@
+:root{
+    --text: #000;
+    --mute: #000;
+    --bg: #000;
+}
+
+@font-face{
+    font-family: 'Raindondo';
+    src: url('../fonts/Raindondo.otf') ;
+}
+@font-face{
+    font-family: 'RW-Dialogue';
+    src: url('../fonts/rain-world-menu-font-webfont.otf.woff2');
+}
+@font-face{
+    font-family: 'FreePixel';
+    src: url('../fonts/FreePixel.ttf');
+}
+
+body{
+    min-height:100dvh;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/*Fuck off*/
+p, a, ul, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.center{
+    text-align: center;
+}
+
+.right{
+    text-align: right;
+}
+
+.mute{
+    color: var(--mute);
+}
+
+/*some links that go offsite*/
+.linkoff::after{
+    content: "↗";
+}

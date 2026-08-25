@@ -1,0 +1,39 @@
+body{
+    --text: #ffffff;
+    --mute: grey;
+    color: var(--text);
+    font-family: 'FreePixel', 'Arial';
+    background-color: var(--bg);
+}
+
+#side{
+    background-image: url('../../images/blackstatic.gif'); /*https://tenor.com/view/static-dark-background-black-and-white-horror-gif-537857989342745980*/
+    background-size: cover;
+    animation: loop 10s linear infinite;
+}
+
+@media only screen and (min-width: 1024px){ /*DESKTOP*/
+    #main{
+        border-radius: 20px;
+    }
+}
+
+@media only screen and (max-width: 1023px) { /*TABLET-MOBILE*/
+    #main{
+        margin: 10px;
+    }
+}
+
+#main{
+    border: 2px dotted var(--mute);
+    padding: 10px;
+}
+
+@keyframes loop {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -500px -500px; /* Moves 500px horizontally. Adjust to your image size */
+    }
+}

@@ -1,0 +1,30 @@
+@media only screen and (min-width: 1024px){ /*DESKTOP*/
+    #wr{
+        padding: 100px auto;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 800px;
+        max-height: 100%;
+    }
+
+    #side{
+        margin-right: 50px;
+    }
+}
+
+@media only screen and (max-width: 1023px){ /*TABLET-MOBILE*/
+    #wr{
+        flex-direction: column;
+    }
+
+    #main{
+        height: 100%;
+    }
+}
+
+#wr{
+    align-content: center;
+    max-width: 1024px;
+    min-height: 100dvh;
+    margin: 0 auto;
+}
