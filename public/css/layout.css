@@ -6,11 +6,9 @@ body{
 
 @media only screen and (min-width: 1024px){ /*DESKTOP*/
     #wr{
-        padding: 100px auto;
         display: grid;
         grid-template-columns: 200px 1fr;
-        grid-template-rows: 800px;
-        max-height: 100%;
+        grid-auto-rows: 800px;
     }
 
     #side{
@@ -20,7 +18,8 @@ body{
 
 @media only screen and (max-width: 1023px){ /*TABLET-MOBILE*/
     #wr{
-        flex-direction: column;
+        display: grid;
+        grid-auto-flow: row;
     }
 
     #main{
@@ -37,4 +36,14 @@ body{
 
 #main{
     padding: 10px;
+}
+
+#wr{
+    background-color: indianred;
+}
+#side{
+    background-color: darkseagreen;
+}
+#main{
+    background-color: cornflowerblue;
 }
