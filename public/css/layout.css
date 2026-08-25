@@ -5,11 +5,6 @@
         grid-template-columns: 200px 1fr;
         grid-template-rows: 800px;
         max-height: 100%;
-
-        align-content: center;
-        max-width: 1024px;
-        min-height: 100dvh;
-        margin: 0 auto;
     }
 
     #side{
@@ -23,10 +18,13 @@
     }
 
     #main{
-        height: 100dvh;
+        height: 100%;
     }
 }
 
 #wr{
-
+    align-content: center;
+    max-width: 1024px;
+    min-height: 100dvh;
+    margin: 0 auto;
 }
