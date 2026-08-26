@@ -9,19 +9,30 @@
     <link rel="stylesheet" id="theme" href="css/themes/dark.css">
 </head>
 <style>
-    #themeswitcher {
-        height: 100%;
+    #cont{
+        background-color: #8f8f9f;
         width: 100%;
-        margin: auto;
+        height: 100%;
         display: grid;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
 
-        #themebutton{
-            height: 20rem;
+        #themeswitcher{
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 20rem;
-            align-self: center;
-            justify-self: center;
-            background-size: cover;
-            background-repeat: no-repeat;
+            height: 20rem;
+
+            #themebutton{
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .counter{
+            overflow-x: auto;
         }
     }
 
@@ -33,12 +44,19 @@
 </style>
 <body>
 
-<div style="background-color: #8f8f9f" id="themeswitcher"></div>
+<div id="cont">
 
-<p class="abs mute">Credit: Kot Clicker by Tetraneo</p>
+    <div id="themeswitcher"></div>
+
+    <p class="abs mute">Credit: Kot Clicker by Tetraneo</p>
+
+    <p class="counter"></p>
+
+</div>
 
 <script type="module" src="js/themeswitcher.js"></script>
 <script type="module" src="js/savedata.js"></script>
+<script type="module" src="js/kotclicker.js"></script>
 
 </body>
 </html>

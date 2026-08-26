@@ -3,6 +3,7 @@ export const Data = {
     Username: "username",
     Deadname: "deadname",
     Name: "name",
+    KotClickerCounter: "kotclickercounter",
 }
 
 export const Themes = {
@@ -13,6 +14,8 @@ export const Themes = {
 export function save(key, value){
     localStorage.setItem(key, JSON.stringify(value));
 }
+export function saveraw(key, value){ localStorage.setItem(key, value); }
+
 export function load(key){
     if (!exists(key)){
         // default assignments
@@ -25,7 +28,8 @@ export function load(key){
     }
     return JSON.parse(localStorage.getItem(key));
 }
+export function loadraw(key, value){ return localStorage.getItem(key); }
 
-function exists(key){
+export function exists(key){
     return localStorage.getItem(key) !== null;
 }

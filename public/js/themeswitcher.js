@@ -1,5 +1,6 @@
 import { load, save } from './savedata.js';
 import { Data, Themes } from './savedata.js'
+import { increment } from './kotclicker.js';
 
 const themeSheet = document.getElementById("theme");
 let currentTheme = "";
@@ -11,6 +12,7 @@ button.onclick = function (){
     currentTheme = load(Data.Theme);
     if (currentTheme === Themes.Dark){ save(Data.Theme, Themes.Light) }
     if (currentTheme === Themes.Light){ save(Data.Theme, Themes.Dark) }
+    increment();
     settheme();
 }
 
