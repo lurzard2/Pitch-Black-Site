@@ -61,6 +61,15 @@ body{
     }
 }
 
+#themeswitcher{
+    width: 100%;
+
+    #themebutton{
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
 
 /*
 #wr{

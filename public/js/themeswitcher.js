@@ -1,14 +1,20 @@
-import { load } from './savedata.js';
+import { load, save } from './savedata.js';
 import { Data, Themes } from './savedata.js'
 
 const themeSheet = document.getElementById("theme");
+let currentTheme = load(Data.Theme);
 
-let currentTheme = "current";
+document.getElementById("themeswitcher").innerHTML = '<button id="themebutton"></button>';
+const button = document.getElementById("themebutton");
 
-addThemeSwitcherToPage();
-window.addEventListener('resize', function() { addThemeSwitcherToPage(); });
-function addThemeSwitcherToPage(){
-    currentTheme = load(Data.Theme);
+button.onclick = function (){
+    if (currentTheme === Themes.Dark){ save(Data.Theme, Themes.Light) }
+    if (currentTheme === Themes.Light){ save(Data.Theme, Themes.Dark) }
+    settheme();
+}
+
+settheme();
+function settheme(){
     if (currentTheme === Themes.Dark) {
         themeSheet.href = "css/themes/dark.css";
     }
