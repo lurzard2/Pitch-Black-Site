@@ -1,4 +1,4 @@
-import {loadraw, saveraw, exists, save} from './savedata.js';
+import {loadraw, saveraw } from './savedata.js';
 import { Data } from './savedata.js'
 import { button } from './themeswitcher.js';
 
