@@ -65,16 +65,24 @@ body{
     width: 100%;
 
     #themebutton{
+        border: none;
         background-size: contain;
         height: 2rem;
         width: 2rem;
     }
+    #themebutton:hover{
+        opacity: 0.9;
+        .desaturate{
+            opacity: 0.1;
+        }
+        border: 1px solid #454545;
+    }
 
     .dark{
-        background-image: url('../images/ripplecat.gif');
+        background-image: url('../images/kots/ripplecat.gif');
     }
     .light{
-        background-image: url('../images/voidcat.gif');
+        background-image: url('../images/kots/voidcat.gif');
     }
     .red{
         background-image: url('../images/EVILcat.gif');
