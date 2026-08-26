@@ -14,12 +14,16 @@ body{
     @media (width > 700px){
         align-items: center;
         grid-template-columns: 150px auto;
+        column-gap: 20px;
         #side, #main{
             height: 95%;
         }
     }
     @media (width <= 700px){
-        grid-template-rows: 150px auto;
+        grid-template-rows: 100px auto;
+        #main{
+            margin-top: 40px;
+        }
     }
 
     #headerbg {
