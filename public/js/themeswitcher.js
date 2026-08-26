@@ -25,8 +25,14 @@ function settheme(){
     currentTheme = load(Data.Theme);
     if (currentTheme === Themes.Dark) {
         themeSheet.href = "css/themes/dark.css";
+        if (button !== null){
+            button.className = 'dark';
+        }
     }
     else if (currentTheme === Themes.Light) {
         themeSheet.href = "css/themes/light.css";
+        if (button !== null){
+            button.className = 'light';
+        }
     }
 }
