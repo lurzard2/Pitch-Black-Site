@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kot Clicker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" fetchpriority="low">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" id="theme" href="css/themes/dark.css">
+</head>
+<style>
+    #themeswitcher {
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        display: grid;
+
+        #themebutton{
+            height: 20rem;
+            width: 20rem;
+            align-self: center;
+            justify-self: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+</style>
+<body>
+
+<div id="themeswitcher"></div>
+
+<script type="module" src="js/themeswitcher.js"></script>
+<script type="module" src="js/savedata.js"></script>
+
+</body>
+</html>
