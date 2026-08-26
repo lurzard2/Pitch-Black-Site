@@ -9,22 +9,6 @@ body{
     animation: loop 10s linear infinite;
 }
 
-@media only screen and (min-width: 1024px){ /*DESKTOP*/
-    #main{
-        border-radius: 20px;
-    }
-}
-
-@media only screen and (max-width: 1023px) { /*TABLET-MOBILE*/
-    #main{
-        margin: 10px;
-    }
-}
-
-#main{
-    border: 2px dotted var(--mute);
-}
-
 @keyframes loop {
     from {
         background-position: 0 0;

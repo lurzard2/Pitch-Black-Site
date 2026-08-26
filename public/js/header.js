@@ -6,7 +6,7 @@ window.addEventListener('resize', function() { setHeader(); });
 function setHeader() {
     let currentTheme = load(Data.Theme);
 
-    let desktop = window.innerWidth > 767;
+    let desktop = window.innerWidth > 700;
 
     document.getElementById("side").innerHTML = '<div id="headerbg"></div>';
 

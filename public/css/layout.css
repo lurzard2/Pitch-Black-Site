@@ -10,19 +10,16 @@ body{
     display: grid;
     width: min(1024px, 95%);
     margin: auto;
-    align-items: center;
 
     @media (width > 700px){
+        align-items: center;
         grid-template-columns: 150px auto;
-        column-gap: 2rem;
+        #side, #main{
+            height: 95%;
+        }
     }
-    @media (width < 699px){
-        grid-template-rows: 100px auto;
-        row-gap: 2rem;
-    }
-
-    #side, #main{
-        height: 95%;
+    @media (width <= 700px){
+        grid-template-rows: 150px auto;
     }
 
     #headerbg {
