@@ -14,7 +14,7 @@ export function save(key, value){
     localStorage.setItem(key, JSON.stringify(value));
 }
 export function load(key){
-    if (exists(key)){
+    if (!exists(key)){
         // default assignments
         let val = "na";
         if (key === Data.Theme) { val = "dark"; }

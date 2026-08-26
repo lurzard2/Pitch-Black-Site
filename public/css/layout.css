@@ -65,8 +65,16 @@ body{
     width: 100%;
 
     #themebutton{
+        background-size: contain;
         height: 2rem;
         width: 2rem;
+    }
+
+    .dark{
+        background-image: url('../images/ripplecat.gif');
+    }
+    .light{
+        background-image: url('../images/voidcat.gif');
     }
 }
 

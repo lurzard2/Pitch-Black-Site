@@ -1,8 +1,10 @@
 import { load } from './savedata.js';
-import { Data, Themes } from './savedata.js'
+import { Data, Themes } from './savedata.js';
+import { button } from './themeswitcher.js';
 
 setHeader();
 window.addEventListener('resize', function() { setHeader(); });
+button.addEventListener('click', function() { setHeader(); });
 function setHeader() {
     let currentTheme = load(Data.Theme);
 
