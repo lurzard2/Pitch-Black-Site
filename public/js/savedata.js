@@ -4,6 +4,7 @@ export const Data = {
     Deadname: "deadname",
     Name: "name",
     KotClickerCounter: "kotclickercounter",
+    KotClicker: "kotclicker",
 }
 
 export const Themes = {
