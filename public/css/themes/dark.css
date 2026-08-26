@@ -3,7 +3,7 @@ body{
     --mute: grey;
 }
 
-#side{
+#headerbg{
     background-image: url('../../images/blackstatic.gif'); /*https://tenor.com/view/static-dark-background-black-and-white-horror-gif-537857989342745980*/
     background-size: cover;
     animation: loop 10s linear infinite;

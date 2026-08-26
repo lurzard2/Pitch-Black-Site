@@ -2,44 +2,76 @@ body{
     color: var(--text);
     font-family: 'FreePixel', 'Arial';
     background-color: var(--bg);
-}
-
-@media only screen and (min-width: 1024px){ /*DESKTOP*/
-    #wr{
-        display: grid;
-        grid-template-columns: 200px 1fr;
-        grid-auto-rows: 800px;
-    }
-
-    #side{
-        margin-right: 50px;
-    }
-}
-
-@media only screen and (max-width: 1023px){ /*TABLET-MOBILE*/
-    #wr{
-        display: grid;
-        grid-auto-flow: row;
-    }
-
-    #main{
-        height: 100%;
-    }
+    align-items: center;
 }
 
 #wr{
-    align-content: center;
-    max-width: 1024px;
-    min-height: 100dvh;
-    margin: 0 auto;
+    height: 95%;
+    display: grid;
+    width: min(1024px, 95%);
+    margin: auto;
+    align-items: center;
+
+    @media (width > 700px){
+        grid-template-columns: 150px auto;
+        column-gap: 2rem;
+    }
+    @media (width < 699px){
+        grid-template-rows: 100px auto;
+        row-gap: 2rem;
+    }
+
+    #side, #main{
+        height: 100%;
+    }
+
+    #headerbg {
+        height: 100%;
+        width: 100%;
+
+        .titlebv {
+            background-image: url('../images/runictitle-bv.png');
+        }
+
+        .titlewv {
+            background-image: url('../images/runictitle-wv.png');
+        }
+
+        .titlebh {
+            background-image: url('../images/runictitle-bh.png');
+        }
+
+        .titlewh {
+            background-image: url('../images/runictitle-wh.png');
+        }
+
+        .titlebv, .titlewv, .titlebh, .titlewh {
+            height: 100%;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+
+            a{
+                display: flex;
+                height: 100%;
+            }
+        }
+    }
+
+
 }
 
-#main{
-    padding: 10px;
-}
 
 /*
 #wr{
+    div {
+        border: 1px solid;
+    }
+    p{
+        border: 1px solid yellow;
+    }
+
     background-color: indianred;
 }
 #side{

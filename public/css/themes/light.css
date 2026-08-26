@@ -4,11 +4,10 @@ body{
     --bg: #fff;
 }
 
-#side{
+#headerbg{
     background-image: url('../../images/whiterain.gif'); /*https://tenor.com/view/static-dark-background-black-and-white-horror-gif-537857989342745980*/
     background-size: cover;
     animation: loop 10s linear infinite;
-
     opacity: 0.2;
 }
 

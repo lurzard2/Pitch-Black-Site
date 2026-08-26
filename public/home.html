@@ -7,21 +7,6 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" id="theme" href="css/themes/dark.css">
 </head>
-<style>
-    .links{
-        font-weight: bold;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-
-        a{
-            color: var(--text);
-            padding: 20px;
-            font-size: 3rem;
-            text-decoration: none;
-        }
-    }
-</style>
 <body>
 
 <!--TODO: fix height between links and text it's so weird... 96% is a temp fix-->
@@ -30,10 +15,8 @@
     <div id="side">
     </div>
     <div id="main">
-        <div>
             <p>site = new(<span class="mute">[:user]</span>"<span title="//UNIMPLEMENTED" class="user">???</span>") {</p>
-        </div>
-        <div class="links" style="height: 96%; justify-content: center;">
+        <div class="links">
                 <a href="na.html">About Us</a>
                 <a href="na.html">Links</a>
                 <a href="projects.html">Projects</a>
@@ -44,9 +27,9 @@
     </div>
 </div>
 
+<script type="module" src="js/themeswitcher.js"></script>
 <script type="module" src="js/header.js"></script>
 <script src="js/savedata.js"></script>
-<script type="module" src="js/themeswitcher.js"></script>
 
 </body>
 </html>
