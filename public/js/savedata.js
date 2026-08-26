@@ -3,7 +3,7 @@ export const Data = {
     Username: "username",
     Deadname: "deadname",
     Name: "name",
-    KotClickerCounter: "kotclickercounter",
+    KotClickerCounter: "kotclicke   rcounter",
     KotClicker: "kotclicker",
 }
 

@@ -76,6 +76,12 @@ body{
     .light{
         background-image: url('../images/voidcat.gif');
     }
+    .red{
+        background-image: url('../images/EVILcat.gif');
+    }
+    .green{
+        background-image: url('../images/joycat.gif');
+    }
 }
 
 
