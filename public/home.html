@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css" fetchpriority="low">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" id="theme" href="css/themes/dark.css">
+    <script src="https://u.widget.st/ar.js"></script>
 </head>
 <style>
     #main {
@@ -28,10 +29,28 @@
             }
         }
     }
+
+    #reactbox{
+        width:400px;
+        height: 800px;
+        overflow: scroll;
+        position: absolute;
+
+        @media (width > 1600px){
+            top:0;
+            left:0;
+        }
+        @media (width <= 1600px){
+            top: -500px;
+            left: -500px;
+        }
+    }
 </style>
 <body>
 
-<!--TODO: fix height between links and text it's so weird... 96% is a temp fix-->
+<div id="reactbox">
+    <ws-widget class="reactbox" type="reactions" iid="8439"></ws-widget>
+</div>
 
 <div id="wr">
     <div id="side">
