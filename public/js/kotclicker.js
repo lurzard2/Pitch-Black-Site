@@ -1,6 +1,8 @@
 import {loadraw, saveraw, load, save } from './savedata.js';
 import { Data, Themes } from './savedata.js'
 
+// Kot Clicker Page
+
 const counter = document.getElementById("kot-counter");
 if (counter !== null) {
     counter.innerHTML = loadraw(Data.KotClickerCounter) || 0;
@@ -48,3 +50,5 @@ function settheme(){
         }
     }
 }
+
+// Theme button for Main Pages
