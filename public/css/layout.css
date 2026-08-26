@@ -6,7 +6,7 @@ body{
 }
 
 #wr{
-    height: 95%;
+    height: 100%;
     display: grid;
     width: min(1024px, 95%);
     margin: auto;
@@ -22,7 +22,7 @@ body{
     }
 
     #side, #main{
-        height: 100%;
+        height: 95%;
     }
 
     #headerbg {
