@@ -8,6 +8,26 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" id="theme" href="css/themes/dark.css">
 </head>
+<style>
+    #main{
+        display: grid;
+        grid-template-rows: 1fr auto 1fr;
+
+        nav{
+
+           ul li{
+               list-style: none;
+               margin: 30px;
+
+               a{
+                   color: var(--text);
+                   text-decoration: none;
+                   font-size: xxx-large;
+               }
+           }
+        }
+    }
+</style>
 <body>
 
 <!--TODO: fix height between links and text it's so weird... 96% is a temp fix-->
@@ -17,14 +37,16 @@
     </div>
     <div id="main">
             <p>site = new(<span class="mute">[:user]</span>"<span title="//UNIMPLEMENTED" class="user">???</span>") {</p>
-        <div class="links">
-                <a href="na.html">About Us</a>
-                <a href="na.html">Links</a>
-                <a href="projects.html">Projects</a>
-                <a class="linkoff" target="_blank" href="https://pitchblack.atabook.org/">Guestbook</a>
-                <a href="na.html">Contact</a>
-        </div>
-        <p class="right">}; site_credit = "@lurzard" || "@lurvixen"; <span class="mute">//2026-forever meow :3</span></p>
+        <nav class="center" style="align-self:center;">
+            <ul>
+                <li><a href="na.html">About Us</a></li>
+                <li><a href="na.html">Links</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a class="linkoff" target="_blank" href="https://pitchblack.atabook.org/">Guestbook</a></li>
+                <li><a href="na.html">Contact</a></li>
+            </ul>
+        </nav>
+        <p class="right" style="align-self: end">}; site_credit = "@lurzard" || "@lurvixen"; <span class="mute">//2026-forever meow :3</span></p>
     </div>
 </div>
 
