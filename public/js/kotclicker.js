@@ -1,4 +1,4 @@
-import {LoadRaw, SaveRaw, Load, Save } from './savedata.js';
+import {LoadRaw, SaveRaw, Load, Save, Kots as Kot} from './savedata.js';
 import { Data, Kots } from './savedata.js'
 
 function Chance(perc){
@@ -184,6 +184,81 @@ function SetKot(){
     }
     if (currentKot === Kots.Tetra) {
         name = "Kot Tetra";
+    }
+    if (currentKot === Kots.Tronsx){
+        name = "Kot Tronsx";
+    }
+    if (currentKot === Kot.Detrax){
+        name = "Kot Detrax";
+    }
+    if (currentKot === Kot.Kecalp){
+        name = "Kecalp";
+    }
+    if (currentKot === Kot.Placek){
+        name = "Placek";
+    }
+    if (currentKot === Kot.Accordion){
+        name = "Kot Accordion";
+    }
+    if (currentKot === Kot.AH){
+        name = "Kot AH";
+    }
+    if (currentKot === Kot.Augh){
+        name = "Kot Auughhhh";
+    }
+    if (currentKot === Kots.Baby){
+        name = "Kot Baby";
+    }
+    if (currentKot === Kots.Death){
+        name = "Kot Death";
+    }
+    if (currentKot === Kots.Ew){
+        name = "Kot Ewwww";
+    }
+    if (currentKot === Kots.Faucetling){
+        name = "Kot Faucetling";
+    }
+    if (currentKot === Kots.Fear){
+        name = "Kot Fear";
+    }
+    if (currentKot === Kots.Freak){
+        name = "Kot Freak";
+    }
+    if (currentKot === Kots.Gerardtrax){
+        name = "Kot Gerard? Detrax?";
+    }
+    if (currentKot === Kots.Gulp){
+        name = "Kot Gulp";
+    }
+    if (currentKot === Kots.Idiot){
+        name = "Kot Idiot";
+    }
+    if (currentKot === Kots.Jumpscare){
+        name = "Kot Jumpscare!!!";
+    }
+    if (currentKot === Kots.Looker){
+        name = "Kot Looker";
+    }
+    if (currentKot === Kots.Missile){
+        name = "Kot Missile!";
+    }
+    if (currentKot === Kots.Party){
+        name = "Kot Party";
+    }
+    if (currentKot === Kots.Peak){
+        name = "Kot Peak";
+    }
+    if (currentKot === Kots.Pat){
+        name = "Kot Patpatpatpat";
+    }
+    if (currentKot === Kots.ResonanceCascade){
+        name = "Kot Resonance Cascade";
+    }
+    if (currentKot === Kots.Tiny){
+        name = "Kot Tiny";
+    }
+    if (currentKot === Kots.Woowoo){
+        name = "Kot Woowoo";
     }
     if (kotname !== null){
         kotname.innerHTML = name;
