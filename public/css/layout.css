@@ -118,6 +118,78 @@ body{
     .tetra{
         background-image: url('../images/kots/kottetra.png');
     }
+    .tronsx{
+        background-image: url('../images/kots/kottronsx.jpg');
+    }
+    .detrax{
+        background-image: url('../images/kots/kotdetrax.gif');
+    }
+    .Kecalp{
+        background-image: url('../images/kots/kecalp.gif');
+    }
+    .placek{
+        background-image: url('../images/kots/placek.gif');
+    }
+    .accordion{
+        background-image: url('../images/kots/kotaccordion.webp');
+    }
+    .ah{
+        background-image: url('../images/kots/kotAH.gif');
+    }
+    .augh{
+        background-image: url('../images/kots/kotaugh.gif');
+    }
+    .baby{
+        background-image: url('../images/kots/kotbaby.webp');
+    }
+    .death{
+        background-image: url('../images/kots/kotDEATH.gif');
+    }
+    .ew{
+        background-image: url('../images/kots/koteww.gif');
+    }
+    .faucetling{
+        background-image: url('../images/kots/kotfaucetling.gif');
+    }
+    .fear{
+        background-image: url('../images/kots/kotfear.gif');
+    }
+    .freak{
+        background-image: url('../images/kots/kotfreak.webp');
+    }
+    .gerardtrax{
+        background-image: url('../images/kots/kotgerarddetrax.gif');
+    }
+    .gulp{
+        background-image: url('../images/kots/kotgulp.gif');
+    }
+    .idiot{
+        background-image: url('../images/kots/kotidiot.gif')
+    }
+    .jumpscare{
+        background-image: url('../images/kots/kotjumpscare.gif');
+    }
+    .looker{
+        background-image: url('../images/kots/kotlooker.webp');
+    }
+    .missile{
+        background-image: url('../images/kots/kotmissile.webp');
+    }
+    .party{
+        background-image: url('../images/kots/kotparty.gif');
+    }
+    .pat{
+        background-image: url('../images/kots/kotpat.gif');
+    }
+    .resonancecascade{
+        background-image: url('../images/kots/kotresonancecascade.gif');
+    }
+    .tiny{
+        background-image: url('../images/kots/kottiny.webp');
+    }
+    .woowoo{
+        background-image: url('../images/kots/kotwoowoo.gif');
+    }
 }
 
 
