@@ -59,7 +59,7 @@ if (kot !== null){
                 realKot = Kots.Dakras;
             }
             if (Chance(60)){
-                realkot = Kots.Tetra;
+                realKot = Kots.Tetra;
             }
             Save(Data.Kot, realKot);
         }
@@ -108,6 +108,9 @@ function SetKot(){
     }
     if (currentKot === Kots.Dakras) {
         name = "Kot Dakras";
+    }
+    if (currentKot === Kots.Tetra) {
+        name = "Kot Tetra";
     }
     if (kotname !== null){
         kotname.innerHTML = name;
