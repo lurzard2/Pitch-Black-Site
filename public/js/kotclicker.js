@@ -48,6 +48,9 @@ if (kot !== null){
         else if (Chance(0.15)){
             Save(Data.Theme, Themes.Tata);
         }
+        else if (Chance(0.1)){
+            Save(Data.Theme, Themes.Mooyling);
+        }
         else if (currentTheme !== Themes.Dark){ Save(Data.Theme, Themes.Dark); }
         else{
             Save(Data.Theme, Themes.Light);
@@ -86,6 +89,9 @@ function SetTheme(){
     }
     if (currentTheme === Themes.Tata) {
         kotname = "Kot Tata";
+    }
+    if (currentTheme === Themes.Mooyling) {
+        kotname = "Kot Mooyling";
     }
     if (name !== null){
         name.innerHTML = kotname;
