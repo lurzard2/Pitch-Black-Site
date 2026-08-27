@@ -38,13 +38,13 @@ if (kot !== null){
         if (count === 9999){
             Save(Data.Kot, Kots.Gerardtrax);
         }
-        else if (Chance(10) || count === 419) {
+        else if (Chance(1) || count === 419) {
             Save(Data.Kot, Kots.Green);
         }
-        else if (Chance(5)){
+        else if (Chance(1)){
             Save(Data.Kot, Kots.Red);
         }
-        else if (Chance(2)){
+        else if (Chance(1)){
             Save(Data.Kot, Kots.Alicja);
         }
         else if (Chance(1)){
