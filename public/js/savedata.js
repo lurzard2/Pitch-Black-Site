@@ -18,6 +18,7 @@ export const Kots = {
     Magic: "magic",
     Mexico: "mexico",
     Dakras: "dakras",
+    Tetra: "tetra",
 }
 
 export function Save(key, value){

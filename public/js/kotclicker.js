@@ -58,6 +58,9 @@ if (kot !== null){
             if (Chance(70)){
                 realKot = Kots.Dakras;
             }
+            if (Chance(60)){
+                realkot = Kots.Tetra;
+            }
             Save(Data.Kot, realKot);
         }
 
