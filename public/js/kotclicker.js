@@ -35,7 +35,7 @@ if (kot !== null){
     kot.onclick = function (){
         currentTheme = Load(Data.Theme);
 
-        if (Chance(1)){
+        if (Chance(1 || counter.innerHTML === "420")){
             Save(Data.Theme, Themes.Green);
         }
         else if (Chance(0.5)){
@@ -57,6 +57,8 @@ if (kot !== null){
 SetTheme();
 function SetTheme(){
     currentTheme = Load(Data.Theme);
+    const name = document.getElementById("kot-name");
+    let kotname = "Kot";
     if (kot !== null){
         kot.className = currentTheme;
     }
@@ -67,8 +69,12 @@ function SetTheme(){
         themeSheet.href = "css/themes/light.css";
     }
     if (currentTheme === Themes.Green) {
-        themeSheet.href = "css/themes/green.css";
+        kotname = "Kot yauy";
     }
-
-
+    if (currentTheme === Themes.Red) {
+        kotname = "Kot EVIL";
+    }
+    if (name !== null){
+        name.innerHTML = kotname;
+    }
 }
