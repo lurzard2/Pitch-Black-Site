@@ -100,6 +100,15 @@ body{
     .mooyling{
         background-image: url('../images/kots/kotmooyling.gif');
     }
+    .magic{
+        background-image: url('../images/kots/kotmagic.png');
+    }
+    .mexico{
+        background-image: url('../images/kots/kotmexico.png');
+    }
+    .dakras{
+        background-image: url('../images/kots/kotdakras.png');
+    }
 }
 
 

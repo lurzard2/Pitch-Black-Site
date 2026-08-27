@@ -47,7 +47,7 @@ if (kot !== null){
         else if (Chance(0.15)){
             Save(Data.Kot, Kots.Tata);
         }
-        else if (Chance(10)){
+        else if (Chance(0.1)){
             let realKot = Kots.Mooyling;
             if (Chance(90)){
                 realKot = Kots.Magic;
