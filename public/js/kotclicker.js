@@ -60,14 +60,12 @@ if (kot !== null){
             }
             Save(Data.Kot, realKot);
         }
+
         else if (Load(Data.Kot) !== Kots.Dark){ Save(Data.Kot, Kots.Dark); }
         else{
             Save(Data.Kot, Kots.Light);
         }
 
-            //if (currentTheme === Themes.Dark){ Save(Data.Theme, Themes.Light) }
-            //if (currentTheme === Themes.Light){ Save(Data.Theme, Themes.Dark) }
-            //else{Save(Data.Theme, Themes.Dark);}
         IncrementCounter();
         SetKot();
     }
@@ -79,6 +77,11 @@ function SetKot(){
     const kotname = document.getElementById("kot-name");
     let name = "Kot";
     kot.className = currentKot;
+    if (currentKot === Kots.Dark || currentKot === Kots.Light) {
+        if (document.getElementById('k-visibility').checked) {
+            kot.className = "grey";
+        }
+    }
     if (currentKot === Kots.Green) {
         name = "Kot yauy";
     }
