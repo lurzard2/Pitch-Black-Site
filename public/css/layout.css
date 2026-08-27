@@ -88,6 +88,9 @@ body{
     .grey{
         background-image: url('../images/kots/greykot.png');
     }
+    .locked{
+        background-image: url('../images/kots/lockedkot.png');
+    }
     .red{
         background-image: url('../images/kots/EVILkot.gif');
     }

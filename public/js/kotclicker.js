@@ -85,6 +85,7 @@ function SetKot(){
             kot.className = "grey";
         }
     }
+
     if (currentKot === Kots.Green) {
         name = "Kot yauy";
     }

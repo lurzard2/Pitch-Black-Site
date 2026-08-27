@@ -5,6 +5,7 @@ export const Data = {
     Name: "name",
     KotClickerCounter: "kotclickercounter",
     Kot: "kot",
+    KotsTracker: "kotstracker",
 }
 
 export const Kots = {
