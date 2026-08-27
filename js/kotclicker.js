@@ -52,85 +52,85 @@ if (kot !== null){
         }
         else if (Chance(1)){
             let realKot = Kots.Mooyling;
-            if (Chance(90)){
+            if (Chance(1)){
                 realKot = Kots.Magic;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Mexico;
             }
-            if (Chance(70)){
+            if (Chance(1)){
                 realKot = Kots.Dakras;
             }
-            if (Chance(60)){
+            if (Chance(1)){
                 realKot = Kots.Tetra;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Tronsx;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Detrax;
             }
-            if (Chance(60)){
+            if (Chance(1)){
                 realKot = Kots.Accordion;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.AH;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Augh;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Baby;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Death;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Ew;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Faucetling;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Fear;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Gulp;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Idiot;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Jumpscare;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Looker;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Missile;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Party;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Pat;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Peak;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.ResonanceCascade;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Tiny;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Woowoo;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Placek;
             }
-            if (Chance(80)){
+            if (Chance(1)){
                 realKot = Kots.Kecalp;
             }
             Save(Data.Kot, realKot);
