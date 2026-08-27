@@ -38,13 +38,13 @@ if (kot !== null){
         if (count === 9999){
             Save(Data.Kot, Kots.Gerardtrax);
         }
-        if (Chance(1) || count === 419) {
+        else if (Chance(10) || count === 419) {
             Save(Data.Kot, Kots.Green);
         }
-        else if (Chance(1)){
+        else if (Chance(5)){
             Save(Data.Kot, Kots.Red);
         }
-        else if (Chance(1)){
+        else if (Chance(2)){
             Save(Data.Kot, Kots.Alicja);
         }
         else if (Chance(1)){
@@ -67,7 +67,7 @@ if (kot !== null){
             if (Chance(80)){
                 realKot = Kots.Tronsx;
             }
-            if (Chane(80)){
+            if (Chance(80)){
                 realKot = Kots.Detrax;
             }
             if (Chance(60)){
