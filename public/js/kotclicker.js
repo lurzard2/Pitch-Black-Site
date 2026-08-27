@@ -34,8 +34,9 @@ const kot = document.getElementById("kotbutton");
 if (kot !== null){
     kot.onclick = function (){
         currentTheme = Load(Data.Theme);
+        let count = parseInt(LoadRaw(Data.KotClickerCounter)) || 0;
 
-        if (Chance(1 || counter.innerHTML === "420")){
+        if (Chance(1) || count === 419) {
             Save(Data.Theme, Themes.Green);
         }
         else if (Chance(0.5)){
