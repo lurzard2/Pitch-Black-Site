@@ -4,10 +4,10 @@ export const Data = {
     Deadname: "deadname",
     Name: "name",
     KotClickerCounter: "kotclickercounter",
-    KotClicker: "kotclicker",
+    Kot: "kot",
 }
 
-export const Themes = {
+export const Kots = {
     Dark: "dark",
     Light: "light",
     Green: "green",
@@ -15,6 +15,9 @@ export const Themes = {
     Alicja: "alicja",
     Tata: "tata",
     Mooyling: "mooyling",
+    Magic: "magic",
+    Mexico: "mexico",
+    Dakras: "dakras",
 }
 
 export function Save(key, value){

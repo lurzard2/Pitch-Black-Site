@@ -1,5 +1,5 @@
 import {LoadRaw, SaveRaw, Load, Save } from './savedata.js';
-import { Data, Themes } from './savedata.js'
+import { Data, Kots } from './savedata.js'
 
 function Chance(perc){
     return Math.random() < (perc / 100);
@@ -33,67 +33,77 @@ if (kotContainer !== null){
 const kot = document.getElementById("kotbutton");
 if (kot !== null){
     kot.onclick = function (){
-        currentTheme = Load(Data.Theme);
         let count = parseInt(LoadRaw(Data.KotClickerCounter)) || 0;
 
         if (Chance(1) || count === 419) {
-            Save(Data.Theme, Themes.Green);
+            Save(Data.Kot, Kots.Green);
         }
         else if (Chance(0.5)){
-            Save(Data.Theme, Themes.Red);
+            Save(Data.Kot, Kots.Red);
         }
         else if (Chance(0.25)){
-            Save(Data.Theme, Themes.Alicja);
+            Save(Data.Kot, Kots.Alicja);
         }
         else if (Chance(0.15)){
-            Save(Data.Theme, Themes.Tata);
+            Save(Data.Kot, Kots.Tata);
         }
-        else if (Chance(0.1)){
-            Save(Data.Theme, Themes.Mooyling);
+        else if (Chance(10)){
+            let realKot = Kots.Mooyling;
+            if (Chance(90)){
+                realKot = Kots.Magic;
+            }
+            if (Chance(80)){
+                realKot = Kots.Mexico;
+            }
+            if (Chance(70)){
+                realKot = Kots.Dakras;
+            }
+            Save(Data.Kot, realKot);
         }
-        else if (currentTheme !== Themes.Dark){ Save(Data.Theme, Themes.Dark); }
+        else if (Load(Data.Kot) !== Kots.Dark){ Save(Data.Kot, Kots.Dark); }
         else{
-            Save(Data.Theme, Themes.Light);
+            Save(Data.Kot, Kots.Light);
         }
 
             //if (currentTheme === Themes.Dark){ Save(Data.Theme, Themes.Light) }
             //if (currentTheme === Themes.Light){ Save(Data.Theme, Themes.Dark) }
             //else{Save(Data.Theme, Themes.Dark);}
         IncrementCounter();
-        SetTheme();
+        SetKot();
     }
 }
 
-SetTheme();
-function SetTheme(){
-    currentTheme = Load(Data.Theme);
-    const name = document.getElementById("kot-name");
-    let kotname = "Kot";
-    if (kot !== null){
-        kot.className = currentTheme;
+SetKot();
+function SetKot(){
+    const currentKot = Load(Data.Kot);
+    const kotname = document.getElementById("kot-name");
+    let name = "Kot";
+    kot.className = currentKot;
+    if (currentKot === Kots.Green) {
+        name = "Kot yauy";
     }
-    if (currentTheme === Themes.Dark) {
-        themeSheet.href = "css/themes/dark.css";
+    if (currentKot === Kots.Red) {
+        name = "Kot EVIL";
     }
-    if (currentTheme === Themes.Light) {
-        themeSheet.href = "css/themes/light.css";
+    if (currentKot === Kots.Alicja) {
+        name = "Kot Alicja";
     }
-    if (currentTheme === Themes.Green) {
-        kotname = "Kot yauy";
+    if (currentKot === Kots.Tata) {
+        name = "Kot Tata";
     }
-    if (currentTheme === Themes.Red) {
-        kotname = "Kot EVIL";
+    if (currentKot === Kots.Mooyling) {
+        name = "Kot Mooyling";
     }
-    if (currentTheme === Themes.Alicja) {
-        kotname = "Kot Alicja";
+    if (currentKot === Kots.Magic) {
+        name = "Kot Magician";
     }
-    if (currentTheme === Themes.Tata) {
-        kotname = "Kot Tata";
+    if (currentKot === Kots.Mexico) {
+        name = "Kot Mexico";
     }
-    if (currentTheme === Themes.Mooyling) {
-        kotname = "Kot Mooyling";
+    if (currentKot === Kots.Dakras) {
+        name = "Kot Dakras";
     }
-    if (name !== null){
-        name.innerHTML = kotname;
+    if (kotname !== null){
+        kotname.innerHTML = name;
     }
 }
