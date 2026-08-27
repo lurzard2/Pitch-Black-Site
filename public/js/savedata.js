@@ -10,27 +10,29 @@ export const Data = {
 export const Themes = {
     Dark: "dark",
     Light: "light",
+    Green: "green",
+    Red: "red",
 }
 
-export function save(key, value){
+export function Save(key, value){
     localStorage.setItem(key, JSON.stringify(value));
 }
-export function saveraw(key, value){ localStorage.setItem(key, value); }
+export function SaveRaw(key, value){ localStorage.setItem(key, value); }
 
-export function load(key){
-    if (!exists(key)){
+export function Load(key){
+    if (!Exists(key)){
         // default assignments
         let val = "na";
         if (key === Data.Theme) { val = "dark"; }
         if (key === Data.Username) { val = "you"; }
         if (key === Data.Deadname) { val = "Gabriele"; }
         if (key === Data.Name) { val = "Alex"; }
-        save(key, val);
+        Save(key, val);
     }
     return JSON.parse(localStorage.getItem(key));
 }
-export function loadraw(key, value){ return localStorage.getItem(key); }
+export function LoadRaw(key, value){ return localStorage.getItem(key); }
 
-export function exists(key){
+export function Exists(key){
     return localStorage.getItem(key) !== null;
 }

@@ -61,17 +61,17 @@ body{
     }
 }
 
-#themeswitcher{
+#kotholder{
     width: 100%;
 
-    #themebutton{
+    #kotbutton{
         border: none;
         background-size: cover;
         background-position: center;
         height: 2rem;
         width: 2rem;
     }
-    #themebutton:hover{
+    #kotbutton:hover{
         opacity: 0.9;
         .desaturate{
             opacity: 0.1;
@@ -80,16 +80,16 @@ body{
     }
 
     .dark{
-        background-image: url('../images/kots/ripplecat.gif');
+        background-image: url('../images/kots/ripplekot.gif');
     }
     .light{
-        background-image: url('../images/kots/voidcat.gif');
+        background-image: url('../images/kots/voidkot.gif');
     }
     .red{
-        background-image: url('../images/EVILcat.gif');
+        background-image: url('../images/kots/EVILkot.gif');
     }
     .green{
-        background-image: url('../images/joycat.gif');
+        background-image: url('../images/kots/joykot.gif');
     }
 }
 

@@ -1,54 +1,74 @@
-import {loadraw, saveraw, load, save } from './savedata.js';
+import {LoadRaw, SaveRaw, Load, Save } from './savedata.js';
 import { Data, Themes } from './savedata.js'
 
-// Kot Clicker Page
-
-const counter = document.getElementById("kot-counter");
-if (counter !== null) {
-    counter.innerHTML = loadraw(Data.KotClickerCounter) || 0;
-}
-
-export function increment(){
-    let count = parseInt(loadraw(Data.KotClickerCounter)) || 0;
-    count += 1;
-    document.getElementById("kot-counter").innerHTML = count;
-    if (Number.isNaN(count)){ count = 0; }
-    saveraw(Data.KotClickerCounter, count);
+function Chance(perc){
+    return Math.random() < (perc / 100);
 }
 
 const themeSheet = document.getElementById("theme");
 let currentTheme = "";
 
-const switcher = document.getElementById("themeswitcher");
-if (switcher !== null){
-    switcher.innerHTML = '<button id="themebutton"></button>';
+// on site load, load and print the count saved
+const counter = document.getElementById("kot-counter");
+if (counter !== null) {
+    counter.innerHTML = LoadRaw(Data.KotClickerCounter) || 0;
 }
-export const button = document.getElementById("themebutton");
-if (button !== null){
-    button.onclick = function (){
-        currentTheme = load(Data.Theme);
-        if (currentTheme === Themes.Dark){ save(Data.Theme, Themes.Light) }
-        if (currentTheme === Themes.Light){ save(Data.Theme, Themes.Dark) }
-        increment();
-        settheme();
+
+// used for kot clicker, on click increment the counter
+export function IncrementCounter(){
+    let count = parseInt(LoadRaw(Data.KotClickerCounter)) || 0;
+    count += 1;
+    if (Number.isNaN(count)){ count = 0; }
+    counter.innerHTML = count;
+    SaveRaw(Data.KotClickerCounter, count);
+}
+
+// add button to div
+const kotContainer = document.getElementById("kotholder");
+if (kotContainer !== null){
+    kotContainer.innerHTML = '<button id="kotbutton"></button>';
+}
+
+// get button to add click event
+const kot = document.getElementById("kotbutton");
+if (kot !== null){
+    kot.onclick = function (){
+        currentTheme = Load(Data.Theme);
+
+        if (Chance(1)){
+            Save(Data.Theme, Themes.Green);
+        }
+        else if (Chance(0.5)){
+            Save(Data.Theme, Themes.Red);
+        }
+        else if (currentTheme !== Themes.Dark){ Save(Data.Theme, Themes.Dark); }
+        else{
+            Save(Data.Theme, Themes.Light);
+        }
+
+            //if (currentTheme === Themes.Dark){ Save(Data.Theme, Themes.Light) }
+            //if (currentTheme === Themes.Light){ Save(Data.Theme, Themes.Dark) }
+            //else{Save(Data.Theme, Themes.Dark);}
+        IncrementCounter();
+        SetTheme();
     }
 }
 
-settheme();
-function settheme(){
-    currentTheme = load(Data.Theme);
+SetTheme();
+function SetTheme(){
+    currentTheme = Load(Data.Theme);
+    if (kot !== null){
+        kot.className = currentTheme;
+    }
     if (currentTheme === Themes.Dark) {
         themeSheet.href = "css/themes/dark.css";
-        if (button !== null){
-            button.className = 'dark';
-        }
     }
-    else if (currentTheme === Themes.Light) {
+    if (currentTheme === Themes.Light) {
         themeSheet.href = "css/themes/light.css";
-        if (button !== null){
-            button.className = 'light';
-        }
     }
-}
+    if (currentTheme === Themes.Green) {
+        themeSheet.href = "css/themes/green.css";
+    }
 
-// Theme button for Main Pages
+
+}
