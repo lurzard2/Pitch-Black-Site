@@ -35,6 +35,9 @@ if (kot !== null){
     kot.onclick = function (){
         let count = parseInt(LoadRaw(Data.KotClickerCounter)) || 0;
 
+        if (count === 9999){
+            Save(Data.Kot, Kots.Gerardtrax);
+        }
         if (Chance(1) || count === 419) {
             Save(Data.Kot, Kots.Green);
         }
@@ -60,6 +63,75 @@ if (kot !== null){
             }
             if (Chance(60)){
                 realKot = Kots.Tetra;
+            }
+            if (Chance(80)){
+                realKot = Kots.Tronsx;
+            }
+            if (Chane(80)){
+                realKot = Kots.Detrax;
+            }
+            if (Chance(60)){
+                realKot = Kots.Accordion;
+            }
+            if (Chance(80)){
+                realKot = Kots.AH;
+            }
+            if (Chance(80)){
+                realKot = Kots.Augh;
+            }
+            if (Chance(80)){
+                realKot = Kots.Baby;
+            }
+            if (Chance(80)){
+                realKot = Kots.Death;
+            }
+            if (Chance(80)){
+                realKot = Kots.Ew;
+            }
+            if (Chance(80)){
+                realKot = Kots.Faucetling;
+            }
+            if (Chance(80)){
+                realKot = Kots.Fear;
+            }
+            if (Chance(80)){
+                realKot = Kots.Gulp;
+            }
+            if (Chance(80)){
+                realKot = Kots.Idiot;
+            }
+            if (Chance(80)){
+                realKot = Kots.Jumpscare;
+            }
+            if (Chance(80)){
+                realKot = Kots.Looker;
+            }
+            if (Chance(80)){
+                realKot = Kots.Missile;
+            }
+            if (Chance(80)){
+                realKot = Kots.Party;
+            }
+            if (Chance(80)){
+                realKot = Kots.Pat;
+            }
+            if (Chance(80)){
+                realKot = Kots.Peak;
+            }
+            if (Chance(80)){
+                realKot = Kots.ResonanceCascade;
+            }
+            if (Chance(80)){
+                realKot = Kots.Tiny;
+            }
+            if (Chance(80)){
+                realKot = Kots.Woowoo;
+            }
+            if (Chance(80)){
+                realKot = Kots.Placek;
+            }
+            if (Chance(80)){
+                realKot = Kots.Kecalp;
             }
             Save(Data.Kot, realKot);
         }
