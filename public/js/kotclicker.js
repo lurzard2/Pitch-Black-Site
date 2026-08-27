@@ -38,16 +38,16 @@ if (kot !== null){
         if (Chance(1) || count === 419) {
             Save(Data.Kot, Kots.Green);
         }
-        else if (Chance(0.5)){
+        else if (Chance(1)){
             Save(Data.Kot, Kots.Red);
         }
-        else if (Chance(0.25)){
+        else if (Chance(1)){
             Save(Data.Kot, Kots.Alicja);
         }
-        else if (Chance(0.15)){
+        else if (Chance(1)){
             Save(Data.Kot, Kots.Tata);
         }
-        else if (Chance(0.1)){
+        else if (Chance(1)){
             let realKot = Kots.Mooyling;
             if (Chance(90)){
                 realKot = Kots.Magic;
