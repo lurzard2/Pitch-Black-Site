@@ -13,6 +13,7 @@ export const Themes = {
     Green: "green",
     Red: "red",
     Alicja: "alicja",
+    Tata: "tata",
 }
 
 export function Save(key, value){
