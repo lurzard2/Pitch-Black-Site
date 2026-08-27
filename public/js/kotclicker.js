@@ -42,6 +42,9 @@ if (kot !== null){
         else if (Chance(0.5)){
             Save(Data.Theme, Themes.Red);
         }
+        else if (Chance(0.25)){
+            Save(Data.Theme, Themes.Alicja);
+        }
         else if (currentTheme !== Themes.Dark){ Save(Data.Theme, Themes.Dark); }
         else{
             Save(Data.Theme, Themes.Light);
@@ -74,6 +77,9 @@ function SetTheme(){
     }
     if (currentTheme === Themes.Red) {
         kotname = "Kot EVIL";
+    }
+    if (currentTheme === Themes.Alicja) {
+        kotname = "Kot Alicja";
     }
     if (name !== null){
         name.innerHTML = kotname;
