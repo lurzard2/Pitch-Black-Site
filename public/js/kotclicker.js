@@ -75,7 +75,7 @@ if (kot !== null){
 
 SetKot();
 function SetKot(){
-    const currentKot = Load(Data.Kot);
+    let currentKot = Load(Data.Kot);
     const kotname = document.getElementById("kot-name");
     let name = "Kot";
     kot.className = currentKot;
