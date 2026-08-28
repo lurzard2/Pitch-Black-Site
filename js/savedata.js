@@ -35,7 +35,7 @@ export const Kots = {
     Freak: "freak",
     Gerardtrax: "gerardtrax",
     Gulp: "gulp",
-    Idiot: "diot",
+    Idiot: "idiot",
     Jumpscare: "jumpscare",
     Looker: "looker",
     Missile: "missile",
