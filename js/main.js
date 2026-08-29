@@ -1,34 +1,30 @@
-export const Keys = {
-    Displayname: "displayname",
+export const _ = {
+    DisplayName: "displayname",
     KotClicker: "kotclicker",
-    Kot: "kot",
-    KotClickerCounter: "kotclickercounter",
 }
 
 export const KotClicker = {
     // Kot to display
-    Current: {
-        Display: "kot",
-        Name: "Kot"
+    CurrentKot: {
+        className: "kot",
+        DisplayName: "Kot"
     },
 
     // total: every click ever on kot
     // burst: tracked clicks for scripts, resets when you stop clicking
     // (_kot name): clicks per-kot. If key exists, count as discovered for Kollection
     Clicks: {
-        total: 0,
-        burst: 0,
+        Total: 0,
+        Burst: 0,
     },
 }
 
 //init
-if (!Exists(Keys.Displayname)){
-    Save(Keys.Displayname, "na");
+if (!Exists(_.DisplayName)){
+    Save(_.DisplayName, "na");
 }
-if (!Exists(Keys.KotClicker)){
-    Save(Keys.KotClickerCounter, 0);
-    Save(Keys.Kot, "dark");
-    Save(Keys.KotClicker, KotClicker);
+if (!Exists(_.KotClicker)){
+    Save(_.KotClicker, KotClicker);
 }
 
 export const Kots = {
@@ -69,6 +65,7 @@ export const Kots = {
     Tiny: "tiny",
     Woowoo: "woowoo",
 }
+console.log(Object.entries(Kots));
 
 export function Save(key, value){
     localStorage.setItem(key, JSON.stringify(value));
@@ -80,4 +77,9 @@ export function Load(key){
 
 export function Exists(key){
     return localStorage.getItem(key) !== null;
+}
+
+
+export function Chance(perc){
+    return Math.random() < (perc / 100);
 }

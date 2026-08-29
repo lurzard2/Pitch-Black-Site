@@ -61,17 +61,17 @@ body{
     }
 }
 
-#kotholder{
+#kot-holder{
     width: 100%;
 
-    #kotbutton{
+    #kot-button{
         border: none;
         background-size: cover;
         background-position: center;
         height: 2rem;
         width: 2rem;
     }
-    #kotbutton:hover{
+    #kot-button:hover{
         opacity: 0.9;
         .desaturate{
             opacity: 0.1;

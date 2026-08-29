@@ -1,10 +1,10 @@
 import { Load } from './main.js';
-import { Keys, Themes } from './main.js';
+import { _, Themes } from './main.js';
 
 setHeader();
 window.addEventListener('resize', function() { setHeader(); });
 function setHeader() {
-    let currentTheme = Load(Keys.Theme);
+    let currentTheme = Load(_.Theme);
 
     let desktop = window.innerWidth > 700;
 
