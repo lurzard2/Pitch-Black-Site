@@ -1,25 +1,34 @@
 export const Keys = {
+    Displayname: "displayname",
     KotClicker: "kotclicker",
-    KotClickerCounter: "kotclickercounter",
     Kot: "kot",
+    KotClickerCounter: "kotclickercounter",
 }
 
 export const KotClicker = {
     // Kot to display
-    Current: "kot",
+    Current: {
+        Display: "kot",
+        Name: "Kot"
+    },
 
     // total: every click ever on kot
     // burst: tracked clicks for scripts, resets when you stop clicking
-    // (kot name): clicks per-kot. If key exists, count as discovered for Kollection
+    // (_kot name): clicks per-kot. If key exists, count as discovered for Kollection
     Clicks: {
-        _total: 0,
-        _burst: 0,
+        total: 0,
+        burst: 0,
     },
+}
 
-    Buffs: {},
-    Debuffs: {},
-    Skills: {},
-    Achievements: {},
+//init
+if (!Exists(Keys.Displayname)){
+    Save(Keys.Displayname, "na");
+}
+if (!Exists(Keys.KotClicker)){
+    Save(Keys.KotClickerCounter, 0);
+    Save(Keys.Kot, "dark");
+    Save(Keys.KotClicker, KotClicker);
 }
 
 export const Kots = {
@@ -64,21 +73,10 @@ export const Kots = {
 export function Save(key, value){
     localStorage.setItem(key, JSON.stringify(value));
 }
-export function SaveRaw(key, value){ localStorage.setItem(key, value); }
 
 export function Load(key){
-    if (!Exists(key)){
-        // default assignments
-        let val = "na";
-        if (key === Keys.Theme) { val = "dark"; }
-        if (key === Keys.Username) { val = "you"; }
-        if (key === Keys.Deadname) { val = "Gabriele"; }
-        if (key === Keys.Name) { val = "Alex"; }
-        Save(key, val);
-    }
     return JSON.parse(localStorage.getItem(key));
 }
-export function LoadRaw(key, value){ return localStorage.getItem(key); }
 
 export function Exists(key){
     return localStorage.getItem(key) !== null;

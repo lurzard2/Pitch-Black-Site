@@ -1,5 +1,4 @@
-import {LoadRaw, SaveRaw, Load, Save, Kots as Kot} from './savedata.js';
-import { Keys, Kots } from './savedata.js'
+import {Keys, Load, Save, Kots} from './main.js';
 
 function Chance(perc){
     return Math.random() < (perc / 100);
@@ -8,16 +7,16 @@ function Chance(perc){
 // on site load, load and print the count saved
 const counter = document.getElementById("kot-counter");
 if (counter !== null) {
-    counter.innerHTML = LoadRaw(Keys.KotClickerCounter) || 0;
+    counter.innerHTML = Load(Keys.KotClickerCounter) || 0;
 }
 
 // used for kot clicker, on click increment the counter
 export function IncrementCounter(){
-    let count = parseInt(LoadRaw(Keys.KotClickerCounter)) || 0;
+    let count = parseInt(Load(Keys.KotClickerCounter)) || 0;
     count += 1;
     if (Number.isNaN(count)){ count = 0; }
     counter.innerHTML = count;
-    SaveRaw(Keys.KotClickerCounter, count);
+    Save(Keys.KotClickerCounter, count);
 }
 
 // add button to div
@@ -30,7 +29,7 @@ if (kotContainer !== null){
 const kot = document.getElementById("kotbutton");
 if (kot !== null){
     kot.onclick = function (){
-        let count = parseInt(LoadRaw(Keys.KotClickerCounter)) || 0;
+        let count = parseInt(Load(Keys.KotClickerCounter)) || 0;
 
         if (count === 9999){
             Save(Keys.Kot, Kots.Gerardtrax);
@@ -185,22 +184,22 @@ function SetKot(){
     if (currentKot === Kots.Tronsx){
         name = "Kot Tronsx";
     }
-    if (currentKot === Kot.Detrax){
+    if (currentKot === Kots.Detrax){
         name = "Kot Detrax";
     }
-    if (currentKot === Kot.Kecalp){
+    if (currentKot === Kots.Kecalp){
         name = "Kecalp";
     }
-    if (currentKot === Kot.Placek){
+    if (currentKot === Kots.Placek){
         name = "Placek";
     }
-    if (currentKot === Kot.Accordion){
+    if (currentKot === Kots.Accordion){
         name = "Kot Accordion";
     }
-    if (currentKot === Kot.AH){
+    if (currentKot === Kots.AH){
         name = "Kot AH";
     }
-    if (currentKot === Kot.Augh){
+    if (currentKot === Kots.Augh){
         name = "Kot Auughhhh";
     }
     if (currentKot === Kots.Baby){

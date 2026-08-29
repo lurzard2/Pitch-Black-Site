@@ -1,5 +1,5 @@
-import { Load } from './savedata.js';
-import { Keys, Themes } from './savedata.js';
+import { Load } from './main.js';
+import { Keys, Themes } from './main.js';
 
 setHeader();
 window.addEventListener('resize', function() { setHeader(); });
