@@ -1,26 +1,23 @@
 import {LoadRaw, SaveRaw, Load, Save, Kots as Kot} from './savedata.js';
-import { Data, Kots } from './savedata.js'
+import { Keys, Kots } from './savedata.js'
 
 function Chance(perc){
     return Math.random() < (perc / 100);
 }
 
-const themeSheet = document.getElementById("theme");
-let currentTheme = "";
-
 // on site load, load and print the count saved
 const counter = document.getElementById("kot-counter");
 if (counter !== null) {
-    counter.innerHTML = LoadRaw(Data.KotClickerCounter) || 0;
+    counter.innerHTML = LoadRaw(Keys.KotClickerCounter) || 0;
 }
 
 // used for kot clicker, on click increment the counter
 export function IncrementCounter(){
-    let count = parseInt(LoadRaw(Data.KotClickerCounter)) || 0;
+    let count = parseInt(LoadRaw(Keys.KotClickerCounter)) || 0;
     count += 1;
     if (Number.isNaN(count)){ count = 0; }
     counter.innerHTML = count;
-    SaveRaw(Data.KotClickerCounter, count);
+    SaveRaw(Keys.KotClickerCounter, count);
 }
 
 // add button to div
@@ -33,22 +30,22 @@ if (kotContainer !== null){
 const kot = document.getElementById("kotbutton");
 if (kot !== null){
     kot.onclick = function (){
-        let count = parseInt(LoadRaw(Data.KotClickerCounter)) || 0;
+        let count = parseInt(LoadRaw(Keys.KotClickerCounter)) || 0;
 
         if (count === 9999){
-            Save(Data.Kot, Kots.Gerardtrax);
+            Save(Keys.Kot, Kots.Gerardtrax);
         }
         else if (Chance(1) || count === 419) {
-            Save(Data.Kot, Kots.Green);
+            Save(Keys.Kot, Kots.Green);
         }
         else if (Chance(1)){
-            Save(Data.Kot, Kots.Red);
+            Save(Keys.Kot, Kots.Red);
         }
         else if (Chance(1)){
-            Save(Data.Kot, Kots.Alicja);
+            Save(Keys.Kot, Kots.Alicja);
         }
         else if (Chance(1)){
-            Save(Data.Kot, Kots.Tata);
+            Save(Keys.Kot, Kots.Tata);
         }
         else if (Chance(1)){
             let realKot = Kots.Mooyling;
@@ -133,12 +130,12 @@ if (kot !== null){
             if (Chance(1)){
                 realKot = Kots.Kecalp;
             }
-            Save(Data.Kot, realKot);
+            Save(Keys.Kot, realKot);
         }
 
-        else if (Load(Data.Kot) !== Kots.Dark){ Save(Data.Kot, Kots.Dark); }
+        else if (Load(Keys.Kot) !== Kots.Dark){ Save(Keys.Kot, Kots.Dark); }
         else{
-            Save(Data.Kot, Kots.Light);
+            Save(Keys.Kot, Kots.Light);
         }
 
         IncrementCounter();
@@ -148,7 +145,7 @@ if (kot !== null){
 
 SetKot();
 function SetKot(){
-    let currentKot = Load(Data.Kot);
+    let currentKot = Load(Keys.Kot);
     const kotname = document.getElementById("kot-name");
     let name = "Kot";
     kot.className = currentKot;

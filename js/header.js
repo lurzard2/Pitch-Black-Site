@@ -1,10 +1,10 @@
 import { Load } from './savedata.js';
-import { Data, Themes } from './savedata.js';
+import { Keys, Themes } from './savedata.js';
 
 setHeader();
 window.addEventListener('resize', function() { setHeader(); });
 function setHeader() {
-    let currentTheme = Load(Data.Theme);
+    let currentTheme = Load(Keys.Theme);
 
     let desktop = window.innerWidth > 700;
 

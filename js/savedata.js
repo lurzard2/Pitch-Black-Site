@@ -1,11 +1,25 @@
-export const Data = {
-    Theme: "theme",
-    Username: "username",
-    Deadname: "deadname",
-    Name: "name",
+export const Keys = {
+    KotClicker: "kotclicker",
     KotClickerCounter: "kotclickercounter",
     Kot: "kot",
-    KotsTracker: "kotstracker",
+}
+
+export const KotClicker = {
+    // Kot to display
+    Current: "kot",
+
+    // total: every click ever on kot
+    // burst: tracked clicks for scripts, resets when you stop clicking
+    // (kot name): clicks per-kot. If key exists, count as discovered for Kollection
+    Clicks: {
+        _total: 0,
+        _burst: 0,
+    },
+
+    Buffs: {},
+    Debuffs: {},
+    Skills: {},
+    Achievements: {},
 }
 
 export const Kots = {
@@ -56,10 +70,10 @@ export function Load(key){
     if (!Exists(key)){
         // default assignments
         let val = "na";
-        if (key === Data.Theme) { val = "dark"; }
-        if (key === Data.Username) { val = "you"; }
-        if (key === Data.Deadname) { val = "Gabriele"; }
-        if (key === Data.Name) { val = "Alex"; }
+        if (key === Keys.Theme) { val = "dark"; }
+        if (key === Keys.Username) { val = "you"; }
+        if (key === Keys.Deadname) { val = "Gabriele"; }
+        if (key === Keys.Name) { val = "Alex"; }
         Save(key, val);
     }
     return JSON.parse(localStorage.getItem(key));
