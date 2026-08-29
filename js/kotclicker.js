@@ -1,4 +1,4 @@
-import {_, Load, Save, Kots, Chance} from './main.js';
+import {_, Load, Save} from './main.js';
 
 const __ = Load(_.KotClicker);
 function _Save() { Save(_.KotClicker, __); }
@@ -28,12 +28,8 @@ const kotname = document.getElementById("kot-name");
 const kot = document.getElementById("kot-button");
 if (kot !== null){
     kot.onclick = function (){
-        let count = IncrementCounter();
-
-        let defaultKot = count % 2 === 0 ? "dark" : "light";
-        kot.className = defaultKot;
-        kotname.innerHTML = defaultKot;
-
+        __.Kot.State = !__.Kot.State;
+        kot.className = __.Kot.State ? "light" : "dark";
         _Save();
     }
 }

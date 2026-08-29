@@ -4,10 +4,8 @@ export const _ = {
 }
 
 export const KotClicker = {
-    // Kot to display
-    CurrentKot: {
-        className: "kot",
-        DisplayName: "Kot"
+    Kot: {
+        State: false,
     },
 
     // total: every click ever on kot
@@ -65,7 +63,6 @@ export const Kots = {
     Tiny: "tiny",
     Woowoo: "woowoo",
 }
-console.log(Object.entries(Kots));
 
 export function Save(key, value){
     localStorage.setItem(key, JSON.stringify(value));
