@@ -39,6 +39,8 @@ if (kot !== null){
     }
 }
 
+
+
 // Template for creating kots
 class SpawnableKot {
     constructor(spawnAsset, asset, timeToSpawn, timeToLive){
@@ -78,17 +80,22 @@ const spawnedKots = [];
 
 
 
+// global update
+function KotClickerUpdate(){
 
+    //TODO: <spawning logic>
 
+    // mandatory for allowing every kot to exist simultaneously
+    spawnedKots.forEach(kot => {
+        kot.Update();
+    })
+}
 
-// global update for game loop
 requestAnimationFrame(UPDATE);
 function UPDATE(){
     //console.log("hi");
 
-    spawnedKots.forEach(kot => {
-        kot.Update();
-    })
+    KotClickerUpdate();
 
     requestAnimationFrame(UPDATE);
 }
