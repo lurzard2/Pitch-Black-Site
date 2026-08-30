@@ -17,7 +17,6 @@ export function IncrementCounter(){
     counter.forEach((el) => {
         el.innerHTML = __.Clicks.Total;
     })
-    return __.Clicks.Total;
 }
 
 // add button to div
@@ -40,13 +39,56 @@ if (kot !== null){
     }
 }
 
+// Template for creating kots
+class SpawnableKot {
+    constructor(spawnAsset, asset, timeToSpawn, timeToLive){
+        this.spawnAsset = spawnAsset;
+        this.asset = asset;
+        this.time_Spawn = timeToSpawn;
+        this.time_Life = timeToLive;
+    }
 
-// add update functions here
+    Spawning() {
+
+    }
+    Life() {
+
+    }
+    Despawn() {
+
+    }
+    Update() {
+        if (this.time_Life < 0){
+            this.Despawn();
+        } else if (this.time_Spawn >= 0){
+            this.Spawning();
+            this.time_Spawn -= 1;
+        } else if (this.time_Life >= 0) {
+            this.Life();
+            this.time_Life -= 1;
+        }
+    }
+}
+
+const spawnedKots = [];
+
+
+
+
+
+
+
+
+
+
+// global update for game loop
 requestAnimationFrame(UPDATE);
 function UPDATE(){
     //console.log("hi");
 
-
+    spawnedKots.forEach(kot => {
+        kot.Update();
+    })
 
     requestAnimationFrame(UPDATE);
 }

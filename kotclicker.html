@@ -12,7 +12,8 @@
 <style>
 
     .cont{
-        background-color: #35373e;
+        background-color: #4b4e57;
+        background-image: url(images/tile.jpg);
         width: 100%;
         height: 100%;
         display: grid;
@@ -34,16 +35,15 @@
         }
 
         #kot-ui{
-            display: flex;
+            display: grid;
+            row-gap: 0.5rem;
             position: absolute;
             top: 0;
             left: 0;
+            margin: 1rem 0 0 1rem;
         }
 
         #kot-tutorial{
-            position: absolute;
-            bottom: 0;
-            right: 0;
             width: 2rem;
         }
         #kot-tutorial:hover{
@@ -55,11 +55,13 @@
 
 <div class="cont">
     <div id="kot-ui">
-        <img src="images/kotclicker/kurrency.gif" alt="$">
-        <p class="kot-count"></p>
+        <div style="display:flex">
+            <img src="images/kotclicker/kurrency.gif" alt="$">
+            <p class="kot-count"></p>
+        </div>
+        <img id="kot-tutorial" src="images/kotclicker/question.gif">
     </div>
     <div id="kot-holder"></div>
-    <img title="this does nothing yet sorry" id="kot-tutorial" src="images/kotclicker/question.gif">
 </div>
 
 <script type="module" src="js/main.js"></script>
