@@ -6,6 +6,7 @@ export const _ = {
 export const KotClicker = {
     Kot: {
         State: false,
+        Power: 100,
     },
 
     // total: every click ever on kot

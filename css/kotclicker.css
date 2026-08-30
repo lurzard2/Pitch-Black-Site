@@ -1,0 +1,139 @@
+.kot-count:before{
+    content: url("../images/kotclicker/kurrency.gif");
+    display: inline-block;
+}
+
+#kot-holder{
+    width: 100%;
+
+    #kot-button{
+        border: none;
+        background-size: cover;
+        background-position: center;
+        height: 2rem;
+        width: 2rem;
+    }
+    #kot-button:hover{
+        opacity: 0.9;
+        .desaturate{
+            opacity: 0.1;
+        }
+        border: 1px solid #454545;
+    }
+
+    .kot{
+        background-image: url("../images/kotclicker/kots/kot.gif");
+    }
+
+    .dark{
+        background-image: url('../images/kotclicker/kots/ripplekot.gif');
+    }
+    .light{
+        background-image: url('../images/kotclicker/kots/voidkot.gif');
+    }
+    .grey{
+        background-image: url('../images/kotclicker/kots/greykot.png');
+    }
+    .locked{
+        background-image: url('../images/kotclicker/kots/lockedkot.png');
+    }
+    .red{
+        background-image: url('../images/kotclicker/kots/EVILkot.gif');
+    }
+    .green{
+        background-image: url('../images/kotclicker/kots/joykot.gif');
+    }
+    .alicja{
+        background-image: url('../images/kotclicker/kots/kotalicja.gif');
+    }
+    .tata{
+        background-image: url('../images/kotclicker/kots/kottata.png');
+    }
+    .mooyling{
+        background-image: url('../images/kotclicker/kots/kotmooyling.gif');
+    }
+    .magic{
+        background-image: url('../images/kotclicker/kots/kotmagic.png');
+    }
+    .mexico{
+        background-image: url('../images/kotclicker/kots/kotmexico.png');
+    }
+    .dakras{
+        background-image: url('../images/kotclicker/kots/kotdakras.png');
+    }
+    .tetra{
+        background-image: url('../images/kotclicker/kots/kottetra.png');
+    }
+    .tronsx{
+        background-image: url('../images/kotclicker/kots/kottronsx.jpg');
+    }
+    .detrax{
+        background-image: url('../images/kotclicker/kots/kotdetrax.gif');
+    }
+    .Kecalp{
+        background-image: url('../images/kotclicker/kots/kecalp.gif');
+    }
+    .placek{
+        background-image: url('../images/kotclicker/kots/placek.png');
+    }
+    .accordion{
+        background-image: url('../images/kotclicker/kots/kotaccordion.webp');
+    }
+    .ah{
+        background-image: url('../images/kotclicker/kots/kotAH.gif');
+    }
+    .augh{
+        background-image: url('../images/kotclicker/kots/kotaugh.gif');
+    }
+    .baby{
+        background-image: url('../images/kotclicker/kots/kotbaby.webp');
+    }
+    .death{
+        background-image: url('../images/kotclicker/kots/kotDEATH.gif');
+    }
+    .ew{
+        background-image: url('../images/kotclicker/kots/koteww.gif');
+    }
+    .faucetling{
+        background-image: url('../images/kotclicker/kots/kotfaucetling.gif');
+    }
+    .fear{
+        background-image: url('../images/kotclicker/kots/kotfear.gif');
+    }
+    .freak{
+        background-image: url('../images/kotclicker/kots/kotfreak.webp');
+    }
+    .gerardtrax{
+        background-image: url('../images/kotclicker/kots/kotgerarddetrax.gif');
+    }
+    .gulp{
+        background-image: url('../images/kotclicker/kots/kotgulp.gif');
+    }
+    .idiot{
+        background-image: url('../images/kotclicker/kots/kotidiot.gif')
+    }
+    .jumpscare{
+        background-image: url('../images/kotclicker/kots/kotjumpscare.gif');
+    }
+    .looker{
+        background-image: url('../images/kotclicker/kots/kotlooker.webp');
+    }
+    .missile{
+        background-image: url('../images/kotclicker/kots/kotmissile.webp');
+    }
+    .party{
+        background-image: url('../images/kotclicker/kots/kotparty.gif');
+    }
+    .pat{
+        background-image: url('../images/kotclicker/kots/kotpat.gif');
+    }
+    .resonancecascade{
+        background-image: url('../images/kotclicker/kots/kotresonancecascade.gif');
+    }
+    .tiny{
+        background-image: url('../images/kotclicker/kots/kottiny.webp');
+    }
+    .woowoo{
+        background-image: url('../images/kotclicker/kots/kotwoowoo.gif');
+    }
+}
