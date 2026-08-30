@@ -1,4 +1,4 @@
-import {_, Load, Save} from './main.js';
+import {_, Load, Save, Chance} from './main.js';
 
 const __ = Load(_.KotClicker);
 function _Save() { Save(_.KotClicker, __); }
@@ -23,7 +23,7 @@ export function IncrementCounter(){
 // add button to div
 const kotContainer = document.getElementById("kot-holder");
 if (kotContainer !== null){
-    kotContainer.innerHTML = '<button id="kot-button"></button>';
+    kotContainer.innerHTML = '<div id="kot-button"></div>';
 }
 
 // name element
@@ -38,4 +38,15 @@ if (kot !== null){
         kot.className = __.Kot.State ? "light" : "dark";
         _Save();
     }
+}
+
+
+// add update functions here
+requestAnimationFrame(UPDATE);
+function UPDATE(){
+    //console.log("hi");
+
+
+
+    requestAnimationFrame(UPDATE);
 }

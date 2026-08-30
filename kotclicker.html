@@ -12,7 +12,7 @@
 <style>
 
     .cont{
-        background-color: #6e6e7c;
+        background-color: #35373e;
         width: 100%;
         height: 100%;
         display: grid;
@@ -33,19 +33,33 @@
             }
         }
 
-        .kot-count{
+        #kot-ui{
+            display: flex;
             position: absolute;
             top: 0;
             left: 0;
+        }
+
+        #kot-tutorial{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 2rem;
+        }
+        #kot-tutorial:hover{
+            opacity: 0.8;
         }
     }
 </style>
 <body>
 
 <div class="cont">
-    <p class="kot-count"></p>
+    <div id="kot-ui">
+        <img src="images/kotclicker/kurrency.gif" alt="$">
+        <p class="kot-count"></p>
+    </div>
     <div id="kot-holder"></div>
-
+    <img title="this does nothing yet sorry" id="kot-tutorial" src="images/kotclicker/question.gif">
 </div>
 
 <script type="module" src="js/main.js"></script>
