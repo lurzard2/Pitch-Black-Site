@@ -44,8 +44,8 @@ const kontainer = document.getElementById("kot-spawns");
 const spawnedKots = [];
 
 function RemoveKot(instance, id){
-    spawnedKots.splice(spawnedKots.indexOf(instance), 1);
     kontainer.removeChild(document.getElementById(id));
+    spawnedKots.splice(spawnedKots.indexOf(instance), 1);
 }
 
 // Template for creating kots
@@ -73,9 +73,6 @@ class SpawnableKot {
     Life() {
 
     }
-    Despawning() {
-        RemoveKot(this, this._kot.id);
-    }
     Update() {
         this._kot.id = "kot" + spawnedKots.indexOf(this);
 
@@ -89,6 +86,9 @@ class SpawnableKot {
             this.time_Life -= 1;
         }
     }
+    Despawning() {
+        RemoveKot(this, this._kot.id);
+    }
 }
 
 
@@ -98,6 +98,12 @@ class EvilKot extends SpawnableKot {
             "../images/kotclicker/evil-spawner.gif",
             "../images/kotclicker/kots/EVILkot.gif");
         this.asset2 = "../images/kotclicker/kots/EVILkot2.gif";
+    }
+
+    Click(){
+        if (this.assetChanges === 1){
+            this.Despawning();
+        }
     }
 
     Spawning() {
@@ -118,7 +124,9 @@ class EvilKot extends SpawnableKot {
     }
 
     Despawning() {
-        __.Clicks.Total -= 500;
+        if (this.assetChanges === 2){
+            __.Clicks.Total -= 500;
+        }
         super.Despawning();
     }
 }
@@ -135,6 +143,7 @@ function KotClickerUpdate(){
     // mandatory for allowing every kot to exist simultaneously
     spawnedKots.forEach(kot => {
         kot.Update();
+        kot._kot.onclick = function () { kot.Click() }
         //console.log(kot);
     })
 }
