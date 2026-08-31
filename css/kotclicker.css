@@ -1,3 +1,15 @@
+.kot{
+    display: flex;
+    position: absolute;
+    top: 30rem;
+    left: 40rem;
+    width: 5rem;
+    height: 5rem;
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 #kot-holder{
     width: 100%;
 
@@ -16,7 +28,7 @@
         border: 1px solid #454545;
     }
 
-    .kot{
+    .kot-spawning{
         background-image: url("../images/kotclicker/kots/kot.gif");
     }
 

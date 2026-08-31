@@ -39,15 +39,32 @@ if (kot !== null){
     }
 }
 
+const kontainer = document.getElementById("kot-spawns");
 
+const spawnedKots = [];
+
+function RemoveKot(instance, id){
+    spawnedKots.splice(spawnedKots.indexOf(instance), 1);
+    kontainer.removeChild(document.getElementById(id));
+}
 
 // Template for creating kots
 class SpawnableKot {
-    constructor(spawnAsset, asset, timeToSpawn, timeToLive){
+
+    Click(){
+        this.Despawning();
+    }
+
+    constructor(spawnAsset, asset, timeToSpawn = 200, timeToLive = 300){
         this.spawnAsset = spawnAsset;
         this.asset = asset;
+        this.assetChanges = 0;
+        this.addedClickFunction = false;
         this.time_Spawn = timeToSpawn;
         this.time_Life = timeToLive;
+        this._kot = document.createElement('div');
+        this._kot.className = "kot";
+        this._kot.id = "kot" + spawnedKots.indexOf(this);
     }
 
     Spawning() {
@@ -56,29 +73,59 @@ class SpawnableKot {
     Life() {
 
     }
-    Despawn() {
-
+    Despawning() {
+        RemoveKot(this, this._kot.id);
     }
     Update() {
-        if (this.time_Life < 0){
-            this.Despawn();
-        } else if (this.time_Spawn >= 0){
+        this._kot.id = "kot" + spawnedKots.indexOf(this);
+
+        if (this.time_Life === 0){
+            this.Despawning();
+        } else if (this.time_Spawn > 0){
             this.Spawning();
             this.time_Spawn -= 1;
-        } else if (this.time_Life >= 0) {
+        } else if (this.time_Life > 0) {
             this.Life();
             this.time_Life -= 1;
         }
     }
 }
 
-const spawnedKots = [];
+
+class EvilKot extends SpawnableKot {
+    constructor(){
+        super(
+            "../images/kotclicker/evil-spawner.gif",
+            "../images/kotclicker/kots/EVILkot.gif");
+        this.asset2 = "../images/kotclicker/kots/EVILkot2.gif";
+    }
+
+    Spawning() {
+        this._kot.style.backgroundImage = "url('" + this.spawnAsset + "')";
+        kontainer.appendChild(this._kot);
+    }
+
+    Life(){
+        if (this.assetChanges === 0){
+            this._kot.style.backgroundImage = "url('" + this.asset + "')";
+            this._kot.style.backgroundSize = "cover";
+            this.assetChanges++;
+        }
+        if (this.time_Life < 110 && this.assetChanges === 1){
+            this._kot.style.backgroundImage = "url('" + this.asset2 + "')";
+            this.assetChanges++;
+        }
+    }
+
+    Despawning() {
+        __.Clicks.Total -= 500;
+        super.Despawning();
+    }
+}
 
 
 
-
-
-
+spawnedKots.push(new EvilKot());
 
 // global update
 function KotClickerUpdate(){
@@ -88,6 +135,7 @@ function KotClickerUpdate(){
     // mandatory for allowing every kot to exist simultaneously
     spawnedKots.forEach(kot => {
         kot.Update();
+        //console.log(kot);
     })
 }
 
