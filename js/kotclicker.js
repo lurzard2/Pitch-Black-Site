@@ -203,8 +203,10 @@ class MeiMei extends SpawnableKot {
     }
 
     Click(){
-        UpdateStat(Stats.PersistentMeiMeis);
-        super.Despawning();
+        if (this.stage === 1){
+            UpdateStat(Stats.PersistentMeiMeis);
+            super.Despawning();
+        }
     }
 }
 
@@ -234,6 +236,11 @@ class AntiClicker extends SpawnableKot {
 
     Life(){
         UpdateStat(Stats.TotalClicks, -RandomRange(1, 50));
+        super.Life();
+    }
+
+    Despawning() {
+
     }
 }
 
