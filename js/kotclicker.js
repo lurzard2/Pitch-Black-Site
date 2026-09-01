@@ -140,7 +140,7 @@ class Evil extends SpawnableKot {
 
     Despawning() {
         if (this.stage === 2){
-            UpdateStat(Stats.TotalClicks, -10);
+            UpdateStat(Stats.TotalClicks, -RandomRange(1, 50));
         }
         super.Despawning();
     }
@@ -226,19 +226,19 @@ class ClickerRival extends SpawnableKot {
 // global update
 function KotClickerUpdate(){
 
-    if (Chance(1)){
+    if (Chance(0.5)){
         spawnedKots.push(new Evil);
     }
-    if (Chance(0.01)){
+    else if (Chance(0.008)){
         spawnedKots.push(new Lucky);
     }
-    if (Chance(0.15)){
+    else if (Chance(0.15)){
         spawnedKots.push(new Melon);
     }
-    if (Chance(0.003)){
+    else if (Chance(0.05)){
         spawnedKots.push(new MeiMei);
     }
-    if (Chance(0.0008)){
+    else if (Chance(0.002)){
         spawnedKots.push(new ClickerRival);
     }
 
