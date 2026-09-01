@@ -244,27 +244,37 @@ class AntiClicker extends SpawnableKot {
     }
 }
 
+function Spawn(){
+    let k = null;
+
+    if (Chance(0.25)){
+        k = new Evil();
+    }
+    if (Chance(0.15)){
+        k = new Melon();
+    }
+    if (Chance(0.00777)){
+        k = new Lucky();
+    }
+    if (Chance(0.0025)){
+        k = new MeiMei();
+    }
+    if (Chance(0.002)){
+        k = new ClickerRival();
+    }
+    if (Chance(0.0015)){
+        k = new AntiClicker();
+    }
+
+    if (k !== null){
+        spawnedKots.push(k);
+    }
+}
+
 // global update
 function KotClickerUpdate(){
 
-    if (Chance(0.2)){
-        spawnedKots.push(new Evil);
-    }
-    else if (Chance(0.008)){
-        spawnedKots.push(new Lucky);
-    }
-    else if (Chance(0.15)){
-        spawnedKots.push(new Melon);
-    }
-    else if (Chance(0.05)){
-        spawnedKots.push(new MeiMei);
-    }
-    else if (Chance(0.002)){
-        spawnedKots.push(new ClickerRival);
-    }
-    else if (Chance(0.001)){
-        spawnedKots.push(new AntiClicker);
-    }
+    Spawn();
 
     // mandatory for allowing every kot to exist simultaneously
     spawnedKots.forEach(kot => {
