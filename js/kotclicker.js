@@ -246,8 +246,11 @@ class AntiClicker extends SpawnableKot {
 
 function Spawn(){
     let k = null;
+    function DynamicChance(perc){
+        return Chance(perc) * (__.Clicks.Total / 2);
+    }
 
-    if (Chance(0.25)){
+    if (DynamicChance(0.25)){
         k = new Evil();
     }
     if (Chance(0.15)){
@@ -259,10 +262,10 @@ function Spawn(){
     if (Chance(0.0025)){
         k = new MeiMei();
     }
-    if (Chance(0.002)){
+    if (DynamicChance(0.002)){
         k = new ClickerRival();
     }
-    if (Chance(0.0015)){
+    if (DynamicChance(0.0015)){
         k = new AntiClicker();
     }
 
