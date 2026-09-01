@@ -1,13 +1,14 @@
 .kot{
     display: flex;
     position: absolute;
-    top: 30rem;
-    left: 40rem;
-    width: 5rem;
-    height: 5rem;
+    width: 10rem;
+    height: 10rem;
     background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
+}
+.kot:hover{
+    opacity: 0.9;
 }
 
 #kot-holder{

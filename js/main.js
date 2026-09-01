@@ -14,6 +14,8 @@ export const KotClicker = {
     // (_kot name): clicks per-kot. If key exists, count as discovered for Kollection
     Clicks: {
         Total: 0,
+        MeiMei: 0,
+        Goated: 0,
         Burst: 0,
     },
 }
@@ -80,4 +82,10 @@ export function Exists(key){
 
 export function Chance(perc){
     return Math.random() < (perc / 100);
+}
+
+export function RandomRange(min, max){
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
