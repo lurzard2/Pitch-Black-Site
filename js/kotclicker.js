@@ -223,10 +223,24 @@ class ClickerRival extends SpawnableKot {
     }
 }
 
+class AntiClicker extends SpawnableKot {
+    constructor(){
+        super(
+            filePath + "anticlicker-spawner.gif",
+            filePath + "kots/kotanticlicker.gif",
+            1500,
+        )
+    }
+
+    Life(){
+        UpdateStat(Stats.TotalClicks, -RandomRange(1, 50));
+    }
+}
+
 // global update
 function KotClickerUpdate(){
 
-    if (Chance(0.5)){
+    if (Chance(0.2)){
         spawnedKots.push(new Evil);
     }
     else if (Chance(0.008)){
@@ -241,6 +255,9 @@ function KotClickerUpdate(){
     else if (Chance(0.002)){
         spawnedKots.push(new ClickerRival);
     }
+    else if (Chance(0.001)){
+        spawnedKots.push(new AntiClicker);
+    }
 
     // mandatory for allowing every kot to exist simultaneously
     spawnedKots.forEach(kot => {
@@ -254,7 +271,7 @@ requestAnimationFrame(UPDATE);
 function UPDATE(){
 
     KotClickerUpdate();
-    //_Save();
+    //_Save(); // wait til release
 
     requestAnimationFrame(UPDATE);
 }
