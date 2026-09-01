@@ -8,6 +8,9 @@ export const KotClicker = {
         State: false,
         Power: 100,
     },
+    RivalKot: {
+     Clicks: 0,
+    },
 
     // total: every click ever on kot
     // burst: tracked clicks for scripts, resets when you stop clicking

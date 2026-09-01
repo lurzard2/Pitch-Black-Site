@@ -15,18 +15,18 @@ const Stats = {
 
 function UpdateStat(stat, amount = 1){
     if (stat === Stats.TotalClicks){
-        if (amount > 0) __.Clicks.Total += amount;
+        if (amount > 0 || amount < 0) __.Clicks.Total += amount;
         counter.forEach((el) => {
             el.innerHTML = __.Clicks.Total;
         });
     }
     if (stat === Stats.PersistentMeiMeis){
-        if (amount > 0) __.Clicks.MeiMei++;
+        if (amount > 0 || amount < 0) __.Clicks.MeiMei++;
         document.querySelectorAll(".kot-meimei").forEach(count=> {count.innerHTML = __.Clicks.MeiMei})
     }
 
     if (stat === Stats.GlobalGoateds){
-        if (amount > 0) __.Clicks.Goated++;
+        if (amount > 0 || amount < 0) __.Clicks.Goated++;
         document.querySelectorAll(".kot-goated").forEach(count=> {count.innerHTML = __.Clicks.Goated});
     }
 }
@@ -80,8 +80,8 @@ class SpawnableKot {
         this.time_Life = timeToLive;
         this._kot = document.createElement('div');
         this._kot.className = "kot";
-        this._kot.style.top = Math.floor(Math.random() * window.innerHeight - this._kot.offsetHeight) + "px";
-        this._kot.style.left = Math.floor(Math.random() * (window.innerWidth - this._kot.offsetWidth)) + "px";
+        this._kot.style.top = Math.floor(Math.random() * ((window.innerHeight - 160) - this._kot.offsetHeight)) + "px";
+        this._kot.style.left = Math.floor(Math.random() * ((window.innerWidth - 160) - this._kot.offsetWidth)) + "px";
         this._kot.id = "kot" + spawnedKots.indexOf(this);
     }
 
@@ -180,7 +180,7 @@ class Melon extends SpawnableKot {
         if (this.stage === 1){
             this._kot.style.backgroundImage = "url('" + this.asset2 + "')";
             this.time_Life = 100;
-            UpdateStat(Stats.TotalClicks, 200);
+            UpdateStat(Stats.TotalClicks, RandomRange(100, 200));
             this.stage++;
         }
     }
@@ -208,20 +208,38 @@ class MeiMei extends SpawnableKot {
     }
 }
 
+class ClickerRival extends SpawnableKot {
+    constructor(){
+        super(
+            filePath + "clicker-spawner.gif",
+            filePath + "kots/kot.gif",
+            1000,
+        )
+    }
+
+    Despawning() {
+        __.RivalKot.Clicks++;
+        super.Despawning();
+    }
+}
+
 // global update
 function KotClickerUpdate(){
 
     if (Chance(0.1)){
         spawnedKots.push(new Evil);
     }
-    if (Chance(0.1)){
+    if (Chance(0.01)){
         spawnedKots.push(new Lucky);
     }
     if (Chance(0.1)){
         spawnedKots.push(new Melon);
     }
-    if (Chance(0.05)){
+    if (Chance(0.003)){
         spawnedKots.push(new MeiMei);
+    }
+    if (Chance(0.0008)){
+        spawnedKots.push(new ClickerRival);
     }
 
     // mandatory for allowing every kot to exist simultaneously
@@ -236,7 +254,7 @@ requestAnimationFrame(UPDATE);
 function UPDATE(){
 
     KotClickerUpdate();
-    _Save();
+    //_Save();
 
     requestAnimationFrame(UPDATE);
 }
