@@ -238,10 +238,6 @@ class AntiClicker extends SpawnableKot {
         UpdateStat(Stats.TotalClicks, -RandomRange(1, 50));
         super.Life();
     }
-
-    Despawning() {
-
-    }
 }
 
 function Spawn(){
