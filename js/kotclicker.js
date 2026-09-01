@@ -247,13 +247,13 @@ class AntiClicker extends SpawnableKot {
 function Spawn(){
     let k = null;
     function DynamicChance(perc){
-        return Chance(perc) * (__.Clicks.Total / 2);
+        return Chance(perc) * __.Clicks.Total;
     }
 
     if (DynamicChance(0.25)){
         k = new Evil();
     }
-    if (Chance(0.15)){
+    if (DynamicChance(0.15)){
         k = new Melon();
     }
     if (Chance(0.00777)){
