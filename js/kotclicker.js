@@ -247,25 +247,26 @@ class AntiClicker extends SpawnableKot {
 function Spawn(){
     let k = null;
     function DynamicChance(perc){
+        //console.log(perc * __.Clicks.Total);
         return Chance(perc) * __.Clicks.Total;
     }
 
-    if (DynamicChance(0.25)){
+    if (DynamicChance(50)){
         k = new Evil();
     }
-    if (DynamicChance(0.15)){
+    if (DynamicChance(50)){
         k = new Melon();
     }
-    if (Chance(0.00777)){
+    if (Chance(5.777)){
         k = new Lucky();
     }
-    if (Chance(0.0025)){
+    if (Chance(5)){
         k = new MeiMei();
     }
-    if (DynamicChance(0.002)){
+    if (DynamicChance(1)){
         k = new ClickerRival();
     }
-    if (DynamicChance(0.0015)){
+    if (DynamicChance(1)){
         k = new AntiClicker();
     }
 
@@ -274,10 +275,15 @@ function Spawn(){
     }
 }
 
+let spawnDelay = 100;
 // global update
 function KotClickerUpdate(){
-
-    Spawn();
+    if (spawnDelay <= 0){
+        Spawn();
+        spawnDelay = 100;
+    } else {
+        spawnDelay--;
+    }
 
     // mandatory for allowing every kot to exist simultaneously
     spawnedKots.forEach(kot => {

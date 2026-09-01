@@ -3,7 +3,7 @@
     position: absolute;
     width: 7rem;
     height: 7rem;
-    background-size: auto;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
