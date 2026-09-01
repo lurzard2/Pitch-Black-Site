@@ -257,7 +257,7 @@ function Spawn(){
     if (DynamicChance(50)){
         k = new Melon();
     }
-    if (Chance(5.777)){
+    if (Chance(3.777)){
         k = new Lucky();
     }
     if (Chance(5)){
