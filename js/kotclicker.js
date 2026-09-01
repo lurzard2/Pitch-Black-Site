@@ -226,7 +226,7 @@ class ClickerRival extends SpawnableKot {
 // global update
 function KotClickerUpdate(){
 
-    if (Chance(0.1)){
+    if (Chance(0.5)){
         spawnedKots.push(new Evil);
     }
     if (Chance(0.01)){
