@@ -378,7 +378,7 @@ function Spawn(){
     }
 }
 
-let spawnDelay = 10;
+let spawnDelay = 100;
 // global update
 function KotClickerUpdate(){
     if (spawnDelay <= 0){
