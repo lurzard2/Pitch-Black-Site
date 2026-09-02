@@ -272,6 +272,30 @@ class Follower extends SpawnableKot {
     }
 }
 
+class Deceiver extends SpawnableKot {
+    constructor(){
+        super(
+            filePath + "deceiver-spawner.gif",
+            filePath + "kots/greykot.png",
+            400,
+        );
+    }
+
+    Click(){
+        if (this.stage === 1){
+            if (Chance(50)){
+                // copy Evil
+                UpdateStat(Stats.TotalClicks, -RandomRange(1, 50));
+            } else {
+                // copy Lucky
+                UpdateStat(Stats.TotalClicks, 777);
+            }
+
+            super.Despawning();
+        }
+    }
+}
+
 function Spawn(){
     let k = null;
     function DynamicChance(perc){
@@ -291,7 +315,7 @@ function Spawn(){
     if (Chance(2.5)){
         k = new MeiMei();
     }
-    if (Chance(1.5)){
+    if (Chance(1)){
         k = new Follower();
     }
     if (DynamicChance(1)){
@@ -299,6 +323,9 @@ function Spawn(){
     }
     if (DynamicChance(1)){
         k = new AntiClicker();
+    }
+    if (DynamicChance(1)){
+        k = new Deceiver();
     }
 
     if (k !== null){
