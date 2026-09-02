@@ -68,9 +68,10 @@ class Msg{
         this._msg.id = "msg" + chatLog.indexOf(this);
         this._msg.style.color = color;
         chat.appendChild(this._msg);
-        this.visibilityTime = this.text.length * 100;
+        this.visibilityTime = 100;
         this.opacity = 1;
         this._msg.style.width = this.visibilityTime;
+        this._msg.style.zIndex = chat.style.zIndex;
     }
 
     Update(){
