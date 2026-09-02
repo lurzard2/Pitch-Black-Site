@@ -60,6 +60,9 @@ const kontainer = document.getElementById("kot-spawns");
 const spawnedKots = [];
 
 function RemoveKot(instance, id){
+    if (instance === null || id === null){
+        return;
+    }
     kontainer.removeChild(document.getElementById(id));
     spawnedKots.splice(spawnedKots.indexOf(instance), 1);
 }
@@ -231,12 +234,41 @@ class AntiClicker extends SpawnableKot {
             filePath + "anticlicker-spawner.gif",
             filePath + "kots/kotanticlicker.gif",
             1500,
+            1500
         )
     }
 
     Life(){
         UpdateStat(Stats.TotalClicks, -RandomRange(1, 50));
         super.Life();
+    }
+
+    Click(){
+        if (this.stage === 1){
+            super.Despawning();
+        }
+    }
+}
+
+class Follower extends SpawnableKot {
+    constructor() {
+        super(
+            filePath + "follower-spawner.gif",
+            filePath + "kots/",
+            500,
+            500
+        );
+        this.matchedState = Chance(50);
+        this.asset += this.matchedState ? "kecalp.gif" : "placek.png";
+    }
+
+    Click(){
+        if (this.matchedState === __.Kot.State){
+            UpdateStat(Stats.TotalClicks, RandomRange(1, 50));
+        } else {
+            UpdateStat(Stats.TotalClicks, -RandomRange(1, 50));
+        }
+        super.Despawning();
     }
 }
 
@@ -247,17 +279,20 @@ function Spawn(){
         return Chance(perc) * __.Clicks.Total;
     }
 
-    if (DynamicChance(50)){
+    if (DynamicChance(30)){
         k = new Evil();
     }
-    if (DynamicChance(50)){
+    if (DynamicChance(30)){
         k = new Melon();
     }
-    if (Chance(3.777)){
+    if (Chance(1.777)){
         k = new Lucky();
     }
-    if (Chance(5)){
+    if (Chance(2.5)){
         k = new MeiMei();
+    }
+    if (Chance(1.5)){
+        k = new Follower();
     }
     if (DynamicChance(1)){
         k = new ClickerRival();
@@ -287,6 +322,11 @@ function KotClickerUpdate(){
         kot._kot.onclick = function () { kot.Click() }
         //console.log(kot);
     })
+}
+
+if (Load("kotclickerclicks") !== null){
+    localStorage.clear();
+    _Save();
 }
 
 requestAnimationFrame(UPDATE);
