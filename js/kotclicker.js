@@ -172,6 +172,7 @@ class Evil extends SpawnableKot {
 
     Despawning() {
         if (this.stage === 2){
+            Send("Evil Kot took out their anger on you.")
             UpdateStat(Stats.TotalClicks, -RandomRange(1, 50));
         }
         super.Despawning();
@@ -194,6 +195,7 @@ class Lucky extends SpawnableKot {
     }
     Despawning() {
         UpdateStat(Stats.TotalClicks, 777);
+        Send("WAOW WAOW!!")
         super.Despawning();
     }
 }
@@ -233,6 +235,7 @@ class MeiMei extends SpawnableKot {
 
     Click(){
         if (this.stage === 1){
+            Send("Bagged a MeiMei")
             UpdateStat(Stats.PersistentMeiMeis);
             super.Despawning();
         }
@@ -249,6 +252,7 @@ class ClickerRival extends SpawnableKot {
 
     Despawning() {
         __.RivalKot.Clicks++;
+        Send("Your rival clicked you...")
         super.Despawning();
     }
 }
@@ -264,6 +268,7 @@ class AntiClicker extends SpawnableKot {
 
     Life(){
         UpdateStat(Stats.TotalClicks, -RandomRange(1, 50));
+        Send("It's the Anti Clicker! HURRY HURRY HURRY!!!")
         super.Life();
     }
 
@@ -288,8 +293,10 @@ class Follower extends SpawnableKot {
     Click(){
         if (this.matchedState === __.Kot.State){
             UpdateStat(Stats.TotalClicks, RandomRange(1, 300));
+            Send("You played along and were rewarded handsomely.")
         } else {
             UpdateStat(Stats.TotalClicks, -RandomRange(1, 300));
+            Send("You lost the game.")
         }
         super.Despawning();
     }
@@ -308,9 +315,11 @@ class Deceiver extends SpawnableKot {
             if (Chance(50)){
                 // copy Evil
                 UpdateStat(Stats.TotalClicks, -RandomRange(1, 50));
+                Send("This one was EVIL.")
             } else {
                 // copy Lucky
                 UpdateStat(Stats.TotalClicks, 777);
+                Send("This one was LUCKY!")
             }
 
             super.Despawning();
