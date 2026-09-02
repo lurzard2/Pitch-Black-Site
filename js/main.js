@@ -1,6 +1,12 @@
 export const _ = {
     DisplayName: "displayname",
+    Theme: "theme",
     KotClicker: "kotclicker",
+}
+
+export const Themes = {
+    Dark: "dark",
+    Light: "light",
 }
 
 export const KotClicker = {
@@ -29,6 +35,9 @@ if (!Exists(_.DisplayName)){
 }
 if (!Exists(_.KotClicker)){
     Save(_.KotClicker, KotClicker);
+}
+if (!Exists(_.Theme)){
+    Save(_.Theme, Themes.Dark);
 }
 
 export const Kots = {
@@ -81,7 +90,6 @@ export function Load(key){
 export function Exists(key){
     return localStorage.getItem(key) !== null;
 }
-
 
 export function Chance(perc){
     return Math.random() < (perc / 100);
