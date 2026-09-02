@@ -55,6 +55,37 @@ if (kot !== null){
     }
 }
 
+const chat = document.getElementById("kot-chat");
+const chatLog = [];
+class Msg{
+    constructor(text, color = "white") {
+        this.text = text;
+        this._msg = document.createElement('p');
+        this._msg.innerHTML = text;
+        this._msg.id = "msg" + chatLog.indexOf(this);
+        this._msg.style.color = color;
+        chat.appendChild(this._msg);
+        this.visibilityTime = this.text.length * 100;
+        this.opacity = 1;
+        this._msg.style.width = this.visibilityTime;
+    }
+
+    Update(){
+        if (this.visibilityTime > 0){
+            this.visibilityTime--;
+        } else if (this.opacity > 0) {
+            this.opacity -= 0.001;
+            this._msg.style.opacity = this.opacity;
+        } else {
+            chat.removeChild(document.getElementById(this._msg.id));
+            chatLog.splice(chatLog.indexOf(this), 1);
+        }
+    }
+}
+function Send(msg, color = "white"){
+    chatLog.push(new Msg(msg, color));
+}
+
 const kontainer = document.getElementById("kot-spawns");
 
 const spawnedKots = [];
@@ -67,7 +98,6 @@ function RemoveKot(instance, id){
     spawnedKots.splice(spawnedKots.indexOf(instance), 1);
 }
 
-// Template for creating kots
 class SpawnableKot {
 
     Click(){
@@ -116,7 +146,6 @@ class SpawnableKot {
         RemoveKot(this, this._kot.id);
     }
 }
-
 class Evil extends SpawnableKot {
     constructor(){
         super(
@@ -148,7 +177,6 @@ class Evil extends SpawnableKot {
         super.Despawning();
     }
 }
-
 class Lucky extends SpawnableKot {
     constructor(){
         super(
@@ -169,7 +197,6 @@ class Lucky extends SpawnableKot {
         super.Despawning();
     }
 }
-
 class Melon extends SpawnableKot {
     constructor() {
         super(
@@ -194,7 +221,6 @@ class Melon extends SpawnableKot {
         }
     }
 }
-
 class MeiMei extends SpawnableKot {
     constructor(){
         super(
@@ -212,7 +238,6 @@ class MeiMei extends SpawnableKot {
         }
     }
 }
-
 class ClickerRival extends SpawnableKot {
     constructor(){
         super(
@@ -227,7 +252,6 @@ class ClickerRival extends SpawnableKot {
         super.Despawning();
     }
 }
-
 class AntiClicker extends SpawnableKot {
     constructor(){
         super(
@@ -249,7 +273,6 @@ class AntiClicker extends SpawnableKot {
         }
     }
 }
-
 class Follower extends SpawnableKot {
     constructor() {
         super(
@@ -271,7 +294,6 @@ class Follower extends SpawnableKot {
         super.Despawning();
     }
 }
-
 class Deceiver extends SpawnableKot {
     constructor(){
         super(
@@ -348,6 +370,10 @@ function KotClickerUpdate(){
         kot.Update();
         kot._kot.onclick = function () { kot.Click() }
         //console.log(kot);
+    })
+
+    chatLog.forEach(msg => {
+        msg.Update();
     })
 }
 
