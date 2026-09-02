@@ -50,6 +50,9 @@ if (kot !== null){
     kot.className = __.Kot.State ? "light" : "dark";
     kot.onclick = function (){
         __.Kot.State = !__.Kot.State;
+        if (Chance(0.0001)){
+            Send("Calm down.");
+        }
         UpdateStat(Stats.TotalClicks, 1);
         kot.className = __.Kot.State ? "light" : "dark";
     }
@@ -74,7 +77,7 @@ class Msg{
         if (this.visibilityTime > 0){
             this.visibilityTime--;
         } else if (this.opacity > 0) {
-            this.opacity -= 0.001;
+            this.opacity -= 0.005;
             this._msg.style.opacity = this.opacity;
         } else {
             chat.removeChild(document.getElementById(this._msg.id));
@@ -213,6 +216,9 @@ class Melon extends SpawnableKot {
             this._kot.style.backgroundImage = "url('" + this.asset2 + "')";
             this.time_Life = 100;
             UpdateStat(Stats.TotalClicks, RandomRange(100, 200));
+            if (Chance(0.00076)){
+                Send("Thank you.")
+            }
             this.stage++;
         }
     }
@@ -250,6 +256,12 @@ class ClickerRival extends SpawnableKot {
         )
     }
 
+    Click(){
+        if (this.stage === 1){
+            super.Despawning();
+        }
+    }
+
     Despawning() {
         __.RivalKot.Clicks++;
         Send("Your rival clicked you...")
@@ -268,7 +280,9 @@ class AntiClicker extends SpawnableKot {
 
     Life(){
         UpdateStat(Stats.TotalClicks, -RandomRange(1, 50));
-        Send("It's the Anti Clicker! HURRY HURRY HURRY!!!")
+        if (Chance(20)){
+            Send("It's the Anti Clicker! HURRY HURRY HURRY!!!")
+        }
         super.Life();
     }
 
@@ -296,7 +310,7 @@ class Follower extends SpawnableKot {
             Send("You played along and were rewarded handsomely.")
         } else {
             UpdateStat(Stats.TotalClicks, -RandomRange(1, 300));
-            Send("You lost the game.")
+            Send("You fool...")
         }
         super.Despawning();
     }
@@ -364,7 +378,7 @@ function Spawn(){
     }
 }
 
-let spawnDelay = 100;
+let spawnDelay = 10;
 // global update
 function KotClickerUpdate(){
     if (spawnDelay <= 0){
