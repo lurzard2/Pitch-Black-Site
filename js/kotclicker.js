@@ -119,6 +119,7 @@ class SpawnableKot {
         this._kot.style.top = Math.floor(Math.random() * ((window.innerHeight - 160) - this._kot.offsetHeight)) + "px";
         this._kot.style.left = Math.floor(Math.random() * ((window.innerWidth - 160) - this._kot.offsetWidth)) + "px";
         this._kot.id = "kot" + spawnedKots.indexOf(this);
+        this._kot.style.zIndex = kontainer.style.zIndex;
     }
 
     Spawning() {

@@ -45,3 +45,14 @@ p, a, ul, h1, h2, h3, h4, h5, h6 {
 .linkoff::after{
     content: "↗";
 }
+
+*.unselectable {
+    -webkit-user-select: none;
+
+    /*
+      Introduced in IE 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
+}
