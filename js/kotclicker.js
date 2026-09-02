@@ -264,9 +264,9 @@ class Follower extends SpawnableKot {
 
     Click(){
         if (this.matchedState === __.Kot.State){
-            UpdateStat(Stats.TotalClicks, RandomRange(1, 100));
+            UpdateStat(Stats.TotalClicks, RandomRange(1, 300));
         } else {
-            UpdateStat(Stats.TotalClicks, -RandomRange(1, 100));
+            UpdateStat(Stats.TotalClicks, -RandomRange(1, 300));
         }
         super.Despawning();
     }
