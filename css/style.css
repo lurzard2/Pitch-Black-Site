@@ -70,7 +70,8 @@ p, a, ul, h1, h2, h3, h4 {
     content: 'user:';
     color: var(--bg);
     background-color: var(--mute);
-    border-radius: 5px;
+    border-radius: .25rem;
+    margin-right: .05rem;
     font-size: medium;
     text-align: center;
     padding: 3.375px;
