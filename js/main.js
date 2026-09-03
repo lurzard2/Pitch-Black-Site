@@ -107,11 +107,14 @@ if (userName !== null){
     userName.forEach((user) => {
         user.innerHTML = Load(_.DisplayName);
         user.onclick = function(){
-            Save(_.DisplayName, window.prompt("You are requesting to change your display name to:", Load(_.DisplayName)));
+            Save(_.DisplayName, Prompt("You are requesting to change your display name to:", Load(_.DisplayName)));
             if (Load(_.DisplayName) === null || Load(_.DisplayName) === "null" || Load(_.DisplayName) === "" || Load(_.DisplayName).length > 20){
                 Save(_.DisplayName, "You");
             }
             user.innerHTML = Load(_.DisplayName);
         }
     })
+}
+function Prompt(msg, def){
+    return window.prompt(msg, def)
 }
