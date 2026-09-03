@@ -69,9 +69,9 @@ p, a, ul, h1, h2, h3, h4 {
 .user:before{
     content: 'user:';
     color: var(--bg);
+    background-color: var(--mute);
+    border-radius: 5px;
     font-size: medium;
     text-align: center;
     padding: 3.375px;
-    background-color: var(--mute);
-    border-radius: 5px;
 }
