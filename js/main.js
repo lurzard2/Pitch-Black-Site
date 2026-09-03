@@ -31,7 +31,7 @@ export const KotClicker = {
 
 //init
 if (!Exists(_.DisplayName)){
-    Save(_.DisplayName, "na");
+    Save(_.DisplayName, "Undefined");
 }
 if (!Exists(_.KotClicker)){
     Save(_.KotClicker, KotClicker);
@@ -100,4 +100,18 @@ export function RandomRange(min, max){
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+const userName = document.querySelectorAll(".user");
+if (userName !== null){
+    userName.forEach((user) => {
+        user.innerHTML = Load(_.DisplayName);
+        user.onclick = function(){
+            Save(_.DisplayName, window.prompt("You are requesting to change your display name to:", Load(_.DisplayName)));
+            if (Load(_.DisplayName) === null || Load(_.DisplayName) === "null" || Load(_.DisplayName) === ""){
+                Save(_.DisplayName, "Undefined");
+            }
+            user.innerHTML = Load(_.DisplayName);
+        }
+    })
 }

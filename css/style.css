@@ -3,7 +3,6 @@
     --text: #000;
     --mute: #000;
     --bg: #000;
-    --debug: true;
 }
 
 @font-face{
@@ -65,4 +64,14 @@ p, a, ul, h1, h2, h3, h4 {
 }
 .grow{
     flex: 1 0 auto;
+}
+
+.user:before{
+    content: 'user:';
+    color: var(--bg);
+    font-size: medium;
+    text-align: center;
+    padding: 3.375px;
+    background-color: var(--mute);
+    border-radius: 5px;
 }
