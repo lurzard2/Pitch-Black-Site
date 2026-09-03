@@ -1,12 +1,14 @@
 :root{
+    --font: 'Arial';
     --text: #000;
     --mute: #000;
     --bg: #000;
+    --debug: true;
 }
 
 @font-face{
     font-family: 'Raindondo';
-    src: url('../fonts/Raindondo.otf') ;
+    src: url('../fonts/Raindondo.otf');
 }
 @font-face{
     font-family: 'RW-Dialogue';
@@ -18,14 +20,15 @@
 }
 
 body{
+    font-family: var(--font), serif;
     height: 100dvh;
-    font-size: 1.2rem;
+    font-size: 1.2rem; /*1 is too small*/
     margin: auto;
     display: flex;
 }
 
-/*Fuck off*/
-p, a, ul, h1, h2, h3, h4, h5, h6 {
+/*Fuck off dummbass defaults*/
+p, a, ul, h1, h2, h3, h4 {
     margin: 0;
 }
 
@@ -55,4 +58,11 @@ p, a, ul, h1, h2, h3, h4, h5, h6 {
     */
     -ms-user-select: none;
     user-select: none;
+}
+
+.flex{
+    display: flex;
+}
+.grow{
+    flex: 1 0 auto;
 }

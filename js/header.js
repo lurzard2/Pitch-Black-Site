@@ -4,7 +4,7 @@ import { _, Themes } from './main.js';
 setHeader();
 window.addEventListener('resize', function() { setHeader(); });
 function setHeader() {
-    let currentTheme = Load(_.Theme);
+    let currentTheme = Load(_.DisplayTheme);
 
     let desktop = window.innerWidth > 700;
 

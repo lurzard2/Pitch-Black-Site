@@ -1,6 +1,6 @@
 export const _ = {
     DisplayName: "displayname",
-    Theme: "theme",
+    DisplayTheme: "displaytheme",
     KotClicker: "kotclicker",
 }
 
@@ -36,8 +36,9 @@ if (!Exists(_.DisplayName)){
 if (!Exists(_.KotClicker)){
     Save(_.KotClicker, KotClicker);
 }
-if (!Exists(_.Theme)){
-    Save(_.Theme, Themes.Dark);
+if (!Exists(_.DisplayTheme)){
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    Save(_.DisplayTheme, isDarkMode ? 'dark' : 'light');
 }
 
 export const Kots = {

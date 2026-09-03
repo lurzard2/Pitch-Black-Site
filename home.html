@@ -10,26 +10,6 @@
     <script src="https://u.widget.st/ar.js"></script>
 </head>
 <style>
-    #main {
-        display: grid;
-        grid-template-rows: 1fr auto 1fr;
-
-        nav ul {
-            padding: 0;
-
-            li {
-                list-style: none;
-                margin: 30px;
-
-                a {
-                    color: var(--text);
-                    text-decoration: none;
-                    font-size: xxx-large;
-                }
-            }
-        }
-    }
-
     #reactbox{
         width:400px;
         height: 800px;
@@ -45,6 +25,23 @@
             left: -500px;
         }
     }
+
+    ul{
+        list-style-type:none;
+        padding: 0;
+        margin: auto;
+
+        li {
+            list-style: none;
+            margin: 30px;
+
+            a {
+                color: var(--text);
+                text-decoration: none;
+                font-size: xxx-large;
+            }
+        }
+    }
 </style>
 <body>
 
@@ -52,15 +49,11 @@
     <ws-widget class="reactbox" type="reactions" iid="8439"></ws-widget>
 </div>
 
-<div id="wr">
+<div id="wrapper">
     <div id="side">
     </div>
-    <div id="main">
-        <div>
-            <p>site = new(<span class="mute">[:user]</span>"<span title="//UNIMPLEMENTED" class="user">???</span>") {</p>
-        </div>
-        <nav class="center" style="align-self:center;">
-            <ul>
+    <div id="main" class="flex">
+            <ul class="center grow">
                 <li><a href="na.html">About Us</a></li>
                 <li><a href="na.html">Links</a></li>
                 <li><a href="projects.html">Projects</a></li>
@@ -68,8 +61,6 @@
                 <li><a href="na.html">Contact</a></li>
                 <li>(Maybe a button later)</li>
             </ul>
-        </nav>
-        <p class="right" style="align-self: end">}; site_credit = "@lurzard" || "@lurvixen"; <br> <span class="mute">//2026-forever meow :3</span></p>
     </div>
 </div>
 <script type="module" src="js/header.js"></script>
