@@ -109,7 +109,7 @@ if (userName !== null){
         user.onclick = function(){
             Save(_.DisplayName, window.prompt("You are requesting to change your display name to:", Load(_.DisplayName)));
             if (Load(_.DisplayName) === null || Load(_.DisplayName) === "null" || Load(_.DisplayName) === ""){
-                Save(_.DisplayName, "Undefined");
+                Save(_.DisplayName, "You");
             }
             user.innerHTML = Load(_.DisplayName);
         }
