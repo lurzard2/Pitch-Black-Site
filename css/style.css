@@ -24,10 +24,16 @@ body{
     font-size: 1.2rem; /*1 is too small*/
     margin: auto;
     display: flex;
+
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
 }
 
-/*Fuck off dummbass defaults*/
-p, a, ul, h1, h2, h3, h4 {
+.m {
     margin: 0;
 }
 
