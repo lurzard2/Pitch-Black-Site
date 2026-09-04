@@ -27,7 +27,7 @@
 body{
     font-family: var(--font), serif;
     height: 100dvh;
-    font-size: 1rem; /*1 is too small*/
+    font-size: .9rem;
     margin: auto;
     display: flex;
 
