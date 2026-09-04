@@ -115,6 +115,7 @@ if (userName !== null){
         }
     })
 }
+
 export function Prompt(msg, def){
     return window.prompt(msg, def)
     //TODO:Better dialogue box later

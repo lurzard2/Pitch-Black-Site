@@ -27,12 +27,15 @@
 body{
     font-family: var(--font), serif;
     height: 100dvh;
-    font-size: 1.2rem; /*1 is too small*/
+    font-size: 1rem; /*1 is too small*/
     margin: auto;
     display: flex;
 
     h1, h2{
         margin: 1rem 0 0 0;
+    }
+    p{
+        margin: 0.25rem 0 0 0;
     }
 
     h1{
@@ -88,7 +91,7 @@ body{
     background-color: var(--mute);
     border-radius: .25rem;
     margin-right: .05rem;
-    font-size: medium;
+    font-size: small;
     text-align: center;
     padding: 3.375px;
 }
