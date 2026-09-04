@@ -11,6 +11,15 @@
     opacity: 0.9;
 }
 
+#kot-chat{
+    text-align: right;
+    *{
+        background-color: black;
+        padding: .25rem;
+        width: fit-content;
+    }
+}
+
 #kot-holder{
     width: 100%;
 
