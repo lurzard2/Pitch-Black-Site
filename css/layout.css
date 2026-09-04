@@ -53,7 +53,7 @@ body{
     }
 }
 #main{
-    margin: .5rem;
+    margin: 1rem;
     flex: 1 0 auto;
     flex-wrap: wrap;
 }

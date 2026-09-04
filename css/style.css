@@ -25,6 +25,10 @@ body{
     margin: auto;
     display: flex;
 
+    h1, h2{
+        margin: 1rem 0 0 0;
+    }
+
     h1{
         font-size: 2rem;
     }
