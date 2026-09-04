@@ -14,8 +14,14 @@
     src: url('../fonts/rain-world-menu-font-webfont.otf.woff2');
 }
 @font-face{
-    font-family: 'FreePixel';
-    src: url('../fonts/FreePixel.ttf');
+    font-family: 'Pixel';
+    src: url('../fonts/PixeloidSans.ttf');
+    font-weight: normal;
+}
+@font-face{
+    font-family: 'Pixel';
+    src: url('../fonts/PixeloidSans-Bold.ttf');
+    font-weight: bold;
 }
 
 body{

@@ -1,6 +1,6 @@
 body{
     color: var(--text);
-    --font: 'FreePixel', 'Arial';
+    --font: 'Pixel', 'Arial';
     background-color: var(--bg);
 }
 
