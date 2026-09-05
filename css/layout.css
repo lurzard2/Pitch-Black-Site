@@ -65,18 +65,17 @@ body{
     h1{
         position: relative;
         left: 1rem;
+        bottom: .25rem;
+        margin: 0;
     }
 
     .expander{
-        height: 100px;
+        height: 5rem;
         transition: max-height 0.4s ease-in-out;
     }
 }
 .expand:hover{
     max-height: 8rem;
-    .expander{
-        height: 100px;
-    }
 }
 .bg{
     background-size: cover;
