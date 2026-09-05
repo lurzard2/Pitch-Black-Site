@@ -13,7 +13,7 @@ body{
 }
 
 #side{
-    flex-basis: 150px;
+    flex-basis: 8rem;
 
     #headerbg {
         height: 100%;
