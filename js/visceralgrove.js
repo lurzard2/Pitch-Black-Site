@@ -12,7 +12,7 @@ function SetChapter(dest){
 }
 
 if (GetChapter(2)){
-    setTimeout(function(){ SetChapter(GetChapter("")); }, 2500);
+    setTimeout(function(){ SetChapter(""); }, 2500);
 }
 
 requestAnimationFrame(UPDATE);
