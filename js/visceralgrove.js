@@ -11,10 +11,6 @@ function SetChapter(dest){
     window.location.replace(path + dest);
 }
 
-if (GetChapter(2)){
-    setTimeout(function(){ SetChapter(""); }, 2500);
-}
-
 requestAnimationFrame(UPDATE);
 function UPDATE(){
 
