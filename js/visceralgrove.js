@@ -8,6 +8,12 @@ function GetChapter(dest){
     return window.location.href === path + dest;
 }
 function SetChapter(dest = ""){
+    // Start game flag to change index
+    if (GetChapter(2)){
+        console.log("ENTER");
+    }
+
+    // go to index by default
     window.location.replace(dest === "" ? path : path + "/" + dest);
 }
 
