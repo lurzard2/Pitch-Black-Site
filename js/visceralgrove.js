@@ -9,11 +9,6 @@ export function GetChapter(dest){
     return window.location.href === path + dest;
 }
 export function SetChapter(dest = ""){
-    if (GetChapter(2)){
-        log("flag entered");
-        __.Flags.start = true;
-    }
-
     window.location.replace(dest === "" ? path : path + "/" + dest);
 }
 
