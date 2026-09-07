@@ -11,9 +11,9 @@ export function GetChapter(dest){
 export function SetChapter(dest = ""){
     if (GetChapter(2)){
         log("flag entered");
+        __.Flags.start = true;
     }
 
-    // go to index by default
     window.location.replace(dest === "" ? path : path + "/" + dest);
 }
 
