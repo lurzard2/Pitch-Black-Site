@@ -2,15 +2,15 @@ import {_, Save, Load } from './main.js';
 
 const __ = Load(_.VisceralGrove);
 function _Save() { Save(_.VisceralGrove, __); }
+function log(msg) { console.log(msg); }
 
 const path = "https://lurvixen.com/visceralgrove";
 export function GetChapter(dest){
     return window.location.href === path + dest;
 }
 export function SetChapter(dest = ""){
-    // Start game flag to change index
     if (GetChapter(2)){
-        console.log("ENTER");
+        log("flag entered");
     }
 
     // go to index by default
