@@ -42,7 +42,7 @@ if (!Exists(_.DisplayTheme)){
     Save(_.DisplayTheme, isDarkMode ? 'dark' : 'light');
 }
 if (!Exists(_.VisceralGrove)){
-    Save(_.VisceralGrove, { Flags: {} });
+    Save(_.VisceralGrove, { Flags: {}, Name: "Gabriele", Name2: "Alex" });
 }
 
 export const Kots = {
