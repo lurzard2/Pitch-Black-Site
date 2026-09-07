@@ -1,0 +1,11 @@
+.bloodbg{
+    background-image: url('../images/visceralgrove/bloodglitch.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.staticbg{
+    background-image: url('../images/visceralgrove/staticscreen.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}

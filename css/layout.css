@@ -2,20 +2,6 @@ body{
     color: var(--text);
     --font: 'Pixel', 'Arial';
     background-color: var(--bg);
-
-    h1, h2{
-        margin: 1rem 0 .25rem 0;
-    }
-    p{
-        margin: 0.25rem 0 .0375rem 0;
-    }
-
-    h1{
-        font-size: 2rem;
-    }
-    h2{
-        font-size: 1.5rem;
-    }
 }
 
 #wrapper{
@@ -67,6 +53,20 @@ body{
     margin: 1rem;
     flex: 1 0 auto;
     flex-wrap: wrap;
+
+    h1, h2{
+        margin: 1rem 0 .25rem 0;
+    }
+    p{
+        margin: 0.25rem 0 .0375rem 0;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
 }
 
 .expand{
