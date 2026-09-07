@@ -2,6 +2,7 @@ export const _ = {
     DisplayName: "displayname",
     DisplayTheme: "displaytheme",
     KotClicker: "kotclicker",
+    VisceralGrove: "visceralgrove",
 }
 
 export const Themes = {
@@ -39,6 +40,9 @@ if (!Exists(_.KotClicker)){
 if (!Exists(_.DisplayTheme)){
     const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
     Save(_.DisplayTheme, isDarkMode ? 'dark' : 'light');
+}
+if (!Exists(_.VisceralGrove)){
+    Save(_.VisceralGrove, { Flags: {} });
 }
 
 export const Kots = {
