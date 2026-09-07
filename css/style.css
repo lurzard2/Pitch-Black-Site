@@ -23,6 +23,16 @@
     src: url('../fonts/PixeloidSans-Bold.ttf');
     font-weight: bold;
 }
+@font-face{
+    font-family: 'DryBrush';
+    src: url('../fonts/Dry Brush.ttf');
+    font-weight: normal;
+}
+@font-face{
+    font-family: 'LemonMilk';
+    src: url('../fonts/LEMONMILK-Light.otf');
+    font-weight: normal;
+}
 
 body{
     font-family: var(--font), serif;
@@ -84,4 +94,9 @@ body{
 
 .hidelink{
     text-decoration: none;
+}
+
+.cliptext{
+    background-clip: text;
+    color: transparent;
 }
