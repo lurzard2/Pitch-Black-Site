@@ -16,13 +16,6 @@
     }
 </style>
 <script type="module">
-    import { SetChapter } from '../js/visceralgrove.js';
-    import { _, Save, Load } from '../js/main.js';
-
-    const __ = Load(_.VisceralGrove);
-
-    __.Flags.start = true;
-    Save(_.VisceralGrove, __);
     setTimeout(function(){ SetChapter(); }, 2500);
 </script>
 <body>
