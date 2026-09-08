@@ -15,11 +15,6 @@
         font-weight: normal;
         text-align: right;
     }
-    body{
-        background-image: url('images/visceralgrove/grey.png');
-        background-position: center;
-        background-repeat: no-repeat;
-    }
 </style>
 <script type="module">
 import { HasFlagged } from './js/visceralgrove.js';
@@ -28,6 +23,9 @@ if (HasFlagged('start')) {
     strt.innerHTML = '<a href="3">Continue</a>';
     const mnu = document.getElementById('menu');
     mnu.innerHTML = '<p>Contents of this are disturbing, and for mature audiences.</p>';
+    document.getElementById('wrapper').style = 'background-image: url(\'images/visceralgrove/grey.png\');\n' +
+        'background-position: center;\n' +
+        'background-repeat: no-repeat;';
 }
 </script>
 <body>
