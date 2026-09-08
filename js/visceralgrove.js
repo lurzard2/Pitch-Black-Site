@@ -8,14 +8,17 @@ const path = "https://lurvixen.com/visceralgrove";
 export function GetChapter(dest){
     return window.location.href === path + dest;
 }
-export function SetChapter(dest = ""){
-    window.location.replace(dest === "" ? path : path + "/" + dest);
+export function SetChapter(dest = "", replace = false){
+    const href = dest === "" ? path : path + "/" + dest;
+    if (replace){
+        // prevents backtracking
+        window.location.replace(href);
+        return
+    }
+    window.location.href = href;
 }
 
-requestAnimationFrame(UPDATE);
-function UPDATE(){
-
-    _Save();
-
-    requestAnimationFrame(UPDATE);
+export function Flag(name, value){
+    __.Flags[name] = value
+    _Save()
 }
