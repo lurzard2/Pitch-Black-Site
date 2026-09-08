@@ -16,22 +16,29 @@
         text-align: right;
     }
 </style>
+<script type="module">
+import { HasFlagged } from './js/visceralgrove.js';
+if (HasFlagged('start')) {
+    const strt = document.getElementById('start');
+    strt.innerHTML = '<a href="3">Continue</a>';
+    const mnu = document.getElementById('menu');
+    mnu.innerHTML = '<p>Contents of this are disturbing, and for mature audiences.</p>';
+}
+</script>
 <body>
 
 <div id="wrapper">
-    <div id="main">
+<div id="main">
         <h1 id="title" class="cliptext bloodbg">
             Visceral Grove
         </h1>
-        <p class="right">
-            Story of my life am I right?
-        </p>
 
         <!--I don't know if I can do this anymore, I'm sorry.-->
-        <p><a href="visceralgrove/1">Chapter 1 (WIP)</a></p>
-        <p id="new-entry"></p>
-    </div>
+        <p id="start"><a href="visceralgrove/1">Chapter 1 (WIP)</a></p>
 
+        <div id="menu">
+        </div>
+</div>
 </div>
 
 </body>

@@ -22,3 +22,9 @@ export function Flag(name, value){
     __.Flags[name] = value
     _Save()
 }
+export function GetFlag(name, value){
+    return __.Flags[name] === value;
+}
+export function HasFlagged(name){
+    return GetFlag(name, true);
+}
