@@ -1,3 +1,9 @@
+body{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
 .bloodbg{
     background-image: url('../images/visceralgrove/bloodglitch.gif');
     background-size: cover;
