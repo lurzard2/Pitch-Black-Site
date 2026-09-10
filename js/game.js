@@ -41,4 +41,4 @@ function ShowDebugGrid(){
     }
     console.log('showing debug grid');
 }
-//ShowDebugGrid();
+ShowDebugGrid();
