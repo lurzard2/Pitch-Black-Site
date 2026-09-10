@@ -72,16 +72,16 @@ class LevelContext{
 
 const canvas = document.getElementById("visceralgrove");
 const ctx = canvas.getContext('2d');
-ctx.strokeStyle = 'blue';
 canvas.width = CANVAS_DIM.x;
 canvas.height = CANVAS_DIM.y;
 
 function ShowDebugGrid(){
     for (let x = 0; x < GRID_DIM.x; x++){
         for (let y = 0; y < GRID_DIM.y; y++){
+            ctx.strokeStyle = 'blue';
             ctx.strokeRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE);
         }
     }
     console.log('showing debug grid');
 }
-ShowDebugGrid();
+//ShowDebugGrid();
