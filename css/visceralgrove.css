@@ -3,7 +3,6 @@ body{
     justify-content: center;
     align-items: center;
     image-rendering: pixelated;
-    background-color: black;
 }
 
 canvas{
