@@ -7,6 +7,7 @@ body{
 }
 
 canvas{
+    position: absolute;
     background-color: grey;
 }
 
