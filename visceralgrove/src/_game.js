@@ -45,15 +45,26 @@ class Game{
             }
         }
     }
+
+    RenderInGrid(asset, pos){
+        const img = new Image();
+        img.onload = ()=>{
+            game.RenderCtx.drawImage(img, XYZ.Normalize(pos.x), XYZ.Normalize(pos.y));
+        }
+        img.src = '/images/visceralgrove/' + asset
+    }
 }
 
 const game = new Game();
 game.Canvas.width = XYZ.SCREEN.x;
 game.Canvas.height = XYZ.SCREEN.y;
 
-
-
-
+game.IterateOnGrid((x, y) => {
+    game.RenderInGrid('PH.png', new XYZ(x, y));
+    if (x === 3 && y === 3){
+        game.RenderInGrid('Sprite-0001.png', new XYZ(x, y));
+    }
+})
 
 
 
@@ -69,11 +80,3 @@ if (debug){
         })
     }
 }
-
-game.IterateOnGrid((x, y) => {
-    const img = new Image();
-    img.onload = ()=>{
-        game.RenderCtx.drawImage(img, XYZ.Normalize(x), XYZ.Normalize(y))
-    }
-    img.src = '/images/visceralgrove/Sprite-0004.gif'
-})
