@@ -70,6 +70,9 @@ class Thing {
         img.onload = ()=>{
             this.Draw(img);
         }
+        img.onerror = (e)=>{
+            console.error(e, '\nunable to load Image:', JSON.stringify(img));
+        }
         img.src = this.Asset
     }
 }
@@ -84,8 +87,10 @@ if (debug){
     console.log("Debug:", debug);
     if (debugGrid){
         game.IterateOnGrid((pos) => {
-            game.RenderCtx.strokeStyle = 'blue'
-            game.RenderCtx.strokeRect(XYZ.Normalize(pos.x), XYZ.Normalize(pos.y), XYZ.TILE, XYZ.TILE)
+            //game.RenderCtx.strokeStyle = 'blue'
+            //game.RenderCtx.strokeRect(XYZ.Normalize(pos.x), XYZ.Normalize(pos.y), XYZ.TILE, XYZ.TILE)
+            const t = new Thing(undefined, pos);
+            t.Render();
         })
     }
 }
