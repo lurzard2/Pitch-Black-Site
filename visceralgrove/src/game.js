@@ -40,6 +40,14 @@ class Game {
         return this.Canvas.getContext('2d');
     }
 
+    Update(){
+        //console.log('update');
+        processes.forEach(proc => {
+            proc.Update();
+        })
+        requestAnimationFrame(game.Update);
+    }
+
     IterateOnGrid(callBack){
         for (let x = 0; x < XYZ.GRID.x; x++){
             for (let y = 0; y < XYZ.GRID.y; y++){
@@ -75,10 +83,15 @@ class Thing {
         }
         img.src = this.Asset
     }
+
+    Update(){
+
+    }
 }
 
 export const game = new Game();
-
+const processes = [];
+requestAnimationFrame(game.Update);
 
 export const debug = false;
 const debugGrid = true;
@@ -89,8 +102,6 @@ if (debug){
         game.IterateOnGrid((pos) => {
             game.RenderCtx.strokeStyle = 'blue'
             game.RenderCtx.strokeRect(XYZ.Normalize(pos.x), XYZ.Normalize(pos.y), XYZ.TILE, XYZ.TILE)
-            //const t = new Thing(undefined, pos);
-            //t.Render();
         })
     }
 }
