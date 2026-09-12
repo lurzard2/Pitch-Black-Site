@@ -80,17 +80,17 @@ class Thing {
 export const game = new Game();
 
 
-const debug = true;
+export const debug = false;
 const debugGrid = true;
 
 if (debug){
     console.log("Debug:", debug);
     if (debugGrid){
         game.IterateOnGrid((pos) => {
-            //game.RenderCtx.strokeStyle = 'blue'
-            //game.RenderCtx.strokeRect(XYZ.Normalize(pos.x), XYZ.Normalize(pos.y), XYZ.TILE, XYZ.TILE)
-            const t = new Thing(undefined, pos);
-            t.Render();
+            game.RenderCtx.strokeStyle = 'blue'
+            game.RenderCtx.strokeRect(XYZ.Normalize(pos.x), XYZ.Normalize(pos.y), XYZ.TILE, XYZ.TILE)
+            //const t = new Thing(undefined, pos);
+            //t.Render();
         })
     }
 }
