@@ -40,14 +40,6 @@ class Game {
         return this.Canvas.getContext('2d');
     }
 
-    Update(){
-        //console.log('update');
-        processes.forEach(proc => {
-            proc.Update();
-        })
-        requestAnimationFrame(game.Update);
-    }
-
     IterateOnGrid(callBack){
         for (let x = 0; x < XYZ.GRID.x; x++){
             for (let y = 0; y < XYZ.GRID.y; y++){
@@ -84,14 +76,68 @@ class Thing {
         img.src = this.Asset
     }
 
-    Update(){
+    Update(eu){
 
+    }
+}
+
+const controller = {};
+window.addEventListener('keydown', function(e){
+    controller[e.key] = true;
+})
+window.addEventListener('keyup', function(e){
+    controller[e.key] = false;
+})
+class ControllableThing extends Thing {
+    constructor(assetName = 'PH.png', pos = new XYZ()) {
+        super(assetName, pos);
+    }
+
+    get Up(){
+        return 'ArrowUp'
+    }
+    get Down(){
+        return 'ArrowDown'
+    }
+    get Left(){
+        return 'ArrowLeft'
+    }
+    get Right(){
+        return 'ArrowRight'
+    }
+
+    Update(eu){
+        if (controller[this.Up]){
+            this.pos.y -= 1;
+        }
+        if (controller[this.Down]){
+            this.pos.y += 1;
+        }
+        if (controller[this.Left]){
+            this.pos.x -= 1;
+        }
+        if (controller[this.Right]){
+            this.pos.x += 1;
+        }
+        this.Render()
     }
 }
 
 export const game = new Game();
 const processes = [];
-requestAnimationFrame(game.Update);
+let evenUpdate = true;
+function Update() {
+    evenUpdate = !evenUpdate;
+
+    processes.forEach(proc => {
+        proc.Update(evenUpdate);
+    })
+
+    requestAnimationFrame(Update);
+}
+requestAnimationFrame(() => {
+    Update();
+});
 
 export const debug = false;
 const debugGrid = true;
@@ -105,3 +151,11 @@ if (debug){
         })
     }
 }
+
+game.IterateOnGrid((pos) => {
+    if (pos.x === 3 && pos.y === 3) {
+        const ct = new ControllableThing('Sprite-0001.png', pos);
+        ct.Render();
+        processes.push(ct);
+    }
+})
