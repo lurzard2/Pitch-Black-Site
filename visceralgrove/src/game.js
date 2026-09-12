@@ -53,6 +53,7 @@ class Thing {
     constructor(assetName = 'PH.png', pos = new XYZ()) {
         this.assetName = assetName;
         this.pos = pos;
+        this.onScreenBorder = false;
     }
 
     get Asset() {
@@ -89,8 +90,9 @@ window.addEventListener('keyup', function(e){
     controller[e.key] = false;
 })
 class ControllableThing extends Thing {
-    constructor(assetName = 'PH.png', pos = new XYZ()) {
+    constructor(assetName = 'PH.png', pos = new XYZ(), controlled = false) {
         super(assetName, pos);
+        this.controlled = controlled;
     }
 
     get Up(){
@@ -106,20 +108,43 @@ class ControllableThing extends Thing {
         return 'ArrowRight'
     }
 
-    Update(eu){
+    RequestMovement() {
+        //TODO: Read tiles in a radius before engaging in movement
+
+        let newPos = new XYZ(this.pos.x, this.pos.y);
+
         if (controller[this.Up]){
-            this.pos.y -= 1;
+            newPos.y -= 1;
         }
         if (controller[this.Down]){
-            this.pos.y += 1;
+            newPos.y += 1;
         }
         if (controller[this.Left]){
-            this.pos.x -= 1;
+            newPos.x -= 1;
         }
         if (controller[this.Right]){
-            this.pos.x += 1;
+            newPos.x += 1;
         }
-        this.Render()
+
+        if (newPos.x !== this.pos.x || newPos.y !== this.pos.y) {
+            const atXBound = newPos.x === XYZ.GRID.x || newPos.x === -1;
+            const atYBound = newPos.y === XYZ.GRID.y || newPos.y === -1;
+            this.onScreenBorder = atXBound || atYBound;
+
+            if (this.onScreenBorder) {
+                console.log('screen bounds reached')
+            } else {
+                this.pos.x = newPos.x;
+                this.pos.y = newPos.y;
+                this.Render()
+            }
+        }
+    }
+
+    Update(eu){
+        if (this.controlled) {
+            this.RequestMovement()
+        }
     }
 }
 
@@ -154,7 +179,7 @@ if (debug){
 
 game.IterateOnGrid((pos) => {
     if (pos.x === 3 && pos.y === 3) {
-        const ct = new ControllableThing('Sprite-0001.png', pos);
+        const ct = new ControllableThing('Sprite-0001.png', pos, true);
         ct.Render();
         processes.push(ct);
     }
