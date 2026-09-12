@@ -8,7 +8,7 @@ export class XYZ {
 
     // Getting either a normalized single value or a normalized XY
     Normalize(val) { return XYZ.Normalize(val) }
-    static Normalize(val) { return val * XYZ.TILE }
+    static Normalize(val) { return val < 1 ? val : val * XYZ.TILE }
     get Normalized(){
         return new XYZ(this.Normalize(this.x), this.Normalize(this.y))
     }
@@ -23,8 +23,10 @@ export class XYZ {
 }
 
 // Global process
-class Game{
+class Game {
     constructor() {
+        this.Canvas.width = XYZ.SCREEN.x;
+        this.Canvas.height = XYZ.SCREEN.y;
     }
 
     get XYZ(){
@@ -41,31 +43,38 @@ class Game{
     IterateOnGrid(callBack){
         for (let x = 0; x < XYZ.GRID.x; x++){
             for (let y = 0; y < XYZ.GRID.y; y++){
-                callBack(x, y);
+                callBack(new XYZ(x, y));
             }
         }
     }
+}
 
-    RenderInGrid(asset, pos){
+class Thing {
+    constructor(assetName = 'PH.png', pos = new XYZ()) {
+        this.assetName = assetName;
+        this.pos = pos;
+    }
+
+    get Asset() {
+        return '/images/visceralgrove/' + this.assetName
+    }
+
+    // draw call
+    Draw(img){
+        game.RenderCtx.drawImage(img, XYZ.Normalize(this.pos.x), XYZ.Normalize(this.pos.y));
+    }
+
+    // render pipeline
+    Render(){
         const img = new Image();
         img.onload = ()=>{
-            game.RenderCtx.drawImage(img, XYZ.Normalize(pos.x), XYZ.Normalize(pos.y));
+            this.Draw(img);
         }
-        img.src = '/images/visceralgrove/' + asset
+        img.src = this.Asset
     }
 }
 
-const game = new Game();
-game.Canvas.width = XYZ.SCREEN.x;
-game.Canvas.height = XYZ.SCREEN.y;
-
-game.IterateOnGrid((x, y) => {
-    game.RenderInGrid('PH.png', new XYZ(x, y));
-    if (x === 3 && y === 3){
-        game.RenderInGrid('Sprite-0001.png', new XYZ(x, y));
-    }
-})
-
+export const game = new Game();
 
 
 const debug = true;
@@ -74,9 +83,9 @@ const debugGrid = true;
 if (debug){
     console.log("Debug:", debug);
     if (debugGrid){
-        game.IterateOnGrid((x, y) => {
+        game.IterateOnGrid((pos) => {
             game.RenderCtx.strokeStyle = 'blue'
-            game.RenderCtx.strokeRect(XYZ.Normalize(x), XYZ.Normalize(y), XYZ.TILE, XYZ.TILE)
+            game.RenderCtx.strokeRect(XYZ.Normalize(pos.x), XYZ.Normalize(pos.y), XYZ.TILE, XYZ.TILE)
         })
     }
 }
