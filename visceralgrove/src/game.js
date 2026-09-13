@@ -21,7 +21,7 @@ export function Normalize(val) { return val < 1 ? val : val * TILE }
 // 12x8 tile grid
 export const GRID = new XYZ(12, 8);
 
-export function IterateOnGrid(callback){
+export function IterateOnGrid(callback) {
     for (let x = 0; x < GRID.x; x++){
         for (let y = 0; y < GRID.y; y++){
             callback(new XYZ(x, y));
@@ -35,9 +35,9 @@ export const SCREEN = GRID.Normalized;
 
 
 export const canvas = document.body.appendChild(document.createElement('canvas'));
-export const render2D = canvas.getContext('2d');
 canvas.width = SCREEN.x;
 canvas.height = SCREEN.y;
+export const render2D = canvas.getContext('2d');
 
 
 
@@ -60,6 +60,9 @@ requestAnimationFrame(() => {
 
 // Player controller by listening to key presses
 export const controller = {};
+export function GetInput(key) {
+    return controller[key];
+}
 window.addEventListener('keydown', function(e) {
     controller[e.key] = true;
 })
@@ -68,40 +71,75 @@ window.addEventListener('keyup', function(e) {
 })
 
 
-
-export const FileExt = {
-    Image: 'image',
-}
-export function GetFileExt(type) {
-    if (type === FileExt.Image) {
-        return '.png'
-    }
-}
-
+export const assetsPath = '/visceralgrove/assets/';
 export class Asset {
-    constructor(assetName = 'PH', ext = FileExt.Image) {
-        this.assetName = assetName + GetFileExt(ext);
+    constructor(assetName, ext) {
+        this.assetName = assetName;
+        this.ext = ext;
     }
 
-    get Name(){
-        return '/visceralgrove/assets' + this.assetName
+    // prefix and/or suffix injection
+    ExtName({pf = '', sf = ''}) {
+        return assetsPath + pf + this.assetName + sf + '.' + this.ext;
+    }
+
+    get GetName() {
+        return this.ExtName({});
+    }
+}
+
+export class VGImage extends Asset {
+    constructor(textureName = 'PH', ext = 'png') {
+        super(textureName, ext);
+    }
+
+    #Load(img, x, y) {
+        render2D.drawImage(img, x, y, TILE, TILE);
+    }
+
+    Push(pos) {
+        const i = new Image();
+
+        i.onload = () => {
+            this.#Load(i, pos.x, pos.y);
+        }
+
+        i.onerror = (e) => {
+            console.log(e, '\n'+i);
+        }
+
+        i.src = this.GetName
     }
 }
 
 
 
-export class Thing {
-    constructor(asset = new Asset(), pos = new XYZ()) {
+export class Tile {
+    constructor(asset = new VGImage(), pos = new XYZ()) {
         this.asset = asset;
         this.pos = pos;
     }
 
-    Update(){ }
+    Render() {
+        this.asset.Push(this.pos.Normalized)
+    }
+}
+
+
+export class Camera {
+    constructor(targetPos) {
+    }
+}
+
+export class Scene {
+    constructor() {
+
+    }
 }
 
 
 
-export let debug = true;
+export let debug = false;
 export let showDebugGrid = false;
 
 if (debug) {
