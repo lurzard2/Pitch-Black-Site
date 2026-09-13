@@ -38,7 +38,6 @@ class VisceralGrove {
                 callback(new XYZ(x, y));
             }
         }
-
     }
 }
 
@@ -163,15 +162,6 @@ function Update() {
 requestAnimationFrame(() => {
     Update();
 });
-
-// Player controller by listening to key presses
-export const controller = {};
-window.addEventListener('keydown', function(e){
-    controller[e.key] = true;
-})
-window.addEventListener('keyup', function(e){
-    controller[e.key] = false;
-})
 
 
 
