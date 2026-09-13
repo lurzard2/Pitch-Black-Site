@@ -1,3 +1,5 @@
+const canvas = document.body.appendChild(document.createElement('canvas'));
+
 // Coordinate system
 export class XYZ {
     constructor(x = 0, y = 0, z = 0) {
@@ -22,6 +24,7 @@ export class XYZ {
     static SCREEN = this.GRID.Normalized;
 }
 
+
 // Global process
 class Game {
     constructor() {
@@ -34,7 +37,7 @@ class Game {
     }
 
     get Canvas() {
-        return document.getElementById("visceralgrove");
+        return canvas;
     }
     get RenderCtx() {
         return this.Canvas.getContext('2d');
@@ -48,6 +51,7 @@ class Game {
         }
     }
 }
+
 
 class Thing {
     constructor(assetName = 'PH.png', pos = new XYZ()) {
@@ -130,10 +134,23 @@ class ControllableThing extends Thing {
             const atXBound = newPos.x === XYZ.GRID.x || newPos.x === -1;
             const atYBound = newPos.y === XYZ.GRID.y || newPos.y === -1;
             this.onScreenBorder = atXBound || atYBound;
+            let needRender = false;
 
             if (this.onScreenBorder) {
                 console.log('screen bounds reached')
+                if (atXBound){
+                    newPos.x = newPos.x > 0 ? 0 : XYZ.GRID.x -1;
+                    needRender = true;
+                }
+                if (atYBound){
+                    newPos.y = newPos.y > 0 ? 0 : XYZ.GRID.y -1;
+                    needRender = true;
+                }
             } else {
+                needRender = true;
+            }
+
+            if (needRender){
                 this.pos.x = newPos.x;
                 this.pos.y = newPos.y;
                 this.Render()
@@ -147,6 +164,8 @@ class ControllableThing extends Thing {
         }
     }
 }
+
+
 
 export const game = new Game();
 const processes = [];
@@ -163,6 +182,8 @@ function Update() {
 requestAnimationFrame(() => {
     Update();
 });
+
+
 
 export const debug = false;
 const debugGrid = true;
