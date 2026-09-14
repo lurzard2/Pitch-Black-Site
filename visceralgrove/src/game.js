@@ -62,7 +62,7 @@ requestAnimationFrame(() => {
 
 
 
-export const assetsPath = '/visceralgrove/assets/';
+export const directory = '/visceralgrove/';
 export class Asset {
     constructor(assetName, ext) {
         this.assetName = assetName;
@@ -71,7 +71,7 @@ export class Asset {
 
     // prefix and/or suffix injection
     ExtName({pf = '', sf = ''}) {
-        return assetsPath + pf + this.assetName + sf + '.' + this.ext;
+        return directory+'assets/'+ pf+this.assetName+sf +'.'+this.ext;
     }
 
     get GetName() {
@@ -117,8 +117,8 @@ export class Tile {
 }
 
 
-import { Load } from './level.js'
-Load()
+import { LoadLevel } from './level.js'
+LoadLevel(document.title)
 
 import { Camera } from './camera.js';
 export const camera = new Camera();
