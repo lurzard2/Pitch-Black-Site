@@ -5,6 +5,7 @@ export class Level {
         this.lvlName = lvlName;
         this.lvlStr = ''
         this.lvl = {}
+
     }
 
     async LoadLvl() {
@@ -14,8 +15,7 @@ export class Level {
             console.log(this.lvlName, 'INVALID!!!');
             return ''
         } else {
-            const lvlStr2 = await re.text()
-            const lvlStr = lvlStr2
+            const lvlStr = await re.text()
             console.log('Okay. Yay. ❤️')
             return lvlStr;
         }
