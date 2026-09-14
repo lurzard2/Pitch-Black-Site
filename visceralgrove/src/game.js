@@ -37,11 +37,15 @@ export const SCREEN = GRID.Normalized;
 export const canvas = document.body.appendChild(document.createElement('canvas'));
 canvas.width = SCREEN.x;
 canvas.height = SCREEN.y;
+
 export const render2D = canvas.getContext('2d');
 
 
 
 export const processes = [];
+export function PushUpdatableProcess(proc){
+    processes.push(proc)
+}
 let evenUpdate = true;
 function Update() {
     evenUpdate = !evenUpdate;
@@ -56,19 +60,6 @@ requestAnimationFrame(() => {
     Update();
 });
 
-
-
-// Player controller by listening to key presses
-export const controller = {};
-export function GetInput(key) {
-    return controller[key];
-}
-window.addEventListener('keydown', function(e) {
-    controller[e.key] = true;
-})
-window.addEventListener('keyup', function(e) {
-    controller[e.key] = false;
-})
 
 
 export const assetsPath = '/visceralgrove/assets/';
@@ -97,7 +88,7 @@ export class VGImage extends Asset {
         render2D.drawImage(img, x, y, TILE, TILE);
     }
 
-    Push(pos) {
+    Render(pos) {
         const i = new Image();
 
         i.onload = () => {
@@ -121,25 +112,20 @@ export class Tile {
     }
 
     Render() {
-        this.asset.Push(this.pos.Normalized)
+        this.asset.Render(this.pos.Normalized)
     }
 }
 
 
-export class Camera {
-    constructor(targetPos) {
-    }
-}
+import { Load } from './level.js'
+Load()
 
-export class Scene {
-    constructor() {
-
-    }
-}
+import { Camera } from './camera.js';
+export const camera = new Camera();
 
 
 
-export let debug = false;
+export let debug = true;
 export let showDebugGrid = false;
 
 if (debug) {
