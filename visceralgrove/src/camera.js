@@ -21,10 +21,9 @@ export class Camera {
 
     // Use position to get equal pos in the level data to read and retain everything needed in order to render a screen.
     LoadLvlScreen() {
-        const lvl = VG.level.lvl
-        const layers = lvl.layers ?? []
-        const assets = lvl.tilesets ?? []
-        console.log('level loading!', '\nLayers:', layers,'\nAssets', assets)
+        const layers = VG.level.lvl.layers ?? []
+        const tileSets = VG.level.tileSets;
+        //console.log(layers, tileSets);
 
         const pos = new VG.XYZ(-1, 0);
 

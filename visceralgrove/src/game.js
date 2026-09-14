@@ -116,16 +116,28 @@ export class Tile {
     }
 }
 
+
+
 import { Camera } from './camera.js';
 export const camera = new Camera();
 
 import { Level } from './level.js'
-export const level = new Level(document.title);
-// We need to WAIT. For level.lvl to be assigned. before we start grabbing it.
-level.lvl = JSON.parse(await level.LoadLvl())
-camera.LoadLvlScreen()
-//console.log(level.lvl);
+export const level = new Level();
 
+// INITIAL LOAD OF LEVEL. And assigning level values, for the camera to render with.
+
+// File loading is async, we need to await
+await Load()
+console.log('Level init!', '\nLAYERS:\n',level.lvl.layers, '\nTILESETS:\n',level.tileSets)
+camera.LoadLvlScreen()
+
+async function Load(){
+    level.lvl = await level.LoadLvl()
+    level.tileSets = await level.LoadTilesets()
+    for (const tileset of level.tileSets){
+        tileset.data = await level.GetJSONFileAsStr('/levels/'+tileset.src);
+    }
+}
 
 
 export let debug = true;

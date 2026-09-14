@@ -1,7 +1,8 @@
 {
-    "activeFile": "DebugMap.json",
+    "activeFile": "",
     "expandedProjectPaths": [
     ],
+    "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
         "DebugMap.json": {
             "scale": 5.452604166666666,
@@ -32,8 +33,6 @@
     "map.tileWidth": 16,
     "map.width": 12,
     "openFiles": [
-        "DebugTiles.json",
-        "DebugMap.json"
     ],
     "project": "VisceralGrove.tiled-project",
     "recentFiles": [
