@@ -15,6 +15,10 @@ export class Camera {
     }
 
     Update(eu){
+    }
+
+    // Use position to get equal pos in the level data to read and retain everything needed in order to render a screen.
+    LoadLvlScreen() {
 
     }
 }
