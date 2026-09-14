@@ -15,8 +15,8 @@ export class Level {
             return ''
         } else {
             const lvlStr2 = await re.text()
-            const lvlStr = JSON.stringify(lvlStr2)
-            console.log(lvlStr, 'Okay. Yay. ❤️')
+            const lvlStr = lvlStr2
+            console.log('Okay. Yay. ❤️')
             return lvlStr;
         }
     }

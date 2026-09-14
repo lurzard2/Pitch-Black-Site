@@ -116,16 +116,15 @@ export class Tile {
     }
 }
 
+import { Camera } from './camera.js';
+export const camera = new Camera();
 
 import { Level } from './level.js'
 export const level = new Level(document.title);
 // We need to WAIT. For level.lvl to be assigned. before we start grabbing it.
 level.lvl = JSON.parse(await level.LoadLvl())
-console.log(level.lvl);
-
-
-import { Camera } from './camera.js';
-export const camera = new Camera();
+camera.LoadLvlScreen()
+//console.log(level.lvl);
 
 
 
