@@ -4,6 +4,7 @@ export class Camera {
     constructor(pos = new VG.XYZ()) {
         this.pos = pos;
         this.destPos = new VG.XYZ();
+        this.loadedMap = {}
         VG.PushUpdatableProcess(this)
     }
 
@@ -22,8 +23,8 @@ export class Camera {
 
     // Use position to get equal pos in the level data to read and retain everything needed in order to render a screen.
     OldCamDraw() {
-        const layers = VG.level.lvl['layers'] ?? []
-        const tileSets = VG.level.tileSets;
+        const layers = VG.world.lvl['layers'] ?? []
+        const tileSets = VG.world.tileSets;
         //console.log(layers, tileSets);
 
         const pos = new VG.XYZ(-1, 0);

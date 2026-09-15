@@ -9,6 +9,15 @@ export class XYZ {
     get Normalized() {
         return new XYZ(Normalize(this.x), Normalize(this.y))
     }
+
+    FromString(str){
+        const strings = str.split(',')
+        return new XYZ(strings[0], strings[1], strings[2]);
+    }
+
+    get ToString() {
+        return `${this.x},${this.y},${this.z}`
+    }
 }
 
 
@@ -21,11 +30,25 @@ export function Normalize(val) { return val < 1 ? val : val * TILE }
 // 12x8 tile grid
 export const GRID = new XYZ(12, 8);
 
-export function IterateOnGrid(callback) {
-    for (let x = 0; x < GRID.x; x++){
-        for (let y = 0; y < GRID.y; y++){
+// 2d iteration on grid tiles
+export function SearchGrid(callback) {
+    for (let x = 0; x < GRID.x; x++) {
+        for (let y = 0; y < GRID.y; y++) {
             callback(new XYZ(x, y));
         }
+    }
+}
+
+// calculated left-down iteration on grid tiles, best for non-2d arrays
+export function LoopThroughGrid(callback, pos = new XYZ(-1)) {
+    const total = GRID.x * GRID.y
+    for (let i = 0; i < total; i++) {
+        pos.x += 1
+        if (pos.x === GRID.x) {
+            pos.x = 0
+            pos.y += 1
+        }
+        callback(pos);
     }
 }
 
@@ -116,35 +139,25 @@ export class Tile {
     }
 }
 
+import { World } from './world.js'
+export const world = new World('test');
 
+async function Load(){
+    await world.LoadWorld()
+}
+await Load();
+//console.log('INIT!!!', world)
 
 import { Camera } from './camera.js';
 export const camera = new Camera();
 
-import { Level } from './level.js'
-export const level = new Level();
-
-// INITIAL LOAD OF LEVEL. And assigning level values, for the camera to render with.
-
-// File loading is async, we need to await
-//await Load()
-console.log('Level init!', '\nLAYERS:\n',level.lvl['layers'], '\nTILESETS:\n',level.tileSets)
-//camera.OldCamDraw()
-
-async function Load(){
-    level.lvl = await level.LoadLvl()
-    level.tileSets = await level.LoadTilesets()
-    for (const tileset of level.tileSets){
-        tileset.data = await level.GetJSONFileAsStr('/levels/'+tileset.src);
-    }
-}
 
 
 export let debug = true;
 export let showDebugGrid = false;
 
 if (debug) {
-    IterateOnGrid((pos) => {
+    SearchGrid((pos) => {
         render2D.strokeStyle = 'blue';
         render2D.strokeRect(Normalize(pos.x), Normalize(pos.y), TILE, TILE)
     })
