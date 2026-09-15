@@ -56,12 +56,20 @@ export function LoopThroughGrid(callback, pos = new XYZ(-1)) {
 export const SCREEN = GRID.Normalized;
 
 
+import * as PIXI from '/js/pixi.mjs'
+const app = new PIXI.Application();
+const container = new PIXI.Container();
 
-export const canvas = document.body.appendChild(document.createElement('canvas'));
-canvas.width = SCREEN.x;
-canvas.height = SCREEN.y;
-
-export const render2D = canvas.getContext('2d');
+async function Start(){
+    await app.init({
+        background: 'grey',
+        width: SCREEN.x,
+        height: SCREEN.y,
+    })
+    document.body.appendChild(app.canvas);
+    app.stage.addChild(container);
+}
+await Start();
 
 
 
