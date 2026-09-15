@@ -146,7 +146,6 @@ async function Load(){
     await world.LoadWorld()
 }
 await Load();
-//console.log('INIT!!!', world)
 
 import { Camera } from './camera.js';
 export const camera = new Camera();
@@ -154,11 +153,7 @@ export const camera = new Camera();
 
 
 export let debug = true;
-export let showDebugGrid = false;
 
 if (debug) {
-    SearchGrid((pos) => {
-        render2D.strokeStyle = 'blue';
-        render2D.strokeRect(Normalize(pos.x), Normalize(pos.y), TILE, TILE)
-    })
+    console.log('INIT!!!', world)
 }

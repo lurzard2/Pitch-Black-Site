@@ -12,7 +12,7 @@ export class World {
 
     // Build an optimized map object from parsed data
     async ParseMap(mapString){
-        const parsed = await this.Parse(this.Path + `worlds/${this.name}/` + mapString)
+        const parsed = await this.ParseJSON(this.Path + `worlds/${this.name}/` + mapString)
 
         // we have to interpret and trim the data from these collections
         const layers = parsed['layers']
@@ -38,7 +38,7 @@ export class World {
             // tileset urls go to a diff path, we have to trim the path and make it work. which is for organization purposes.
             const properString = ts['source'].split('tilesets/')
             const properTilesetPath = properString[1]
-            const properTileset = await this.Parse('tiled/tilesets/' + properTilesetPath)
+            const properTileset = await this.ParseJSON('tiled/tilesets/' + properTilesetPath)
 
             interpretedTilesets.push(
                 {
@@ -55,13 +55,15 @@ export class World {
     }
 
     async GetWorld(worldName){
-        const world = await this.Parse(this.Path + `worlds/${worldName}/` + worldName + '.world')
+        const world = await this.ParseJSON(this.Path + `worlds/${worldName}/` + worldName + '.world')
+        // We don't actually need any other data besides the maps array
         return {
             maps: world['maps'],
         }
     }
 
     async LoadWorld(worldName = '') {
+        // Dynamic world switching?
         if (worldName.length > 0) {
             this.name = worldName
         }
@@ -83,22 +85,22 @@ export class World {
         return 'tiled/'
     }
 
-    async GetJSONFileAsStr(filePath) {
+    async GetFileAsStr(filePath) {
         const loadRq = new Request(VG.directory+filePath)
         const re = await fetch(loadRq)
         if (!re.ok) {
-            console.log(re.text(), 'Parse: INVALID!!! -', filePath)
+            console.log(re.text(), 'GetFileAsStr: INVALID!!! -', filePath)
             return ''
         } else {
             const retStr = await re.text()
-            console.log('Parse: okay ❤️ yay ❤️ -', filePath)
+            console.log('GetFileAsStr: okay ❤️ yay ❤️ -', filePath)
             return retStr
         }
     }
 
-    async Parse(fileName) {
+    async ParseJSON(fileName) {
         if (this.cachedParses[fileName] === undefined) {
-            this.cachedParses[fileName] = JSON.parse(await this.GetJSONFileAsStr(fileName))
+            this.cachedParses[fileName] = JSON.parse(await this.GetFileAsStr(fileName))
         }
         return this.cachedParses[fileName]
     }
@@ -126,7 +128,7 @@ export class World {
 
     // this.lvl
     async LoadLvl() {
-        return JSON.parse(await this.GetJSONFileAsStr('tiled/' + this.name));
+        return JSON.parse(await this.GetFileAsStr('tiled/' + this.name));
     }
 
     // this.tileSets

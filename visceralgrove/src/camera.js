@@ -5,18 +5,14 @@ export class Camera {
         this.pos = pos;
         this.destPos = new VG.XYZ();
         this.loadedMap = {}
-        VG.PushUpdatableProcess(this)
-    }
-
-    set #ChangeX(val) {
-        this.destPos.x = val;
-    }
-    set #ChangeY(val) {
-        this.destPos.y = val;
+        this.assetContainers = {
+            board: [],
+            actor: [],
+            above: [],
+        }
     }
 
     Update(eu) {
-
     }
 
 
