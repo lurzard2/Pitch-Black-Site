@@ -127,9 +127,9 @@ export const level = new Level();
 // INITIAL LOAD OF LEVEL. And assigning level values, for the camera to render with.
 
 // File loading is async, we need to await
-await Load()
-console.log('Level init!', '\nLAYERS:\n',level.lvl.layers, '\nTILESETS:\n',level.tileSets)
-camera.LoadLvlScreen()
+//await Load()
+console.log('Level init!', '\nLAYERS:\n',level.lvl['layers'], '\nTILESETS:\n',level.tileSets)
+//camera.OldCamDraw()
 
 async function Load(){
     level.lvl = await level.LoadLvl()

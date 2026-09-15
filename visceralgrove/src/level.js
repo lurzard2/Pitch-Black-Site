@@ -1,5 +1,6 @@
 import * as VG from './game.js'
 
+// Hold level data
 export class Level {
     constructor() {
         this.lvlName = document.title+'.json';
@@ -9,7 +10,7 @@ export class Level {
 
     // this.lvl
     async LoadLvl() {
-        return JSON.parse(await this.GetJSONFileAsStr('levels/' +'Map-'+this.lvlName));
+        return JSON.parse(await this.GetJSONFileAsStr('tiled/' + this.lvlName));
     }
 
     // this.tileSets

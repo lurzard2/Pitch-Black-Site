@@ -1,5 +1,4 @@
 import * as VG from './game.js';
-import {VGImage} from "./game.js";
 
 export class Camera {
     constructor(pos = new VG.XYZ()) {
@@ -19,16 +18,18 @@ export class Camera {
 
     }
 
+
+
     // Use position to get equal pos in the level data to read and retain everything needed in order to render a screen.
-    LoadLvlScreen() {
-        const layers = VG.level.lvl.layers ?? []
+    OldCamDraw() {
+        const layers = VG.level.lvl['layers'] ?? []
         const tileSets = VG.level.tileSets;
         //console.log(layers, tileSets);
 
         const pos = new VG.XYZ(-1, 0);
 
         for (const layer of layers) {
-            for (const tile of layer.data){
+            for (const tile of layer['data']){
                 pos.x += 1
                 if (pos.x === VG.GRID.x){
                     pos.x = 0
@@ -37,7 +38,7 @@ export class Camera {
 
                 if (tile !== 0){
 
-                    const t = new VG.Tile(new VGImage(), pos);
+                    const t = new VG.Tile(new VG.VGImage(), pos);
                     t.Render()
                 }
 

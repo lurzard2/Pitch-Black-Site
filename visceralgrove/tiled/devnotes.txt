@@ -1,0 +1,29 @@
+Everything for the game is stored in either of 2 file paths
+
+/tiled/ for /worlds/ and /tilesets/
+
+MAINTAIN: We store all data used for visceralgrove outside of .js code in json or assets files
+
+/worlds/
+    folders use the same name as the .world file
+    loading files from .worlds is done with name association in the file structure.
+
+    EXAMPLE: loading "Debug" as world points to "Debug.world" which points to map files stored in "Debug/"
+
+        WorldName/
+
+            WorldName.world
+                contains maps
+                each map is positioned in Tiled, storing an x,y, and a path to the json file.
+
+                    MapName.json
+                        maps are game screens, they load into the canvas grid, per tile, and are switched between on screen transitions.
+                        can be named anything as long as the pointer finds it correctly.
+                        defines object placement as well as tile usage, and what tilesets are used per-map
+
+                        < see Tiled Documentation >
+
+/tilsets/
+    json files storing tileset data, pointing to the image they source
+
+    < see Tiled Documentation >
