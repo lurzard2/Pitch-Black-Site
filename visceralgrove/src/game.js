@@ -1,3 +1,7 @@
+export const directory = '/visceralgrove/';
+
+
+
 // Positioning System
 export class XYZ {
     constructor(x = 0, y = 0, z = 0) {
@@ -39,7 +43,7 @@ export function SearchGrid(callback) {
     }
 }
 
-// calculated left-down iteration on grid tiles, best for non-2d arrays
+// calculated left-down iteration on grid tiles, best for forward iteration on a 1d array
 export function LoopThroughGrid(callback, pos = new XYZ(-1)) {
     const total = GRID.x * GRID.y
     for (let i = 0; i < total; i++) {
@@ -56,11 +60,18 @@ export function LoopThroughGrid(callback, pos = new XYZ(-1)) {
 export const SCREEN = GRID.Normalized;
 
 
-import * as PIXI from '/js/pixi.mjs'
-const app = new PIXI.Application();
-const container = new PIXI.Container();
 
-async function Start(){
+// START!
+import {
+    Application,
+    Container,
+    Assets
+} from '/js/pixi.mjs'
+
+export const app = new Application();
+export const container = new Container();
+
+(async () => {
     await app.init({
         background: 'grey',
         width: SCREEN.x,
@@ -68,8 +79,7 @@ async function Start(){
     })
     document.body.appendChild(app.canvas);
     app.stage.addChild(container);
-}
-await Start();
+})()
 
 
 
@@ -93,60 +103,6 @@ requestAnimationFrame(() => {
 
 
 
-export const directory = '/visceralgrove/';
-export class Asset {
-    constructor(assetName, ext) {
-        this.assetName = assetName;
-        this.ext = ext;
-    }
-
-    // prefix and/or suffix injection
-    ExtName({pf = '', sf = ''}) {
-        return directory+'assets/'+ pf+this.assetName+sf +'.'+this.ext;
-    }
-
-    get GetName() {
-        return this.ExtName({});
-    }
-}
-
-export class VGImage extends Asset {
-    constructor(textureName = 'PH', ext = 'png') {
-        super(textureName, ext);
-    }
-
-    #Load(img, x, y) {
-        render2D.drawImage(img, x, y, TILE, TILE);
-    }
-
-    Render(pos) {
-        const i = new Image();
-
-        i.onload = () => {
-            this.#Load(i, pos.x, pos.y);
-        }
-
-        i.onerror = (e) => {
-            console.log(e, '\n'+i);
-        }
-
-        i.src = this.GetName
-    }
-}
-
-
-
-export class Tile {
-    constructor(asset = new VGImage(), pos = new XYZ()) {
-        this.asset = asset;
-        this.pos = pos;
-    }
-
-    Render() {
-        this.asset.Render(this.pos.Normalized)
-    }
-}
-
 import { World } from './world.js'
 export const world = new World('test');
 
@@ -155,13 +111,21 @@ async function Load(){
 }
 await Load();
 
-import { Camera } from './camera.js';
-export const camera = new Camera();
-
-
-
 export let debug = true;
 
 if (debug) {
-    console.log('INIT!!!', world)
+    console.debug('WORLD INIT!!!', world)
 }
+
+
+
+import { VGAssets } from './VGAssets.js'
+export const vgassets = new VGAssets()
+
+
+
+console.info(
+    'Clarification on WebGL warnings',
+    '\n"WebGL context was lost" - ARBITRARY\n   It means it survived, WebGL context is fine.',
+    '\n"Source map error: (...)" - ARBITRARY\n   Missing file used for debugging, which we don\'t need.'
+)

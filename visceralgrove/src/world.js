@@ -1,10 +1,10 @@
-import * as VG from './game.js'
+import {directory, XYZ} from './game.js'
 
 // Hold level data
 export class World {
     constructor(name) {
         this.name = name;
-        this.originPos = new VG.XYZ()
+        this.originPos = new XYZ()
         this.loadedWorld = {}
         this.maps = {}
         this.cachedParses = {}
@@ -32,18 +32,24 @@ export class World {
             )
         }
 
-        // interpret 'tilesets'
+        // interpret 'tilesets' but it's deeply nested stuff
         for (const ts of tilesets) {
-
             // tileset urls go to a diff path, we have to trim the path and make it work. which is for organization purposes.
             const properString = ts['source'].split('tilesets/')
             const properTilesetPath = properString[1]
             const properTileset = await this.ParseJSON('tiled/tilesets/' + properTilesetPath)
+            // now we filter!
+            const properTSObj = {
+                name: properTileset['name'],
+                image: properTileset['image'],
+                size: new XYZ(properTileset['rows'], properTileset['columns']),
+                count: properTileset['tilecount'],
+            }
 
             interpretedTilesets.push(
                 {
                     firstgid: ts['firstgid'],
-                    data: properTileset,
+                    data: properTSObj,
                 }
             )
         }
@@ -70,7 +76,7 @@ export class World {
         this.loadedWorld = await this.GetWorld(this.name)
 
         for (const map of this.loadedWorld['maps']) {
-            const pos = new VG.XYZ(map['x'], map['y'])
+            const pos = new XYZ(map['x'], map['y'])
             this.maps[pos.ToString] = await this.ParseMap(map['fileName'])
 
             if (this.maps[pos.ToString]['class'] === 0 && (pos.x !== 0 || pos.y !== 0)) {
@@ -86,14 +92,14 @@ export class World {
     }
 
     async GetFileAsStr(filePath) {
-        const loadRq = new Request(VG.directory+filePath)
+        const loadRq = new Request(directory+filePath)
         const re = await fetch(loadRq)
         if (!re.ok) {
-            console.log(re.text(), 'GetFileAsStr: INVALID!!! -', filePath)
+            console.warn(re.text(), 'GetFileAsStr: INVALID!!! -', filePath)
             return ''
         } else {
             const retStr = await re.text()
-            console.log('GetFileAsStr: okay ❤️ yay ❤️ -', filePath)
+            console.debug('GetFileAsStr: okay ❤️ yay ❤️ -', filePath)
             return retStr
         }
     }
@@ -103,40 +109,5 @@ export class World {
             this.cachedParses[fileName] = JSON.parse(await this.GetFileAsStr(fileName))
         }
         return this.cachedParses[fileName]
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // this.lvl
-    async LoadLvl() {
-        return JSON.parse(await this.GetFileAsStr('tiled/' + this.name));
-    }
-
-    // this.tileSets
-    async LoadTilesets(){
-        const tilesets = []
-        for (const ts of this.lvl.tilesets){
-            tilesets.push({ fgid: ts.firstgid, src: ts.source, data: '' })
-        }
-        return tilesets
     }
 }
