@@ -1,4 +1,4 @@
-import {directory, XYZ} from './game.js'
+import {directory, XYZ, LoopThroughGrid} from './game.js'
 
 // Hold level data
 export class World {
@@ -21,6 +21,7 @@ export class World {
         const interpretedTilesets = []
 
         // interpret 'layers'
+
         for (const layer of layers){
             interpretedLayers.push(
                 {

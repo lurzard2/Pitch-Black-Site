@@ -117,12 +117,8 @@ if (debug) {
     console.debug('WORLD INIT!!!', world)
 }
 
-
-
-import { VGAssets } from './VGAssets.js'
-export const vgassets = new VGAssets()
-
-
+import { Camera } from './camera.js';
+export const camera = new Camera();
 
 console.info(
     'Clarification on WebGL warnings',
