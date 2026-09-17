@@ -1,5 +1,5 @@
 export const directory = '/visceralgrove/';
-export const pixiDirectory = window.location.hostname === 'localhost' ? '' : '/';
+export const pixiDirectory = window.location.hostname === 'localhost' ? '' : '/visceralgrove/';
 export let debug = true;
 
 
