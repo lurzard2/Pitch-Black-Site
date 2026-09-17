@@ -113,13 +113,12 @@ export const container = new Container();
             onProgress: (p) => {if (debug) { console.debug(`Loading Asset: ${Math.round(p * 100)}%`) }},
             onError: (err, asset) => console.error(`Error loading ${asset.src}: ${err.message}`)
         },
-        basePath: '/visceralgrove/',
     })
 })()
 
 
 
-import { WorldLoader } from './worldLoader.js'
+import { WorldLoader } from './src/worldLoader.js'
 export const worldLoader = new WorldLoader('test');
 
 async function Load(){
@@ -140,7 +139,7 @@ globalClock.start()
 
 
 
-import { SceneHandler } from './sceneHandler.js';
+import { SceneHandler } from './src/sceneHandler.js';
 const sceneHandler = new SceneHandler();
 await sceneHandler.LoadAllAssets();
 

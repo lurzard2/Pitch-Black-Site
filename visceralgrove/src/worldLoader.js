@@ -1,4 +1,4 @@
-import {directory, XYZ, LoopThroughGrid} from './game.js'
+import {directory, XYZ, LoopThroughGrid} from '../game.js'
 
 // Hold level data
 export class WorldLoader {

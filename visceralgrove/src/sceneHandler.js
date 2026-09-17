@@ -10,7 +10,7 @@ import {
     debug,
     LoopThroughGrid,
     SlimeGridLoop
-} from "./game.js";
+} from "../game.js";
 
 
 
@@ -34,7 +34,7 @@ export class SceneHandler {
 
     async LoadAllAssets() {
         for (const ts of this.Map.tilesets) {
-            await Assets.load({ alias: ts.name, src: 'tiled/tilesets/'+ts.image })
+            await Assets.load({ alias: ts.name, src: './tiled/tilesets/'+ts.image })
         }
     }
 
