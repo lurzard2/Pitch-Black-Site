@@ -34,7 +34,7 @@ export class SceneHandler {
 
     async LoadAllAssets() {
         for (const ts of this.Map.tilesets) {
-            await Assets.load({ alias: ts.name, src: 'tiled/tilesets/'+ts.image })
+            await Assets.load({ alias: ts.name, src: 'visceralgrove/tiled/tilesets/'+ts.image })
         }
     }
 

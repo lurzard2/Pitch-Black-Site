@@ -113,7 +113,7 @@ export const container = new Container();
             onProgress: (p) => {if (debug) { console.debug(`Loading Asset: ${Math.round(p * 100)}%`) }},
             onError: (err, asset) => console.error(`Error loading ${asset.src}: ${err.message}`)
         },
-        basePath: '/visceralgrove/'
+        basePath: '/'
     })
 })()
 
