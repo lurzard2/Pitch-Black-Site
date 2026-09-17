@@ -136,13 +136,16 @@ if (debug) {
 export const globalClock = new Ticker()
 globalClock.minFPS = 60
 globalClock.maxFPS = 60
-globalClock.start()
 
 
 
 import { SceneHandler } from './src/sceneHandler.js';
 const sceneHandler = new SceneHandler();
 await sceneHandler.LoadAllAssets();
+
+
+
+globalClock.start()
 
 
 
