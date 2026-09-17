@@ -1,13 +1,13 @@
 import {directory, XYZ, LoopThroughGrid} from './game.js'
 
 // Hold level data
-export class World {
+export class WorldLoader {
     constructor(name) {
         this.name = name;
         this.originPos = new XYZ()
         this.loadedWorld = {}
-        this.maps = {}
-        this.cachedParses = {}
+        this.maps = []
+        this._cachedParses = {}
     }
 
     // Build an optimized map object from parsed data
@@ -41,18 +41,14 @@ export class World {
             const properTileset = await this.ParseJSON('tiled/tilesets/' + properTilesetPath)
             // now we filter!
             const properTSObj = {
+                firstgid: ts['firstgid'],
                 name: properTileset['name'],
                 image: properTileset['image'],
                 size: new XYZ(properTileset['rows'], properTileset['columns']),
                 count: properTileset['tilecount'],
             }
 
-            interpretedTilesets.push(
-                {
-                    firstgid: ts['firstgid'],
-                    data: properTSObj,
-                }
-            )
+            interpretedTilesets.push(properTSObj)
         }
         return {
             class: parsed['class'],
@@ -92,6 +88,7 @@ export class World {
         return 'tiled/'
     }
 
+    //TODO: refactor to use pixi?
     async GetFileAsStr(filePath) {
         const loadRq = new Request(directory+filePath)
         const re = await fetch(loadRq)
@@ -106,9 +103,9 @@ export class World {
     }
 
     async ParseJSON(fileName) {
-        if (this.cachedParses[fileName] === undefined) {
-            this.cachedParses[fileName] = JSON.parse(await this.GetFileAsStr(fileName))
+        if (this._cachedParses[fileName] === undefined) {
+            this._cachedParses[fileName] = JSON.parse(await this.GetFileAsStr(fileName))
         }
-        return this.cachedParses[fileName]
+        return this._cachedParses[fileName]
     }
 }

@@ -1,4 +1,5 @@
 export const directory = '/visceralgrove/';
+export let debug = true;
 
 
 
@@ -65,11 +66,13 @@ export const SCREEN = GRID.Normalized;
 import {
     Application,
     Container,
-    Assets
+    Ticker,
+    Assets,
 } from '/js/pixi.mjs'
 
 export const app = new Application();
 export const container = new Container();
+
 
 (async () => {
     await app.init({
@@ -79,46 +82,44 @@ export const container = new Container();
     })
     document.body.appendChild(app.canvas);
     app.stage.addChild(container);
+
+    Assets.init({
+        loadOptions: {
+            onProgress: (p) => {if (debug) { console.debug(`Loading: ${Math.round(p * 100)}%`) }},
+            onError: (err, asset) => console.error(`Error loading ${asset.src}: ${err.message}`)
+        },
+        baseUrl: 'visceralgrove/'
+    })
 })()
 
 
 
-export const processes = [];
-export function PushUpdatableProcess(proc){
-    processes.push(proc)
-}
-let evenUpdate = true;
-function Update() {
-    evenUpdate = !evenUpdate;
-
-    processes.forEach(proc => {
-        proc.Update(evenUpdate);
-    })
-
-    requestAnimationFrame(Update);
-}
-requestAnimationFrame(() => {
-    Update();
-});
-
-
-
-import { World } from './world.js'
-export const world = new World('test');
+import { WorldLoader } from './worldLoader.js'
+export const worldLoader = new WorldLoader('test');
 
 async function Load(){
-    await world.LoadWorld()
+    await worldLoader.LoadWorld()
 }
 await Load();
 
-export let debug = true;
-
 if (debug) {
-    console.debug('WORLD INIT!!!', world)
+    console.debug('WORLD INIT!!!', worldLoader)
 }
 
-import { Camera } from './camera.js';
-export const camera = new Camera();
+
+
+export const globalClock = new Ticker()
+globalClock.minFPS = 60
+globalClock.maxFPS = 60
+globalClock.start()
+
+
+
+import { SceneHandler } from './sceneHandler.js';
+const sceneHandler = new SceneHandler();
+await sceneHandler.LoadAllAssets();
+
+
 
 console.info(
     'Clarification on WebGL warnings',
