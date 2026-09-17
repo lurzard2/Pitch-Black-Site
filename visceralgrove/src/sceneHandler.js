@@ -17,6 +17,7 @@ import {
 export class SceneHandler {
     constructor(pos = new XYZ()) {
         this.pos = pos;
+        this.pos = worldLoader.originPos
         globalClock.addOnce(() => { this.RenderScene() })
     }
 
