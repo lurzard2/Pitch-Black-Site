@@ -44,7 +44,7 @@ export class WorldLoader {
                 firstgid: ts['firstgid'],
                 name: properTileset['name'],
                 image: properTileset['image'],
-                size: new XYZ(properTileset['rows'], properTileset['columns']),
+                size: new XYZ(properTileset['imageheight'], properTileset['imagewidth']),
                 count: properTileset['tilecount'],
             }
 

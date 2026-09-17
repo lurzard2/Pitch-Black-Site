@@ -37,8 +37,8 @@ export const GRID = new XYZ(12, 8);
 
 // 2d iteration on grid tiles
 export function SearchGrid(callback) {
-    for (let x = 0; x < GRID.x; x++) {
-        for (let y = 0; y < GRID.y; y++) {
+    for (let y = 0; y < GRID.y; y++) {
+        for (let x = 0; x < GRID.x; x++) {
             callback(new XYZ(x, y));
         }
     }
@@ -56,6 +56,31 @@ export function LoopThroughGrid(callback, pos = new XYZ(-1)) {
         callback(pos);
     }
 }
+
+export function SlimeGridLoop(length, callback) {
+    /*for (let i = 0; i < length; i++) {
+        const x = i % GRID.x - 1;
+        const y = Math.floor(i / GRID.x);
+        console.debug(`Tile index ${i} is located at (${x}, ${y})`);
+        callback(i, new XYZ(x, y));
+    }*/
+
+    let i = 0;
+    for (let y = 0; y < GRID.y; y++) {
+        for (let x = 0; x < GRID.x; x++) {
+            //console.log(`Tile index ${i} is located at (${x}, ${y})`);
+            i++;
+            callback(i, new XYZ(x, y));
+        }
+    }
+}
+
+export function GetPlaceInGridLoop(index, rows, cols) {
+    rows -= 1;
+
+}
+
+
 
 // 12x8 (16x16) screen
 export const SCREEN = GRID.Normalized;
@@ -85,7 +110,7 @@ export const container = new Container();
 
     Assets.init({
         loadOptions: {
-            onProgress: (p) => {if (debug) { console.debug(`Loading: ${Math.round(p * 100)}%`) }},
+            onProgress: (p) => {if (debug) { console.debug(`Loading Asset: ${Math.round(p * 100)}%`) }},
             onError: (err, asset) => console.error(`Error loading ${asset.src}: ${err.message}`)
         },
         baseUrl: 'visceralgrove/'
