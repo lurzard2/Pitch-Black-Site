@@ -1,4 +1,5 @@
 export const directory = '/visceralgrove/';
+export const pixiDirectory = window.location.hostname === 'localhost' ? '' : '/';
 export let debug = true;
 
 
@@ -113,7 +114,7 @@ export const container = new Container();
             onProgress: (p) => {if (debug) { console.debug(`Loading Asset: ${Math.round(p * 100)}%`) }},
             onError: (err, asset) => console.error(`Error loading ${asset.src}: ${err.message}`)
         },
-        basePath: '/'
+        basePath: pixiDirectory
     })
 })()
 
