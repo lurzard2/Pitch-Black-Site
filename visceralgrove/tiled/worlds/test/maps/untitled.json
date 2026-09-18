@@ -1,8 +1,42 @@
-{ "class": 0,
-  "compressionlevel":-1,
+{ "class":"0",
+ "compressionlevel":-1,
  "height":8,
  "infinite":false,
  "layers":[
+        {
+         "draworder":"topdown",
+         "id":4,
+         "name":"spawnpoints",
+         "objects":[
+                {
+                 "height":0,
+                 "id":2,
+                 "name":"",
+                 "opacity":1,
+                 "properties":[
+                        {
+                         "name":"char",
+                         "type":"string",
+                         "value":"grey"
+                        }, 
+                        {
+                         "name":"order",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"spawn",
+                 "visible":true,
+                 "width":0,
+                 "x":120,
+                 "y":56
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
         {
          "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -22,8 +56,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":2,
- "nextobjectid":1,
+ "nextlayerid":5,
+ "nextobjectid":3,
  "orientation":"orthogonal",
  "renderorder":"left-down",
  "tiledversion":"1.12.2",

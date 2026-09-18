@@ -23,14 +23,26 @@ export class WorldLoader {
         // interpret 'layers'
 
         for (const layer of layers){
-            interpretedLayers.push(
-                {
-                    data: layer['data'],
-                    id: layer['id'],
-                    name: layer['name'],
-                    type: layer['type']
-                }
-            )
+            if (layer.type === 'tilelayer') {
+                interpretedLayers.push(
+                    {
+                        data: layer['data'],
+                        id: layer['id'],
+                        name: layer['name'],
+                        type: layer['type']
+                    }
+                )
+            }
+            if (layer.type === 'objectgroup') {
+                interpretedLayers.push(
+                    {
+                        id: layer['id'],
+                        name: layer['name'],
+                        type: layer['type'],
+                        objects: layer['objects'],
+                    }
+                )
+            }
         }
 
         // interpret 'tilesets' but it's deeply nested stuff
@@ -76,7 +88,7 @@ export class WorldLoader {
             const pos = new XYZ(map['x'], map['y'])
             this.maps[pos.ToString] = await this.ParseMap(map['fileName'])
 
-            if (this.maps[pos.ToString]['class'] === 0 && (pos.x !== 0 || pos.y !== 0)) {
+            if (this.maps[pos.ToString]['class'] === '0' && (pos.x !== 0 || pos.y !== 0)) {
                 this.originPos = pos
             }
         }

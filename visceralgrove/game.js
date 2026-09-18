@@ -1,6 +1,20 @@
 export const directory = '/visceralgrove/';
-export const pixiDirectory = window.location.hostname === 'localhost' ? '' : '/visceralgrove/';
-export let debug = true;
+export let debug = window.location.hostname === 'localhost';
+export const pixiDirectory = debug ? '' : '/visceralgrove/';
+
+
+
+
+export const controller = {};
+export function GetInput(key) {
+    return controller[key];
+}
+window.addEventListener('keydown', function(e) {
+    controller[e.key] = true;
+})
+window.addEventListener('keyup', function(e) {
+    controller[e.key] = false;
+})
 
 
 
@@ -10,6 +24,13 @@ export class XYZ {
         this.x = x;
         this.y = y;
         this.z = z;
+    }
+
+    get NormalizedFloor() {
+        return new XYZ(
+            Normalize(Math.floor(this.x)),
+            Normalize(Math.floor(this.y))
+        )
     }
 
     get Normalized() {
@@ -32,6 +53,9 @@ export class XYZ {
 // Globally consistent tile and asset size which must be maintained.
 export const TILE = 16;
 export function Normalize(val) { return val < 1 ? val : val * TILE }
+export function Denormalize(val) { return val / TILE }
+
+
 
 // 12x8 tile grid
 export const GRID = new XYZ(12, 8);
@@ -74,11 +98,6 @@ export function SlimeGridLoop(length, callback) {
             callback(i, new XYZ(x, y));
         }
     }
-}
-
-export function GetPlaceInGridLoop(index, rows, cols) {
-    rows -= 1;
-
 }
 
 

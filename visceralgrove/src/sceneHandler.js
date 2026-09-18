@@ -69,12 +69,18 @@ export class SceneHandler {
 
     RenderScene() {
         for (const layer of this.Map.layers) {
-            if (layer.type !== 'tilelayer') { continue; }
-            SlimeGridLoop(layer.data.length,(i, pos) => {
-                if (layer.data[i] > 0){
-                    app.stage.addChild(this.GetTileAsSpriteFromGID(layer.data[i], pos.Normalized))
+            if (layer.type === 'tilelayer') {
+                SlimeGridLoop(layer.data.length,(i, pos) => {
+                    if (layer.data[i] > 0){
+                        app.stage.addChild(this.GetTileAsSpriteFromGID(layer.data[i], pos.Normalized))
+                    }
+                })
+            }
+            if (layer.type === 'objectgroup') {
+                for (const obj of layer.objects) {
+                    console.debug(obj);
                 }
-            })
+            }
         }
     }
 }

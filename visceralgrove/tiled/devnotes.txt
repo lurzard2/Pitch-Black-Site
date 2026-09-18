@@ -23,6 +23,9 @@ MAINTAIN: We store all data used for visceralgrove outside of .js code in json o
 
                         < see Tiled Documentation >
 
+                        class:
+                        '0'
+
 /tilsets/
     json files storing tileset data, pointing to the image they source
 

@@ -1,13 +1,13 @@
 {
-    "activeFile": "tiled/tilesets/Debug-Tiles.json",
+    "activeFile": "tiled/worlds/test/maps/untitled.json",
     "expandedProjectPaths": [
+        "levels",
+        ".",
+        "tiled/worlds",
         "tiled/worlds/test/maps",
         "tiled",
-        "tiled/tilesets",
-        "levels",
         "tiled/worlds/test",
-        ".",
-        "tiled/worlds"
+        "tiled/tilesets"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -72,22 +72,25 @@
             "scaleInEditor": 1
         },
         "tiled/worlds/test/maps/Map-3.json": {
-            "scale": 2,
+            "scale": 3,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 214.5,
-                "y": 64
+                "x": 198.33333333333334,
+                "y": 66.33333333333334
             }
         },
         "tiled/worlds/test/maps/Tiles-Debug.json": {
             "scaleInDock": 1
         },
         "tiled/worlds/test/maps/untitled.json": {
-            "scale": 2,
+            "expandedObjectLayers": [
+                4
+            ],
+            "scale": 3,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 95.75,
-                "y": 63.75
+                "x": -2,
+                "y": 65.66666666666667
             }
         },
         "tileset.tsx": {
@@ -109,17 +112,15 @@
     "map.width": 12,
     "openFiles": [
         "tiled/worlds/test/maps/Map-3.json",
-        "tiled/worlds/test/maps/untitled.json",
-        "tiled/worlds/test/maps/Debug-Tiles.json",
-        "tiled/tilesets/Debug-Tiles.json",
-        "tiled/tilesets/Tiles-Debug.json"
+        "tiled/worlds/test/maps/untitled.json"
     ],
     "project": "VisceralGrove.tiled-project",
+    "property.type": "string",
     "recentFiles": [
         "tiled/worlds/test/maps/Map-3.json",
         "tiled/worlds/test/maps/untitled.json",
-        "tiled/worlds/test/maps/Debug-Tiles.json",
         "tiled/tilesets/Tiles-Debug.json",
+        "tiled/worlds/test/maps/Debug-Tiles.json",
         "tiled/tilesets/Debug-Tiles.json",
         "levels/untitled.json",
         "levels/Map-3.json",
