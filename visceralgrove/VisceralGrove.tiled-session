@@ -1,15 +1,15 @@
 {
-    "activeFile": "tiled/worlds/test/maps/untitled.json",
+    "activeFile": "tiled/worlds/test/maps/Map-3.json",
     "expandedProjectPaths": [
-        "tiled/worlds/test",
+        "tiled/tilesets",
+        "tiled",
+        "tiled/tilesets/Grove",
+        "levels",
+        ".",
+        "tiled/worlds/test/maps",
         "tiled/tilesets/Grove/Room",
         "tiled/worlds",
-        "levels",
-        "tiled/tilesets/Grove",
-        ".",
-        "tiled",
-        "tiled/worlds/test/maps",
-        "tiled/tilesets"
+        "tiled/worlds/test"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -97,11 +97,11 @@
                 5,
                 2
             ],
-            "scale": 2,
-            "selectedLayer": 1,
+            "scale": 4,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 149.25,
-                "y": 61
+                "x": 269.875,
+                "y": 53.25
             }
         },
         "tiled/worlds/test/maps/RoomWindow.json": {
@@ -116,11 +116,11 @@
                 9,
                 6
             ],
-            "scale": 2,
-            "selectedLayer": 2,
+            "scale": 4,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": -42.75,
-                "y": 61
+                "x": 77.875,
+                "y": 53.25
             }
         },
         "tileset.tsx": {
@@ -149,9 +149,9 @@
     "project": "VisceralGrove.tiled-project",
     "property.type": "bool",
     "recentFiles": [
+        "tiled/worlds/test/maps/untitled.json",
         "tiled/tilesets/Window.json",
         "tiled/worlds/test/maps/Map-3.json",
-        "tiled/worlds/test/maps/untitled.json",
         "tiled/tilesets/Grove/Room/Window.json",
         "tiled/tilesets/Grove/Room/window16A.json",
         "tiled/worlds/test/maps/RoomWindow.json",

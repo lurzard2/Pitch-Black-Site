@@ -147,7 +147,7 @@ export const container = new Container();
 
 (async () => {
     await app.init({
-        background: 'grey',
+        background: 'black',
         width: SCREEN.x,
         height: SCREEN.y,
     })
