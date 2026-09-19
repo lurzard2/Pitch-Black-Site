@@ -1,11 +1,11 @@
 {
-    "activeFile": "tiled/worlds/test/maps/Map-3.json",
+    "activeFile": "tiled/worlds/test/maps/untitled.json",
     "expandedProjectPaths": [
+        ".",
         "tiled/worlds",
         "tiled",
-        ".",
-        "levels",
         "tiled/tilesets",
+        "levels",
         "tiled/worlds/test",
         "tiled/worlds/test/maps"
     ],
@@ -80,11 +80,11 @@
                 2
             ],
             "expandedObjectLayers": [
-                2,
-                5
+                5,
+                2
             ],
             "scale": 2,
-            "selectedLayer": 1,
+            "selectedLayer": -1,
             "viewCenter": {
                 "x": 186,
                 "y": 56
@@ -131,9 +131,9 @@
     "project": "VisceralGrove.tiled-project",
     "property.type": "bool",
     "recentFiles": [
+        "tiled/worlds/test/maps/Map-3.json",
         "tiled/tilesets/Dev.json",
         "tiled/worlds/test/maps/untitled.json",
-        "tiled/worlds/test/maps/Map-3.json",
         "tiled/tilesets/Tiles-Debug.json",
         "tiled/worlds/test/maps/Debug-Tiles.json",
         "tiled/tilesets/Debug-Tiles.json",
