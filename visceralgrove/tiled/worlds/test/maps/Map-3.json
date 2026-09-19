@@ -1,5 +1,5 @@
-{ "class": "0",
-  "compressionlevel":-1,
+{ "class":"0",
+ "compressionlevel":-1,
  "height":8,
  "infinite":false,
  "layers":[
@@ -21,9 +21,61 @@
          "width":12,
          "x":0,
          "y":0
+        }, 
+        {
+         "id":2,
+         "layers":[
+                {
+                 "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 4, 4, 4, 4, 0, 0, 0, 0,
+                    0, 0, 4, 0, 0, 4, 4, 4, 0, 4, 0, 0,
+                    0, 0, 4, 0, 0, 4, 4, 0, 0, 4, 0, 0,
+                    0, 0, 4, 0, 4, 4, 4, 0, 0, 4, 0, 0,
+                    0, 0, 4, 0, 4, 4, 4, 4, 0, 4, 0, 0,
+                    0, 0, 0, 0, 0, 4, 0, 4, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                 "height":8,
+                 "id":7,
+                 "name":"Col",
+                 "opacity":1,
+                 "type":"tilelayer",
+                 "visible":true,
+                 "width":12,
+                 "x":0,
+                 "y":0
+                }, 
+                {
+                 "draworder":"topdown",
+                 "id":5,
+                 "name":"Spawns",
+                 "objects":[
+                        {
+                         "height":0,
+                         "id":4,
+                         "name":"0",
+                         "opacity":1,
+                         "rotation":0,
+                         "type":"spawn",
+                         "visible":true,
+                         "width":0,
+                         "x":39.6666666666667,
+                         "y":103.666666666667
+                        }],
+                 "opacity":1,
+                 "type":"objectgroup",
+                 "visible":true,
+                 "x":0,
+                 "y":0
+                }],
+         "name":"0",
+         "opacity":1,
+         "type":"group",
+         "visible":true,
+         "x":0,
+         "y":0
         }],
- "nextlayerid":2,
- "nextobjectid":1,
+ "nextlayerid":8,
+ "nextobjectid":5,
  "orientation":"orthogonal",
  "renderorder":"left-down",
  "tiledversion":"1.12.2",
@@ -32,6 +84,10 @@
         {
          "firstgid":1,
          "source":"..\/..\/..\/tilesets\/Tiles-Debug.json"
+        }, 
+        {
+         "firstgid":4,
+         "source":"..\/..\/..\/tilesets\/Dev.json"
         }],
  "tilewidth":16,
  "type":"map",
