@@ -1,10 +1,11 @@
-{ "compressionlevel":-1,
+{ "class":"0",
+ "compressionlevel":-1,
  "height":8,
  "infinite":false,
  "layers":[
         {
          "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 12, 13, 0, 0, 0, 0, 0,
             0, 0, 0, 3, 0, 0, 1, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 3, 3, 0, 0, 0, 3, 3, 0,
             0, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0,
@@ -83,6 +84,10 @@
         {
          "firstgid":4,
          "source":"..\/..\/..\/tilesets\/Dev.json"
+        }, 
+        {
+         "firstgid":12,
+         "source":"..\/..\/..\/tilesets\/Window.json"
         }],
  "tilewidth":16,
  "type":"map",
