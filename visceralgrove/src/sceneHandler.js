@@ -9,7 +9,8 @@ import {
     app,
     debug,
     LoopThroughGrid,
-    SlimeGridLoop, pixiDirectory
+    SlimeGridLoop,
+    pixiDirectory
 } from "../game.js";
 
 
@@ -23,7 +24,7 @@ export class SceneHandler {
 
     //TODO: refactor. We need better accessibility
     get Map(){
-
+        return world.maps[this.pos.ToString]['map'];
     }
 
 

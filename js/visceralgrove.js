@@ -6,7 +6,7 @@ function log(msg) { console.log(msg); }
 
 //NAVIGATION
 const path = "https://lurvixen.com/visceralgrove";
-export function SetChapter(dest = "", replace = false){
+export function SetChapter(dest = "", replace = false) {
     const href = dest === "" ? path : path + "/" + dest;
     if (replace){
         // prevents backtracking
@@ -17,13 +17,13 @@ export function SetChapter(dest = "", replace = false){
 }
 
 //FLAG
-export function Flag(name, value){
+export function Flag(name, value) {
     __.Flags[name] = value
     _Save()
 }
-export function GetFlag(name, value){
+export function GetFlag(name, value) {
     return __.Flags[name] === value;
 }
-export function HasFlagged(name){
+export function HasFlagged(name) {
     return GetFlag(name, true);
 }

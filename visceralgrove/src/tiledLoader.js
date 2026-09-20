@@ -52,10 +52,10 @@ export class TiledLoader {
                 originPos = pos
             }
 
-            parsedMaps.push({
+            parsedMaps[pos.ToString] = {
                 pos: pos,
                 map: parsedMap
-            })
+            }
         }
 
         return {
@@ -70,6 +70,8 @@ export class TiledLoader {
         const parsedTilesets = []
         for (const ts of map.tilesets) {
             const parsedTS = await this.ParseTileset(ts['source'])
+            // carry over firstgid from map file
+            parsedTS['firstgid'] = ts['firstgid']
             parsedTilesets.push(parsedTS)
         }
 
@@ -93,7 +95,7 @@ export class TiledLoader {
 
         // load image here from same file path,
         // subtracting the json name part, and this.using the image file instead
-        await Assets.load(this.path + TSPath.split(TSName)[0] + tileset.image)
+        await Assets.load({alias: tileset['name'], src: this.path + TSPath.split(TSName)[0] + tileset.image})
 
         return tileset
     }

@@ -84,15 +84,34 @@ export const Kots = {
     Woowoo: "woowoo",
 }
 
-export function Save(key, value){
-    localStorage.setItem(key, JSON.stringify(value));
+export function Save(key, value, sessionOnly = false){
+    if (sessionOnly){
+        sessionStorage.setItem(key, JSON.stringify(value));
+    } else {
+        localStorage.setItem(key, JSON.stringify(value));
+    }
 }
 
-export function Load(key){
-    return JSON.parse(localStorage.getItem(key));
+export function Load(key, sessionOnly = false){
+    try {
+        if (sessionOnly){
+            return JSON.parse(sessionStorage.getItem(key));
+        }
+        return JSON.parse(localStorage.getItem(key));
+    }
+    catch(error){
+        if (key === 'vgsession') {
+            console.info('No VG Session data detected, recreating...')
+        } else {
+            console.error('FAILED STORAGE LOAD |', 'KEY:',key, '- SESSION:',sessionOnly, '\n', error);
+        }
+    }
 }
 
-export function Exists(key){
+export function Exists(key, sessionOnly = false){
+    if (sessionOnly){
+        return sessionStorage.getItem(key) !== null;
+    }
     return localStorage.getItem(key) !== null;
 }
 

@@ -24,6 +24,8 @@ THAT IS ALL.
 
 
 
+import {Save, Load} from '/js/main.js';
+
 export const directory = '/visceralgrove/';
 export let debug = window.location.hostname === 'localhost';
 export const pixiDirectory = debug ? '' : directory;
@@ -155,7 +157,7 @@ export const container = new Container();
 
     Assets.init({
         loadOptions: {
-            onProgress: (p) => {if (debug) { console.debug(`Loading Asset: ${Math.round(p * 100)}%`) }},
+            onProgress: (p) => { if (debug) { console.debug(`Loading Asset: ${Math.round(p * 100)}%`) }},
             onError: (err, asset) => console.error(`Error loading ${asset.src}: ${err.message}`)
         },
         basePath: pixiDirectory
@@ -164,15 +166,16 @@ export const container = new Container();
 
 
 
-import { TiledLoader } from './src/tiledLoader.js'
 
 export let world = undefined
 
-async function Load(){
+import { TiledLoader } from './src/tiledLoader.js'
+
+async function init(){
     const tiled = new TiledLoader('test')
     world = await tiled.GetWorld()
 }
-await Load();
+await init();
 
 if (debug) {
     console.debug('WORLD INIT!!!', world)
@@ -183,17 +186,15 @@ if (debug) {
 export const globalClock = new Ticker()
 globalClock.minFPS = 60
 globalClock.maxFPS = 60
+globalClock.start()
 
 
 
 import { SceneHandler } from './src/sceneHandler.js';
 const sceneHandler = new SceneHandler();
 
-
-
-globalClock.start()
-
-
+import { SaveManager } from './src/saveManager.js';
+const save = new SaveManager();
 
 console.info(
     'Clarification on WebGL warnings',
