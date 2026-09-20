@@ -20,14 +20,13 @@ PLEASE ENJOY WHAT IS HERE IN A FAITHFUL WAY.
 AND HAVE FUN.
 THAT IS ALL.
 
- */
+*/
 
 
 
 export const directory = '/visceralgrove/';
 export let debug = window.location.hostname === 'localhost';
-export const pixiDirectory = debug ? '' : '/visceralgrove/';
-
+export const pixiDirectory = debug ? '' : directory;
 
 
 
@@ -52,15 +51,15 @@ export class XYZ {
         this.z = z;
     }
 
-    get NormalizedFloor() {
-        return new XYZ(
-            Normalize(Math.floor(this.x)),
-            Normalize(Math.floor(this.y))
-        )
-    }
-
     get Normalized() {
         return new XYZ(Normalize(this.x), Normalize(this.y))
+    }
+
+    get Floor() {
+        return new XYZ(
+            Math.floor(this.x),
+            Math.floor(this.y)
+        )
     }
 
     FromString(str){
@@ -147,7 +146,7 @@ export const container = new Container();
 
 (async () => {
     await app.init({
-        background: 'black',
+        background: 'grey',
         width: SCREEN.x,
         height: SCREEN.y,
     })
@@ -165,16 +164,18 @@ export const container = new Container();
 
 
 
-import { WorldLoader } from './src/worldLoader.js'
-export const worldLoader = new WorldLoader('test');
+import { TiledLoader } from './src/tiledLoader.js'
+
+export let world = undefined
 
 async function Load(){
-    await worldLoader.LoadWorld()
+    const tiled = new TiledLoader('test')
+    world = await tiled.GetWorld()
 }
 await Load();
 
 if (debug) {
-    console.debug('WORLD INIT!!!', worldLoader)
+    console.debug('WORLD INIT!!!', world)
 }
 
 
@@ -187,7 +188,6 @@ globalClock.maxFPS = 60
 
 import { SceneHandler } from './src/sceneHandler.js';
 const sceneHandler = new SceneHandler();
-await sceneHandler.LoadAllAssets();
 
 
 

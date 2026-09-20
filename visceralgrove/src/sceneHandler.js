@@ -2,7 +2,7 @@ import {Assets, Graphics, Rectangle, Sprite, Texture} from '/js/pixi.mjs'
 import {
     globalClock,
     directory,
-    worldLoader,
+    world,
     TILE,
     XYZ,
     SearchGrid,
@@ -17,25 +17,18 @@ import {
 export class SceneHandler {
     constructor(pos = new XYZ()) {
         this.pos = pos;
-        this.pos = worldLoader.originPos
         globalClock.addOnce(() => { this.RenderScene() })
     }
 
 
     //TODO: refactor. We need better accessibility
     get Map(){
-        return worldLoader.maps[this.pos.ToString];
+
     }
 
 
     set ChangeMapPos(pos) {
         this.pos = pos;
-    }
-
-    async LoadAllAssets() {
-        for (const ts of this.Map.tilesets) {
-            await Assets.load({ alias: ts.name, src: pixiDirectory+'tiled/tilesets/'+ts.image })
-        }
     }
 
     GetNewTexture(alias, indexOfSheet = 0, size = new XYZ(16, 16)) {

@@ -1,15 +1,15 @@
 {
     "activeFile": "tiled/worlds/test/maps/Map-3.json",
     "expandedProjectPaths": [
-        "tiled/tilesets",
-        "tiled",
         "tiled/tilesets/Grove",
-        "levels",
-        ".",
-        "tiled/worlds/test/maps",
-        "tiled/tilesets/Grove/Room",
         "tiled/worlds",
-        "tiled/worlds/test"
+        "tiled/tilesets/Grove/Room",
+        "levels",
+        "tiled/worlds/test/maps",
+        "tiled/tilesets",
+        "tiled/worlds/test",
+        "tiled",
+        "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -94,14 +94,14 @@
                 2
             ],
             "expandedObjectLayers": [
-                5,
-                2
+                2,
+                5
             ],
-            "scale": 4,
-            "selectedLayer": 3,
+            "scale": 2,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 269.875,
-                "y": 53.25
+                "x": 217.5,
+                "y": 104
             }
         },
         "tiled/worlds/test/maps/RoomWindow.json": {
