@@ -118,7 +118,7 @@ import {
 } from '/js/pixi.mjs'
 
 export const app = new Application()
-export const container = new Container()
+export const container = new Container();
 
 
 (async () => {
