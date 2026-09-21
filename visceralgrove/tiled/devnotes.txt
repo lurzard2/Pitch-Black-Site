@@ -24,7 +24,7 @@ MAINTAIN: We store all data used for visceralgrove outside of .js code in json o
                         < see Tiled Documentation >
 
                         class:
-                        '0'
+                        '0' - Override world <originPos> for determining the init map. Optional. Use once per world.
 
 /tilsets/
     json files storing tileset data, pointing to the image they source

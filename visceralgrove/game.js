@@ -1,56 +1,30 @@
-/*
-
-Hi.
-Yes the site's 'savefile' is saved on the client.
-This is a singleplayer game and your progress is stored locally.
-
-By viewing the source code you acknowledge your experience will be permanently affected.
-Neither positive, nor negative,
-Just affected.
-
-These experiences are intended to be experienced BLIND.
-Viewing internal functioning could expose things otherwise not meant to be seen.
-Or possibly, hidden for you to find...
-I ask you wait until you are ready to proceed, to do this.
-
-BE WARY OF SPOILERS.
-DO NOT LEAK.
-DO NOT SABOTAGE.
-PLEASE ENJOY WHAT IS HERE IN A FAITHFUL WAY.
-AND HAVE FUN.
-THAT IS ALL.
-
-*/
+export const directory = '/visceralgrove/'
+export let debug = window.location.hostname === 'localhost'
+export const pixiDirectory = debug ? '' : directory
 
 
 
-import {Save, Load} from '/js/main.js';
+export const controller = {}
 
-export const directory = '/visceralgrove/';
-export let debug = window.location.hostname === 'localhost';
-export const pixiDirectory = debug ? '' : directory;
-
-
-
-export const controller = {};
-export function GetInput(key) {
-    return controller[key];
-}
 window.addEventListener('keydown', function(e) {
-    controller[e.key] = true;
+    controller[e.key] = true
 })
 window.addEventListener('keyup', function(e) {
-    controller[e.key] = false;
+    controller[e.key] = false
 })
+
+export function GetInput(key) {
+    return controller[key]
+}
 
 
 
 // Positioning System
 export class XYZ {
     constructor(x = 0, y = 0, z = 0) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
+        this.x = x
+        this.y = y
+        this.z = z
     }
 
     get Normalized() {
@@ -66,7 +40,7 @@ export class XYZ {
 
     FromString(str){
         const strings = str.split(',')
-        return new XYZ(strings[0], strings[1], strings[2]);
+        return new XYZ(strings[0], strings[1], strings[2])
     }
 
     get ToString() {
@@ -78,20 +52,21 @@ export class XYZ {
 
 // 16x16
 // Globally consistent tile and asset size which must be maintained.
-export const TILE = 16;
+export const TILE = 16
+
+
 export function Normalize(val) { return val < 1 ? val : val * TILE }
-export function Denormalize(val) { return val / TILE }
 
 
 
 // 12x8 tile grid
-export const GRID = new XYZ(12, 8);
+export const GRID = new XYZ(12, 8)
 
 // 2d iteration on grid tiles
 export function SearchGrid(callback) {
     for (let y = 0; y < GRID.y; y++) {
         for (let x = 0; x < GRID.x; x++) {
-            callback(new XYZ(x, y));
+            callback(new XYZ(x, y))
         }
     }
 }
@@ -105,7 +80,7 @@ export function LoopThroughGrid(callback, pos = new XYZ(-1)) {
             pos.x = 0
             pos.y += 1
         }
-        callback(pos);
+        callback(pos)
     }
 }
 
@@ -117,12 +92,12 @@ export function SlimeGridLoop(length, callback) {
         callback(i, new XYZ(x, y));
     }*/
 
-    let i = -1;
+    let i = -1
     for (let y = 0; y < GRID.y; y++) {
         for (let x = 0; x < GRID.x; x++) {
             //console.log(`Tile index ${i} is located at (${x}, ${y})`);
-            i++;
-            callback(i, new XYZ(x, y));
+            i++
+            callback(i, new XYZ(x, y))
         }
     }
 }
@@ -130,7 +105,7 @@ export function SlimeGridLoop(length, callback) {
 
 
 // 12x8 (16x16) screen
-export const SCREEN = GRID.Normalized;
+export const SCREEN = GRID.Normalized
 
 
 
@@ -142,8 +117,8 @@ import {
     Assets,
 } from '/js/pixi.mjs'
 
-export const app = new Application();
-export const container = new Container();
+export const app = new Application()
+export const container = new Container()
 
 
 (async () => {
@@ -152,8 +127,8 @@ export const container = new Container();
         width: SCREEN.x,
         height: SCREEN.y,
     })
-    document.body.appendChild(app.canvas);
-    app.stage.addChild(container);
+    document.body.appendChild(app.canvas)
+    app.stage.addChild(container)
 
     Assets.init({
         loadOptions: {
@@ -166,21 +141,22 @@ export const container = new Container();
 
 
 
-
 export let world = undefined
 
 import { TiledLoader } from './src/tiledLoader.js'
 
+
 async function init(){
-    const tiled = new TiledLoader('test')
-    world = await tiled.GetWorld()
+    // TiledLoader doesn't need to persist past this one job it completes
+    const tl = new TiledLoader('test')
+    world = await tl.GetWorld()
 }
 await init();
+
 
 if (debug) {
     console.debug('WORLD INIT!!!', world)
 }
-
 
 
 export const globalClock = new Ticker()
@@ -190,11 +166,10 @@ globalClock.start()
 
 
 
-import { SceneHandler } from './src/sceneHandler.js';
-const sceneHandler = new SceneHandler();
-
 import { SaveManager } from './src/saveManager.js';
-const save = new SaveManager();
+const save = new SaveManager()
+
+
 
 console.info(
     'Clarification on WebGL warnings',

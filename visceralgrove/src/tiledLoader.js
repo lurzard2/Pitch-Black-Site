@@ -34,6 +34,7 @@ export class TiledLoader {
     }
 
     async GetWorld() {
+        // pixi won't parse .world files, it's just json though
         const world = await this.ParseWorld()
 
         const parsedMaps = []

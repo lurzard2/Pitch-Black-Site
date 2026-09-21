@@ -18,6 +18,7 @@ import {
 export class SceneHandler {
     constructor(pos = new XYZ()) {
         this.pos = pos;
+        this.pos = world.originPos
         globalClock.addOnce(() => { this.RenderScene() })
     }
 
@@ -33,9 +34,12 @@ export class SceneHandler {
     }
 
     GetNewTexture(alias, indexOfSheet = 0, size = new XYZ(16, 16)) {
+        // clamp-loop x to width
         const x = indexOfSheet % size.x * TILE;
+        // clamp-loop y to height based on x loops
         const y = Math.floor(indexOfSheet / size.x) * TILE
 
+        // we have to manually create a texture in order to trim image contents for the specific tile
         return new Texture({
             source: Assets.get(alias).source,
             frame: new Rectangle(x, y, TILE, TILE)
