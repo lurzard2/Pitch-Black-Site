@@ -1,12 +1,4 @@
-export const MapLayerType = {
-    TILE: 'tilelayer',
-    OBJECT: 'objectgroup',
-    GROUP: 'group'
-}
-
-
-
-import {pixiDirectory, XYZ, SCREEN, directory} from '../game.js'
+import {pixiDirectory, XYZ, SCREEN} from '../game.js'
 import { Assets } from '/js/pixi.mjs'
 
 export class TiledLoader {

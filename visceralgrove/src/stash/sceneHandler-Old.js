@@ -11,7 +11,7 @@ import {
     LoopThroughGrid,
     SlimeGridLoop,
     pixiDirectory
-} from "../game.js";
+} from "../../game.js";
 
 
 

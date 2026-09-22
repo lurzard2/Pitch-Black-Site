@@ -140,6 +140,12 @@ export const container = new Container();
 })()
 
 
+export const globalClock = new Ticker()
+globalClock.minFPS = 60
+globalClock.maxFPS = 60
+globalClock.start()
+
+
 
 export let world = undefined
 
@@ -157,12 +163,6 @@ await init();
 if (debug) {
     console.debug('WORLD INIT!!!', world)
 }
-
-
-export const globalClock = new Ticker()
-globalClock.minFPS = 60
-globalClock.maxFPS = 60
-globalClock.start()
 
 
 

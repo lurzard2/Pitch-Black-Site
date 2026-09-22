@@ -34,12 +34,8 @@ const localKey = 'vgstate'
 
 export class SaveManager {
     constructor() {
-        this.session = this.#SaveLoad
-        globalClock.add(() => { this.#Update() });
-    }
-
-    #Update() {
-        this.#SaveProgress()
+        this.session = this.GetSession
+        this.#AddUpdate()
     }
 
     get #SessionData() {
@@ -49,14 +45,7 @@ export class SaveManager {
         return Load(localKey)
     }
 
-    #SaveProgress() {
-        Save(sessionKey, this.session, true)
-    }
-    ActuallySaveProgress() {
-        Save(localKey, this.session)
-    }
-
-    get #SaveLoad() {
+    get GetSession() {
         // get session first, get local second, and create it last
         const data = (this.#SessionData || this.#SavedData) ?? {
             mapPos: 0,
@@ -65,5 +54,16 @@ export class SaveManager {
         if (debug) { console.debug('SAVEDATA:', data) }
         this.#SaveProgress()
         return data
+    }
+
+    #AddUpdate() {
+        globalClock.add(() => { this.#SaveProgress() });
+    }
+
+    #SaveProgress() {
+        Save(sessionKey, this.session, true)
+    }
+    ActuallySaveProgress() {
+        Save(localKey, this.session)
     }
 }
