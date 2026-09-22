@@ -16,19 +16,24 @@ export class Map {
 
 
     #ReadGroupLayer(layer) {
-        const isInternalFunctionsGroup = layer.name === 'internal'
-
         for (const layer of layer.layers) {
             // group layers inside are defined by type group, so just loop recursively if we encounter one until something can be parsed.
             if (layer.type === LayerType.group) {
                 this.#ReadGroupLayer(layer)
             }
         }
+        this.#ReadLayer(layer)
+    }
 
+    #ReadLayer(layer) {
         if (layer.type === LayerType.tile) {
             this.#ReadTileLayer(layer,(int, pos) => {
-                //TODO: static sprites
+                //TODO: creating sprites
             })
+        }
+
+        if (layer.type === LayerType.obj) {
+            //TODO: read object data
         }
     }
 
