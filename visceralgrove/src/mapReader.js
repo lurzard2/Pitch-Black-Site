@@ -2,7 +2,8 @@ import {SlimeGridLoop, world} from "../game";
 
 const LayerType = {
     tile: 'tilelayer',
-    obj: 'objgroup'
+    obj: 'objgroup',
+    group: 'group'
 }
 
 export class Map {
@@ -12,6 +13,25 @@ export class Map {
 
     get GetMap() { return world.maps[this.pos.ToString]['map'] }
 
+
+
+    #ReadGroupLayer(layer) {
+        const isInternalFunctionsGroup = layer.name === 'internal'
+
+        for (const layer of layer.layers) {
+            // group layers inside are defined by type group, so just loop recursively if we encounter one until something can be parsed.
+            if (layer.type === LayerType.group) {
+                this.#ReadGroupLayer(layer)
+            }
+        }
+
+        if (layer.type === LayerType.tile) {
+            this.#ReadTileLayer(layer,(int, pos) => {
+                //TODO: static sprites
+            })
+        }
+    }
+
     #ReadTileLayer(layer, callback) {
         SlimeGridLoop(layer.data.length, (i, pos) => {
             if (layer.data[i] > 0) {
@@ -20,24 +40,15 @@ export class Map {
         })
     }
 
-    #ReadObjLayer(layer, callback) {
-        //TODO: obj reading
-    }
+
 
     ReadMap() {
-        for (const layer of this.GetMap.layers) {
+        const mapLayers = this.GetMap.layers;
 
-            if (layer.type === LayerType.tile) {
-                this.#ReadTileLayer(layer,(int, pos) => {
-                    //TODO: static sprites
-                })
-            }
-
-            if (layer.type === LayerType.obj) {
-                this.#ReadObjLayer(layer,(obj) => {
-
-                })
-            }
+        for (const layer of mapLayers) {
+            // the map is a layer array, we can just loop through recursively.
+            // the map's layers array has no type, so no need to check for group type here.
+            this.#ReadGroupLayer(layer)
         }
     }
 }
