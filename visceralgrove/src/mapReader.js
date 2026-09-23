@@ -6,35 +6,20 @@ const LayerType = {
     group: 'group'
 }
 
-export class Map {
+export class MapReader {
     constructor(pos) {
         this.pos = pos
+        this.mapObj = world.maps[this.pos.ToString]['map']
     }
-
-    get GetMap() { return world.maps[this.pos.ToString]['map'] }
 
 
 
     #ReadGroupLayer(layer) {
         for (const layer of layer.layers) {
-            // group layers inside are defined by type group, so just loop recursively if we encounter one until something can be parsed.
-            if (layer.type === LayerType.group) {
-                this.#ReadGroupLayer(layer)
-            }
+            // group layers inside will contain inner layers, so just loop recursively if we encounter one, read everything all the way down.
+            this.#ReadGroupLayer(layer)
         }
         this.#ReadLayer(layer)
-    }
-
-    #ReadLayer(layer) {
-        if (layer.type === LayerType.tile) {
-            this.#ReadTileLayer(layer,(int, pos) => {
-                //TODO: creating sprites
-            })
-        }
-
-        if (layer.type === LayerType.obj) {
-            //TODO: read object data
-        }
     }
 
     #ReadTileLayer(layer, callback) {
@@ -45,10 +30,32 @@ export class Map {
         })
     }
 
+    #ReadObjectLayer(layer, callback) {
+        for (const obj of layer.objects){
+            callback(obj);
+        }
+    }
+
+
+
+    #ReadLayer(layer) {
+        if (layer.type === LayerType.tile) {
+            this.#ReadTileLayer(layer,(int, pos) => {
+                //TODO: creating sprites
+            })
+        }
+
+        if (layer.type === LayerType.obj) {
+            this.#ReadObjectLayer(layer,(obj) => {
+                //TODO: read object data
+            })
+        }
+    }
+
 
 
     ReadMap() {
-        const mapLayers = this.GetMap.layers;
+        const mapLayers = this.mapObj.layers;
 
         for (const layer of mapLayers) {
             // the map is a layer array, we can just loop through recursively.

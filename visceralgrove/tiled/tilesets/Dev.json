@@ -14,7 +14,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -34,7 +33,8 @@
              "visible":true,
              "x":0,
              "y":0
-            }
+            },
+         "type":"collision"
         }],
  "tilewidth":16,
  "type":"tileset",

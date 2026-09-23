@@ -23,8 +23,8 @@ export class SpriteFactory {
         })
     }
 
-    //TODO: this is ugly, refactor later
     static #FindCorrectTilesetFromTileValue(indexOfTileset, tilesets) {
+        //TODO: this is an ugly way of doing it but I'm open to improvements in the future
         for (let i = tilesets.length - 1; i >= 0; i--) {
             const ts = tilesets[i];
             const gid = ts.firstgid;
