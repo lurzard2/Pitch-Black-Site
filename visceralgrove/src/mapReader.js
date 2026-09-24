@@ -18,7 +18,18 @@ export class MapReader {
         }
     }
 
+    #FindCorrectTilesetFromTileValue(indexOfTileset, tilesets) {
+        //TODO: this is an ugly way of doing it but I'm open to improvements in the future
+        for (let i = tilesets.length - 1; i >= 0; i--) {
+            const ts = tilesets[i];
+            const gid = ts.firstgid;
 
+            // gid bounds tile values to be only less or exactly its value, depending on the tile's index inside the tileset. try saying that 5 times fast.
+            if (gid <= indexOfTileset) {
+                return ts;
+            }
+        }
+    }
 
     #ReadGroupLayer(layer) {
         const t = layer.type;
@@ -29,10 +40,15 @@ export class MapReader {
         if (t === LayerType.tile) {
             this.#ReadTileLayer(layer,(int, pos) => {
                 if (n === 'collisions') {
-                    this._output.collisions.push(pos.ToString);
+                    this._output.collisions.push(pos);
                 }
                 else {
-                    this._output.staticTiles.push({ val: int, pos: pos.ToString });
+                    const tile = {
+                        val: int,
+                        tileset: this.#FindCorrectTilesetFromTileValue(int, this._mapReference.tilesets),
+                        pos: pos
+                    }
+                    this._output.staticTiles.push(tile);
                 }
             })
         }
@@ -41,7 +57,7 @@ export class MapReader {
             this.#ReadObjectLayer(layer,(obj, pos) => {
                 if (n === 'spawns') {
                     const truePos = pos.Demormalized.Floor
-                    this._output.spawns.push({ name: obj.name, pos: truePos.ToString });
+                    this._output.spawns.push({ name: obj.name, pos: truePos });
                 }
             })
         }
@@ -76,7 +92,7 @@ export class MapReader {
 
 
 
-    get ReadMap() {
+    get GetOutput() {
         const mapLayers = this._mapReference.layers;
 
         for (const layer of mapLayers) {

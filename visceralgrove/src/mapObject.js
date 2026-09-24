@@ -1,5 +1,5 @@
 export class MapObject {
-    constructor(initPos) {
-        this.initPos = initPos;
+    constructor(pos) {
+        this.pos = pos;
     }
 }

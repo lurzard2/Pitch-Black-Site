@@ -162,9 +162,7 @@ export let world = undefined
 
 import { TiledLoader } from './src/tiledLoader.js'
 async function init(){
-    // TiledLoader doesn't need to persist past this one job it completes
-    const tl = new TiledLoader('test')
-    world = await tl.GetWorld()
+    world = await new TiledLoader('test').GetWorld()
 }
 await init();
 
@@ -173,10 +171,10 @@ if (debug) {
 }
 
 
-// WIP
-import { MapReader } from './src/mapReader.js'
-const mr =  new MapReader(new XYZ())
-const map = mr.ReadMap
+//// WIP
+//import { MapReader } from './src/mapReader.js'
+//const mr =  new MapReader(new XYZ())
+//const map = mr.ReadMap
 
 
 import { SaveManager } from './src/saveManager.js';
