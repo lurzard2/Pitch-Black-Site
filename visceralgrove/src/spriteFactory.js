@@ -23,10 +23,10 @@ export class SpriteFactory {
         })
     }
 
-    static GetNewTileSprite(tileObj) {
-        const ts = tileObj.tileset;
+    static GetNewSpriteFromTile({ tileset = {}, val = 0, pos = new XYZ() }) {
+        const ts = tileset;
 
-        const indexOfSheet = tileObj.val - ts.firstgid
+        const indexOfSheet = val - ts.firstgid
 
         const imageSize = new XYZ(ts['imagewidth'], ts['imageheight'])
         const tileSize = new XYZ(ts['tilewidth'], ts['tileheight'])
@@ -34,7 +34,7 @@ export class SpriteFactory {
         const sprite = SpriteFactory.#ConstructNewSprite
         (
             SpriteFactory.#ConstructNewTileTexture(ts.name, indexOfSheet, imageSize, tileSize),
-            tileObj.pos
+            pos
         )
 
         return sprite

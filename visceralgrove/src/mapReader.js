@@ -45,7 +45,7 @@ export class MapReader {
                 else {
                     const tile = {
                         val: int,
-                        tileset: this.#FindCorrectTilesetFromTileValue(int, this._mapReference.tilesets),
+                        associatedTileset: this.#FindCorrectTilesetFromTileValue(int, this._mapReference.tilesets),
                         pos: pos
                     }
                     this._output.staticTiles.push(tile);

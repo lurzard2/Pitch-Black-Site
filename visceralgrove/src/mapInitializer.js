@@ -1,17 +1,27 @@
 import { MapReader } from './mapReader.js'
 import { SpriteFactory } from './spriteFactory.js'
-import { world } from '../game.js'
 
 export class MapInitializer {
     constructor(pos) {
-        this._pos = pos;
-        this.initData = new MapReader(pos).GetOutput
-        this.tiles = this.GetTiles
+        this.data = new MapReader(pos).GetOutput
+        this.staticRenderables = this.#GetStaticRenderables
     }
 
-    get GetTiles() {
-        for (const t of this.initData.staticTiles) {
-            this.tiles.push(SpriteFactory.GetNewTileSprite(t))
+    //TODO: more
+    get #GetStaticRenderables() {
+        const collection = []
+
+        for (const t of this.data.staticTiles) {
+            collection.push
+            (
+                SpriteFactory.GetNewSpriteFromTile({
+                tileset: t.associatedTileset,
+                val: t.val,
+                pos: t.pos
+                })
+            )
         }
+
+        return collection
     }
 }
