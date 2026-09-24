@@ -150,8 +150,6 @@ globalClock.start()
 export let world = undefined
 
 import { TiledLoader } from './src/tiledLoader.js'
-
-
 async function init(){
     // TiledLoader doesn't need to persist past this one job it completes
     const tl = new TiledLoader('test')
@@ -159,11 +157,15 @@ async function init(){
 }
 await init();
 
-
 if (debug) {
     console.debug('WORLD INIT!!!', world)
 }
 
+
+// WIP
+import { MapReader } from './src/mapReader.js'
+const mr =  new MapReader(new XYZ())
+const map = mr.ReadMap
 
 
 import { SaveManager } from './src/saveManager.js';

@@ -1,15 +1,15 @@
 {
-    "activeFile": "tiled/worlds/test/maps/Map-3.json",
+    "activeFile": "tiled/tilesets/Tiles-Debug.json",
     "expandedProjectPaths": [
-        "tiled/tilesets/Grove",
-        "tiled/worlds",
         "tiled/tilesets/Grove/Room",
+        "tiled",
+        "tiled/tilesets/Grove",
+        "tiled/tilesets",
         "levels",
         "tiled/worlds/test/maps",
-        "tiled/tilesets",
         "tiled/worlds/test",
-        "tiled",
-        "."
+        ".",
+        "tiled/worlds"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -65,7 +65,7 @@
         },
         "tiled/tilesets/Dev.json": {
             "scaleInDock": 1,
-            "scaleInEditor": 8
+            "scaleInEditor": 1
         },
         "tiled/tilesets/Grove/Room/Window.json": {
             "scaleInDock": 1,
@@ -78,7 +78,7 @@
         "tiled/tilesets/Tiles-Debug.json": {
             "dynamicWrapping": false,
             "scaleInDock": 1,
-            "scaleInEditor": 8
+            "scaleInEditor": 1
         },
         "tiled/tilesets/Window.json": {
             "scaleInDock": 1,
@@ -98,10 +98,10 @@
                 5
             ],
             "scale": 2,
-            "selectedLayer": 2,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 217.5,
-                "y": 104
+                "x": 206.5,
+                "y": 108.5
             }
         },
         "tiled/worlds/test/maps/RoomWindow.json": {
@@ -116,11 +116,11 @@
                 9,
                 6
             ],
-            "scale": 4,
-            "selectedLayer": 0,
+            "scale": 2,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 96,
-                "y": 63.875
+                "x": 14.5,
+                "y": 108.5
             }
         },
         "tileset.tsx": {
@@ -144,19 +144,20 @@
     "openFiles": [
         "tiled/worlds/test/maps/untitled.json",
         "tiled/worlds/test/maps/Map-3.json",
-        "tiled/tilesets/Window.json"
+        "tiled/tilesets/Tiles-Debug.json",
+        "tiled/tilesets/Dev.json"
     ],
     "project": "VisceralGrove.tiled-project",
     "property.type": "bool",
     "recentFiles": [
         "tiled/worlds/test/maps/untitled.json",
-        "tiled/tilesets/Window.json",
         "tiled/worlds/test/maps/Map-3.json",
+        "tiled/tilesets/Dev.json",
+        "tiled/tilesets/Tiles-Debug.json",
+        "tiled/tilesets/Window.json",
         "tiled/tilesets/Grove/Room/Window.json",
         "tiled/tilesets/Grove/Room/window16A.json",
         "tiled/worlds/test/maps/RoomWindow.json",
-        "tiled/tilesets/Dev.json",
-        "tiled/tilesets/Tiles-Debug.json",
         "tiled/worlds/test/maps/Debug-Tiles.json",
         "tiled/tilesets/Debug-Tiles.json",
         "levels/untitled.json",

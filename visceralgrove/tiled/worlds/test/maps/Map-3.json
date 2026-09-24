@@ -1,4 +1,5 @@
-{ "compressionlevel":-1,
+{ "class":"0",
+ "compressionlevel":-1,
  "height":8,
  "infinite":false,
  "layers":[
@@ -35,7 +36,7 @@
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                  "height":8,
                  "id":7,
-                 "name":"Col",
+                 "name":"Collisions",
                  "opacity":1,
                  "type":"tilelayer",
                  "visible":true,
@@ -69,7 +70,7 @@
          "name":"internal",
          "opacity":1,
          "type":"group",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }],
