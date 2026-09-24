@@ -97,11 +97,11 @@
                 2,
                 5
             ],
-            "scale": 2,
-            "selectedLayer": 1,
+            "scale": 1.5,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 206.5,
-                "y": 108.5
+                "x": 263.33333333333326,
+                "y": 11.333333333333371
             }
         },
         "tiled/worlds/test/maps/RoomWindow.json": {
@@ -119,8 +119,8 @@
             "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 14.5,
-                "y": 108.5
+                "x": -17,
+                "y": 54
             }
         },
         "tileset.tsx": {

@@ -28,7 +28,17 @@ export class XYZ {
     }
 
     get Normalized() {
-        return new XYZ(Normalize(this.x), Normalize(this.y))
+        return new XYZ(
+            Normalize(this.x),
+            Normalize(this.y)
+        )
+    }
+
+    get Demormalized() {
+        return new XYZ(
+            Denormalize(this.x),
+            Denormalize(this.y),
+        )
     }
 
     get Floor() {
@@ -56,6 +66,7 @@ export const TILE = 16
 
 
 export function Normalize(val) { return val < 1 ? val : val * TILE }
+export function Denormalize(val) { return val / TILE }
 
 
 

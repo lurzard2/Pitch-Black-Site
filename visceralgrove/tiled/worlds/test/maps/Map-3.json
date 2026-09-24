@@ -58,8 +58,8 @@
                          "type":"spawn",
                          "visible":true,
                          "width":0,
-                         "x":39.6666666666667,
-                         "y":103.666666666667
+                         "x":40.0416666666667,
+                         "y":103.564393939394
                         }],
                  "opacity":1,
                  "type":"objectgroup",
@@ -70,7 +70,7 @@
          "name":"internal",
          "opacity":1,
          "type":"group",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }],

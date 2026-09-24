@@ -2,7 +2,7 @@ import {debug, SlimeGridLoop, world, XYZ} from '../game.js';
 
 const LayerType = {
     tile: 'tilelayer',
-    obj: 'objgroup',
+    obj: 'objectgroup',
     group: 'group'
 }
 
@@ -29,7 +29,10 @@ export class MapReader {
         if (t === LayerType.tile) {
             this.#ReadTileLayer(layer,(int, pos) => {
                 if (n === 'collisions') {
-                    this._output.collisions.push(pos);
+                    this._output.collisions.push(pos.ToString);
+                }
+                else {
+                    this._output.staticTiles.push({ val: int, pos: pos.ToString });
                 }
             })
         }
@@ -37,7 +40,8 @@ export class MapReader {
         else if (t === LayerType.obj) {
             this.#ReadObjectLayer(layer,(obj, pos) => {
                 if (n === 'spawns') {
-                    this._output.spawns.push(obj);
+                    const truePos = pos.Demormalized.Floor
+                    this._output.spawns.push({ name: obj.name, pos: truePos.ToString });
                 }
             })
         }
