@@ -1,5 +1,5 @@
 import { MapInitializer } from './mapInitializer.js'
-import {debug} from '../game.js'
+import { debug } from '../game.js'
 
 export class VGMap {
     constructor(pos) {

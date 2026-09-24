@@ -1,4 +1,4 @@
-import { XYZ, TILE } from "../game";
+import { XYZ, TILE } from '../game.js'
 import {Texture, Rectangle, Assets, Sprite} from '/js/pixi.mjs'
 
 export class SpriteFactory {
