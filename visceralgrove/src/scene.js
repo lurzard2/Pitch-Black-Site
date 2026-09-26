@@ -21,7 +21,9 @@ export class Scene {
 
         realizedMap = new VGMap(abstractMap)
 
-        globalClock.add(() => { realizedMap?.Render() })
+        globalClock.addOnce(() => {
+            realizedMap?.Render()
+        })
     }
 
     #Reset() {
