@@ -192,7 +192,7 @@ export const scene = new Scene()
 
 
 if (debug) {
-    console.debug('WORLD INIT!!!', internalWorld, '\nLOADED MAPS:', abstractMaps)
+    console.info('INIT!!!', '\nINTERNAL WORLD:', internalWorld, '\nLOADED MAPS:', abstractMaps)
 }
 
 

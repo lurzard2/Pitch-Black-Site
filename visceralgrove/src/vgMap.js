@@ -1,10 +1,16 @@
-import { MapReader } from './mapReader.js'
+import { app } from '../game.js'
 import { SpriteFactory } from './spriteFactory.js'
 
 export class VGMap {
     constructor(abstractMap) {
         this.data = abstractMap
         this.staticRenderables = this.#GetStaticRenderables
+    }
+
+    Render() {
+        for (const sprite of this.staticRenderables) {
+            app.stage.addChild(sprite)
+        }
     }
 
     //TODO: more
@@ -17,7 +23,7 @@ export class VGMap {
                 SpriteFactory.GetNewSpriteFromTile({
                 tileset: t.associatedTileset,
                 val: t.val,
-                pos: t.pos
+                pos: t.pos.Normalized
                 })
             )
         }

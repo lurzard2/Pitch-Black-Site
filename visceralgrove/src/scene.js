@@ -1,4 +1,4 @@
-import { debug, internalWorld, XYZ, abstractMaps} from '../game.js'
+import {debug, internalWorld, XYZ, abstractMaps, globalClock, GetInput} from '../game.js'
 import { VGMap } from './vgMap.js'
 import { GameData } from './gameData.js'
 
@@ -20,18 +20,21 @@ export class Scene {
         }
 
         realizedMap = new VGMap(abstractMap)
+
+        globalClock.add(() => { realizedMap?.Render() })
     }
 
     #Reset() {
         abstractMap = null
         realizedMap = null
 
+        // Maps are kinda like canvases in a gallery, you'll come across a lot but there might be empty space here and there...
         try {
             abstractMap = abstractMaps[pos.ToString]
             realizedMap = new VGMap(abstractMap)
         }
         catch (e) {
-            console.warn(`Unable to load map from ${pos.ToString}\n`)
+            console.info(`Empty ${pos.ToString}`)
         }
     }
 
