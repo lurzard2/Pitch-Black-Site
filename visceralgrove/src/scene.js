@@ -1,12 +1,15 @@
-import {debug, internalWorld, XYZ, abstractMaps, globalClock, GetInput} from '../game.js'
+import { debug, internalWorld, XYZ, abstractMaps, globalClock } from '../game.js'
 import { VGMap } from './vgMap.js'
 import { GameData } from './gameData.js'
 
 
 
 let pos = null
+
 let abstractMap = null
 let realizedMap = null
+
+let playerPositions = []
 
 export class Scene {
     constructor() {
@@ -14,14 +17,14 @@ export class Scene {
 
         abstractMap = abstractMaps[pos.ToString]
 
-        this.playerPositions = GameData.GetFromString('playerPositions', [])
+        playerPositions = GameData.GetFromString('playerPositions', [])
         if (pos.Equals(internalWorld.originPos)) {
-            this.playerPositions.push(abstractMap.spawns['0'].pos)
+            playerPositions.push(abstractMap.spawns['0'].pos)
         }
 
         realizedMap = new VGMap(abstractMap)
 
-        globalClock.addOnce(() => {
+        globalClock.add(() => {
             realizedMap?.Render()
         })
     }
@@ -29,8 +32,6 @@ export class Scene {
     #Reset() {
         abstractMap = null
         realizedMap = null
-
-        // Maps are kinda like canvases in a gallery, you'll come across a lot but there might be empty space here and there...
         try {
             abstractMap = abstractMaps[pos.ToString]
             realizedMap = new VGMap(abstractMap)

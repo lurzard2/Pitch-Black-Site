@@ -7,22 +7,6 @@ export const pixiDirectory = debug ? '' : directory
 
 
 
-const inputStorage = []
-
-window.addEventListener('keydown', function(e) {
-    if (debug) { console.debug(e.key) }
-    inputStorage[e.key] = true
-})
-window.addEventListener('keyup', function(e) {
-    inputStorage[e.key] = false
-})
-
-export function GetInput(key) {
-    return inputStorage[key]
-}
-
-
-
 // Positioning System
 export class XYZ {
     constructor(x = 0, y = 0, z = 0) {
