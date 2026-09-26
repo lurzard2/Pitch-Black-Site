@@ -1,20 +1,24 @@
-export const directory = '/visceralgrove/'
 export let debug = window.location.hostname === 'localhost'
+
+
+export const directory = '/visceralgrove/'
+// local and live file path roots for VG need distinction in order to work properly on both
 export const pixiDirectory = debug ? '' : directory
 
 
 
-export const controller = {}
+const inputStorage = []
 
 window.addEventListener('keydown', function(e) {
-    controller[e.key] = true
+    if (debug) { console.debug(e.key) }
+    inputStorage[e.key] = true
 })
 window.addEventListener('keyup', function(e) {
-    controller[e.key] = false
+    inputStorage[e.key] = false
 })
 
 export function GetInput(key) {
-    return controller[key]
+    return inputStorage[key]
 }
 
 
@@ -25,6 +29,10 @@ export class XYZ {
         this.x = x
         this.y = y
         this.z = z
+    }
+
+    get Unset() {
+        return this.x === 0 || this.y === 0
     }
 
     get Normalized() {
@@ -141,7 +149,7 @@ export const container = new Container();
     document.body.appendChild(app.canvas)
     app.stage.addChild(container)
 
-    Assets.init({
+    await Assets.init({
         loadOptions: {
             onProgress: (p) => { if (debug) { console.debug(`Loading Asset: ${Math.round(p * 100)}%`) }},
             onError: (err, asset) => console.error(`Error loading ${asset.src}: ${err.message}`)
@@ -158,28 +166,25 @@ globalClock.start()
 
 
 
-export let world = undefined
+export let tiledWorld = undefined
 
 import { TiledLoader } from './src/tiledLoader.js'
 async function init(){
-    world = await new TiledLoader('test').GetWorld()
+    tiledWorld = await new TiledLoader('test').GetWorld()
 }
-await init();
+await init()
 
 if (debug) {
-    console.debug('WORLD INIT!!!', world)
+    console.debug('WORLD INIT!!!', tiledWorld)
 }
-
-
-//// WIP
-//import { MapReader } from './src/mapReader.js'
-//const mr =  new MapReader(new XYZ())
-//const map = mr.ReadMap
 
 
 import { SaveManager } from './src/saveManager.js';
-const save = new SaveManager()
+export const save = new SaveManager()
 
+
+import { Scene } from './src/scene.js'
+export const scene = new Scene()
 
 
 console.info(

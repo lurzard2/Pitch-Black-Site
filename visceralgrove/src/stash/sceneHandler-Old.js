@@ -2,13 +2,11 @@ import {Assets, Graphics, Rectangle, Sprite, Texture} from '/js/pixi.mjs'
 import {
     globalClock,
     directory,
-    world,
+    tiledWorld,
     TILE,
     XYZ,
-    SearchGrid,
     app,
     debug,
-    LoopThroughGrid,
     SlimeGridLoop,
     pixiDirectory
 } from "../../game.js";
@@ -18,14 +16,14 @@ import {
 export class SceneHandler {
     constructor(pos = new XYZ()) {
         this.pos = pos;
-        this.pos = world.originPos
+        this.pos = tiledWorld.originPos
         globalClock.addOnce(() => { this.RenderScene() })
     }
 
 
     //TODO: refactor. We need better accessibility
     get Map(){
-        return world.maps[this.pos.ToString]['map'];
+        return tiledWorld.maps[this.pos.ToString]['map'];
     }
 
 
