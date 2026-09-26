@@ -179,8 +179,15 @@ async function init() {
 }
 await init()
 
+
+import { MapReader } from './src/mapReader.js'
+export const abstractMaps = []
+for (const [key, value] of Object.entries(internalWorld.maps)) {
+    abstractMaps[key] = new MapReader(value.pos).GetOutput
+}
+
 if (debug) {
-    console.debug('WORLD INIT!!!', internalWorld)
+    console.debug('WORLD INIT!!!', internalWorld, '\nLOADED MAPS:', abstractMaps)
 }
 
 
