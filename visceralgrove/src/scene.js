@@ -25,7 +25,7 @@ export class Scene {
             playerPositions.push(abstractMap.spawns['0'].pos)
         }
 
-        player = new Player(playerPositions.pop())
+        player = new Player(playerPositions.pop().Normalized)
 
         realizedMap = new VGMap(abstractMap)
 
