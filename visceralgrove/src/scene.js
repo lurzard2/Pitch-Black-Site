@@ -1,6 +1,7 @@
 import { debug, internalWorld, XYZ, abstractMaps, globalClock } from '../game.js'
 import { VGMap } from './vgMap.js'
 import { GameData } from './gameData.js'
+import {Player} from "./player.js";
 
 
 
@@ -8,6 +9,8 @@ let pos = null
 
 let abstractMap = null
 let realizedMap = null
+
+let player = null
 
 let playerPositions = []
 
@@ -22,11 +25,23 @@ export class Scene {
             playerPositions.push(abstractMap.spawns['0'].pos)
         }
 
+        player = new Player(playerPositions.pop())
+
         realizedMap = new VGMap(abstractMap)
 
         globalClock.add(() => {
             realizedMap?.Render()
         })
+    }
+
+    get GetPos() {
+        GameData.GetFromString('worldPos', pos)
+        return pos
+    }
+
+    get GetPlayerPositions() {
+        GameData.GetFromString('playerPositions', playerPositions)
+        return playerPositions
     }
 
     #Reset() {
