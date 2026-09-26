@@ -31,6 +31,10 @@ export class XYZ {
         this.z = z
     }
 
+    Equals(other) {
+        return other.x === this.x && other.y === this.y && other.z === this.z
+    }
+
     get Unset() {
         return this.x === 0 || this.y === 0
     }
@@ -160,31 +164,29 @@ export const container = new Container();
 
 
 export const globalClock = new Ticker()
-globalClock.minFPS = 60
-globalClock.maxFPS = 60
+globalClock.minFPS = 30
+globalClock.maxFPS = 30
 globalClock.start()
 
 
 
-export let tiledWorld = undefined
-
+// read tiled world
 import { TiledLoader } from './src/tiledLoader.js'
-async function init(){
-    tiledWorld = await new TiledLoader('test').GetWorld()
+export let internalWorld = undefined
+async function init() {
+    const tl = new TiledLoader('test')
+    internalWorld = await tl.GetWorld()
 }
 await init()
 
 if (debug) {
-    console.debug('WORLD INIT!!!', tiledWorld)
+    console.debug('WORLD INIT!!!', internalWorld)
 }
-
-
-import { SaveManager } from './src/saveManager.js';
-export const save = new SaveManager()
 
 
 import { Scene } from './src/scene.js'
 export const scene = new Scene()
+
 
 
 console.info(

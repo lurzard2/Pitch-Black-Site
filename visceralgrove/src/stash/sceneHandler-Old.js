@@ -2,7 +2,7 @@ import {Assets, Graphics, Rectangle, Sprite, Texture} from '/js/pixi.mjs'
 import {
     globalClock,
     directory,
-    tiledWorld,
+    internalWorld,
     TILE,
     XYZ,
     app,
@@ -16,14 +16,14 @@ import {
 export class SceneHandler {
     constructor(pos = new XYZ()) {
         this.pos = pos;
-        this.pos = tiledWorld.originPos
+        this.pos = internalWorld.originPos
         globalClock.addOnce(() => { this.RenderScene() })
     }
 
 
     //TODO: refactor. We need better accessibility
     get Map(){
-        return tiledWorld.maps[this.pos.ToString]['map'];
+        return internalWorld.maps[this.pos.ToString]['map'];
     }
 
 

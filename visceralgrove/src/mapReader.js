@@ -1,4 +1,4 @@
-import {debug, SlimeGridLoop, tiledWorld, XYZ} from '../game.js';
+import {debug, SlimeGridLoop, internalWorld, XYZ} from '../game.js';
 
 const LayerType = {
     tile: 'tilelayer',
@@ -9,7 +9,7 @@ const LayerType = {
 export class MapReader {
     constructor(pos) {
         this._pos = pos
-        this._mapReference = tiledWorld.maps[this._pos.ToString]['map']
+        this._mapReference = internalWorld.maps[this._pos.ToString]['map']
 
         this._output = {
             collisions: [],

@@ -1,13 +1,27 @@
-import { MapInitializer } from './mapInitializer.js'
-import { debug } from '../game.js'
+import { MapReader } from './mapReader.js'
+import { SpriteFactory } from './spriteFactory.js'
 
 export class VGMap {
     constructor(pos) {
-        this.initMap = new MapInitializer(pos)
-        if (debug) { console.debug('VGMap initializing...', this.initMap) }
+        this.data = new MapReader(pos).GetOutput
+        this.staticRenderables = this.#GetStaticRenderables
     }
 
-    Render() {
-        //TODO: need to make a rendering pipeline
+    //TODO: more
+    get #GetStaticRenderables() {
+        const collection = []
+
+        for (const t of this.data.staticTiles) {
+            collection.push
+            (
+                SpriteFactory.GetNewSpriteFromTile({
+                tileset: t.associatedTileset,
+                val: t.val,
+                pos: t.pos
+                })
+            )
+        }
+
+        return collection
     }
 }
