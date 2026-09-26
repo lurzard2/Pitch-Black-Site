@@ -1,4 +1,4 @@
-import { debug, internalWorld, XYZ } from '../game.js'
+import { debug, internalWorld, XYZ, abstractMaps} from '../game.js'
 import { VGMap } from './vgMap.js'
 import { GameData } from './gameData.js'
 import {MapReader} from './mapReader.js'
@@ -10,7 +10,7 @@ export class Scene {
     constructor() {
         pos = GameData.GetFromString('worldPos', internalWorld.originPos)
 
-        realizedMap = new MapReader(pos).GetOutput
+        realizedMap = abstractMaps[pos.ToString]
 
         this.playerPositions = GameData.GetFromString('playerPositions', [])
         if (pos.Equals(internalWorld.originPos)) {

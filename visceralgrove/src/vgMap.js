@@ -2,8 +2,8 @@ import { MapReader } from './mapReader.js'
 import { SpriteFactory } from './spriteFactory.js'
 
 export class VGMap {
-    constructor(pos) {
-        this.data = new MapReader(pos).GetOutput
+    constructor(abstractMap) {
+        this.data = abstractMap
         this.staticRenderables = this.#GetStaticRenderables
     }
 

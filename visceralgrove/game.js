@@ -186,14 +186,14 @@ for (const [key, value] of Object.entries(internalWorld.maps)) {
     abstractMaps[key] = new MapReader(value.pos).GetOutput
 }
 
-if (debug) {
-    console.debug('WORLD INIT!!!', internalWorld, '\nLOADED MAPS:', abstractMaps)
-}
-
 
 import { Scene } from './src/scene.js'
 export const scene = new Scene()
 
+
+if (debug) {
+    console.debug('WORLD INIT!!!', internalWorld, '\nLOADED MAPS:', abstractMaps)
+}
 
 
 console.info(
