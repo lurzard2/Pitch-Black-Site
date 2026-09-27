@@ -5,9 +5,6 @@ export class VGMap {
     constructor(abstractMap) {
         this.data = abstractMap
         this.staticRenderables = this.#GetStaticRenderables
-    }
-
-    Render() {
         for (const sprite of this.staticRenderables) {
             app.stage.addChild(sprite)
         }

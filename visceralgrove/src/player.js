@@ -9,23 +9,23 @@ export class Player extends MapObject {
         window.addEventListener('keydown', e => {
             const input = Controller.GetInputDirections
 
-            const inc = 1
+            const inc = 2
             if (input.U) {
                 if (pos.y <= 0) {
                     scene.ChangePos(new XYZ(0, 1))
-                    pos.y = SCREEN.y
+                    pos.y = SCREEN.y - TILE
                 }
                 this.pos.y -= inc
             }
             if (input.D) {
-                if (pos.y >= SCREEN.y) {
+                if (pos.y >= SCREEN.y - TILE) {
                     scene.ChangePos(new XYZ(0, -1))
                     pos.y = 0
                 }
                 this.pos.y += inc
             }
             if (input.R){
-                if (pos.x >= SCREEN.x) {
+                if (pos.x >= SCREEN.x - TILE) {
                     scene.ChangePos(new XYZ(1))
                     pos.x = 0
                 }
@@ -34,7 +34,7 @@ export class Player extends MapObject {
             if (input.L){
                 if (pos.x <= 0) {
                     scene.ChangePos(new XYZ(-1))
-                    pos.x = SCREEN.x
+                    pos.x = SCREEN.x - TILE
                 }
                 this.pos.x -= inc
             }

@@ -14,6 +14,8 @@ let player = null
 
 let playerPositions = []
 
+
+
 export class Scene {
     constructor() {
         pos = GameData.GetFromString('worldPos', internalWorld.originPos)
@@ -25,14 +27,9 @@ export class Scene {
             playerPositions.push(abstractMap.spawns['0'].pos)
         }
 
-        player = new Player(playerPositions.pop())
+        player = new Player(this.GetPlayerPositions.pop())
 
         realizedMap = new VGMap(abstractMap)
-
-        globalClock.add(() => {
-            app.stage.removeChildren()
-            realizedMap?.Render()
-        })
     }
 
     get GetPos() {
@@ -46,6 +43,8 @@ export class Scene {
     }
 
     #Reset() {
+        app.stage.removeChildren()
+
         abstractMap = null
         realizedMap = null
         try {
