@@ -38,7 +38,7 @@ export class Player extends MapObject {
                 }
                 this.pos.x -= inc
             }
-            //console.log(this.pos)
+            console.log(this.pos)
         })
     }
 }
