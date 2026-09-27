@@ -5,10 +5,11 @@ import {app, globalClock, scene, SCREEN, TILE, XYZ} from "../game.js";
 export class Player extends MapObject {
     constructor(pos) {
         super(pos);
+
         window.addEventListener('keydown', e => {
             const input = Controller.GetInputDirections
 
-            const inc = 2
+            const inc = 1
             if (input.U) {
                 if (pos.y <= 0) {
                     scene.ChangePos(new XYZ(0, 1))
@@ -37,7 +38,7 @@ export class Player extends MapObject {
                 }
                 this.pos.x -= inc
             }
-            console.log(this.pos)
+            //console.log(this.pos)
         })
     }
 }

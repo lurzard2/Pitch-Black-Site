@@ -25,11 +25,12 @@ export class Scene {
             playerPositions.push(abstractMap.spawns['0'].pos)
         }
 
-        player = new Player(playerPositions.pop().Normalized)
+        player = new Player(playerPositions.pop())
 
         realizedMap = new VGMap(abstractMap)
 
         globalClock.add(() => {
+            app.stage.removeChildren()
             realizedMap?.Render()
         })
     }
@@ -45,7 +46,6 @@ export class Scene {
     }
 
     #Reset() {
-        app.stage.removeChildren()
         abstractMap = null
         realizedMap = null
         try {
