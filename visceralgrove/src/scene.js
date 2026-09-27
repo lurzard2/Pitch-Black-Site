@@ -1,4 +1,4 @@
-import { debug, internalWorld, XYZ, abstractMaps, globalClock } from '../game.js'
+import {debug, internalWorld, XYZ, abstractMaps, globalClock, app} from '../game.js'
 import { VGMap } from './vgMap.js'
 import { GameData } from './gameData.js'
 import {Player} from "./player.js";
@@ -45,6 +45,7 @@ export class Scene {
     }
 
     #Reset() {
+        app.stage.removeChildren()
         abstractMap = null
         realizedMap = null
         try {
