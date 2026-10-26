@@ -14,28 +14,28 @@ export class Player extends MapObject {
                 if (pos.y <= 0) {
                     scene.ChangePos(new XYZ(0, 1))
                     pos.y = SCREEN.y - TILE
-                }
+                } else
                 this.pos.y -= inc
             }
             if (input.D) {
                 if (pos.y >= SCREEN.y - TILE) {
                     scene.ChangePos(new XYZ(0, -1))
                     pos.y = 0
-                }
+                } else
                 this.pos.y += inc
             }
             if (input.R){
                 if (pos.x >= SCREEN.x - TILE) {
                     scene.ChangePos(new XYZ(1))
                     pos.x = 0
-                }
+                } else
                 this.pos.x += inc
             }
             if (input.L){
                 if (pos.x <= 0) {
                     scene.ChangePos(new XYZ(-1))
                     pos.x = SCREEN.x - TILE
-                }
+                } else
                 this.pos.x -= inc
             }
             console.log(this.pos)
