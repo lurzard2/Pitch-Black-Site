@@ -40,11 +40,6 @@ body{
     font-size: .9rem;
     margin: auto;
     display: flex;
-    transition: opacity 0.4s ease-in-out;
-}
-
-.m {
-    margin: 0;
 }
 
 .center{
@@ -66,38 +61,6 @@ body{
 
 *.unselectable {
     -webkit-user-select: none;
-
-    /*
-      Introduced in IE 10.
-      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-    */
     -ms-user-select: none;
     user-select: none;
-}
-
-.flex{
-    display: flex;
-}
-.grow{
-    flex: 1 0 auto;
-}
-
-.user:before{
-    content: 'user:';
-    color: var(--bg);
-    background-color: var(--mute);
-    border-radius: .25rem;
-    margin-right: .05rem;
-    font-size: small;
-    text-align: center;
-    padding: .25rem;
-}
-
-.hidelink{
-    text-decoration: none;
-}
-
-.cliptext{
-    background-clip: text;
-    color: transparent;
 }
