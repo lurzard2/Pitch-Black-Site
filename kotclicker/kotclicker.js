@@ -1,4 +1,4 @@
-import {_, Load, Save, Chance, RandomRange} from './main.js';
+import {_, Load, Save, Chance, RandomRange} from '../js/main.js';
 
 const __ = Load(_.KotClicker);
 function _Save() { Save(_.KotClicker, __); }
