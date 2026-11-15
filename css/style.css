@@ -24,11 +24,6 @@
     font-weight: bold;
 }
 @font-face{
-    font-family: 'DryBrush';
-    src: url('../fonts/Dry Brush.ttf');
-    font-weight: normal;
-}
-@font-face{
     font-family: 'LemonMilk';
     src: url('../fonts/LEMONMILK-Light.otf');
     font-weight: normal;
