@@ -9,8 +9,26 @@
     <link rel="stylesheet" href="css/layout.css">
 </head>
 <style>
-    .link-button{
-        font: var(--font); color:var(--mute); background-color:var(--bg); border: 1px solid var(--mute); padding:1.5rem;
+    :root {
+        --button-link-col: white;
+        --button-link-bg: black;
+        --button-link-border: 1px solid white;
+    }
+
+    #links {
+        display:grid;
+        width: 20rem;
+        margin:auto;
+        gap:2rem;
+        font-size: x-large;
+
+        .button-link{
+            font: var(--font);
+            color:var(--button-link-col);
+            background-color:var(--button-link-bg);
+            border: var(--button-link-border);
+            padding:1.5rem;
+        }
     }
 </style>
 <body>
@@ -58,12 +76,27 @@
             <p id="updatable-mod-playtesting">...OK</p>
         </div>
 
-        <div class="center" style="display:grid; width: 20rem;  margin:auto">
-            <button class="link-button">Steam Workshop</button>
+        <div id="links" class="center">
+            <button title="unreleased. this button will be usable later when it is, to download it. ok? okay" class="button-link" style="--button-link-col: gray; --button-link-border: 1px solid gray">Steam Workshop</button>
+            <button onclick="opendiscordlink()" class="button-link" style="cursor:pointer; --button-link-col: white; --button-link-border: 1px solid #bac0ff; background-image: linear-gradient(#5865F2, #7885ee)">Discord↗</button>
+            <button onclick="openfaqlink()" class="button-link">FAQ</button>
         </div>
 
     </div>
 </div>
+<script>
+    function checkMobile(){
+        return innerWidth > 500
+    }
 
+    function opendiscordlink(){
+        let features = checkMobile() ? "width=500, height=600" : ""
+        window.open("https://discord.gg/7sUpM4HMzZ", "_blank", features);
+    }
+
+    function openfaqlink(){
+        window.open("/faq", "_blank")
+    }
+</script>
 </body>
 </html>
