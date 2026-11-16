@@ -7,13 +7,18 @@
     <meta name="description" content="Page dedicated to the in-dev Pitch Black mod for Rain World.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/layout.css">
-    </head>
+</head>
+<style>
+    .link-button{
+        font: var(--font); color:var(--mute); background-color:var(--bg); border: 1px solid var(--mute); padding:1.5rem;
+    }
+</style>
 <body>
 
 <div id="wrapper" style="background-color: black">
     <div style="margin:0.5rem">
 
-        <p class="center">// rain world : <b>pitch black</b></p>
+        <p class="center"><span class="mute">// rain world :</span><b>pitch black</b></p>
 
         <div id="trailer-player" style="display:flex; justify-content: center;">
             <iframe style="border: 1px solid var(--text)"
@@ -28,7 +33,7 @@
             </iframe>
         </div>
 
-        <div style=" display:flex; justify-content: space-between">
+        <div style=" display:flex; justify-content: space-between; margin-top:0.5rem">
             <p>STATE...</p>
             <p id="updatable-mod-state">...UNRELEASED</p>
         </div>
@@ -48,14 +53,13 @@
             <p id="updatable-mod-development">...OK</p>
         </div>
 
-        <div style=" display:flex; justify-content: space-between">
-            <p>PROGRESS...</p>
-            <p id="updatable-mod-progress">...OK</p>
-        </div>
-
-        <div style=" display:flex; justify-content: space-between">
+        <div style=" display:flex; justify-content: space-between; margin-bottom:0.5rem">
             <p>PLAYTESTING...</p>
             <p id="updatable-mod-playtesting">...OK</p>
+        </div>
+
+        <div class="center" style="display:grid; width: 20rem;  margin:auto">
+            <button class="link-button">Steam Workshop</button>
         </div>
 
     </div>
