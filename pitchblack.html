@@ -43,7 +43,6 @@
                     width="560"
                     height="315"
                     src="https://www.youtube.com/embed/1FXMEJQgM2M?si=lQX9t3xlAvdJ83QO"
-                    title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin"
@@ -78,8 +77,23 @@
 
         <div id="links" class="center">
             <button title="unreleased. this button will be usable later when it is, to download it. ok? okay" class="button-link" style="--button-link-col: gray; --button-link-border: 1px solid gray">Steam Workshop</button>
-            <button onclick="opendiscordlink()" class="button-link" style="cursor:pointer; --button-link-col: white; --button-link-border: 1px solid #bac0ff; background-image: linear-gradient(#5865F2, #7885ee)">Discord↗</button>
-            <button onclick="openfaqlink()" class="button-link">FAQ</button>
+            <button onclick="opendiscordlink()" class="button-link"
+                    style="cursor:pointer;
+                    --button-link-col: white;
+                    --button-link-border: 1px solid #bac0ff;
+                    background-image: linear-gradient(#5865F2, #7885ee)">
+                Discord
+                <span
+                        style="font-size:small;
+                        font-weight: bold;
+                        vertical-align: top">
+                    ↗
+                </span>
+            </button>
+            <button onclick="openfaqlink()" class="button-link"
+                    style="cursor:pointer;">
+                FAQ
+            </button>
         </div>
 
     </div>
@@ -95,7 +109,8 @@
     }
 
     function openfaqlink(){
-        window.open("/faq", "_blank")
+        let features = checkMobile() ? "width=500, height=600" : ""
+        window.open("https://crouton.net", "_blank", features)
     }
 </script>
 </body>
