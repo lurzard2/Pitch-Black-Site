@@ -17,17 +17,17 @@
 
     #links {
         display:grid;
-        width: 20rem;
+        width: 15rem;
         margin:auto;
-        gap:2rem;
-        font-size: x-large;
+        gap:1.5rem;
+        font-size: large;
 
         .button-link{
             font: var(--font);
             color:var(--button-link-col);
             background-color:var(--button-link-bg);
             border: var(--button-link-border);
-            padding:1.5rem;
+            padding:1rem;
         }
     }
 </style>
@@ -39,7 +39,7 @@
         <p class="center"><span class="mute">// rain world :</span><b>pitch black</b></p>
 
         <div id="trailer-player" style="display:flex; justify-content: center;">
-            <iframe style="border: 1px solid var(--text)"
+            <iframe style="border: 1px solid var(--mute)"
                     width="560"
                     height="315"
                     src="https://www.youtube.com/embed/1FXMEJQgM2M?si=lQX9t3xlAvdJ83QO"
@@ -50,7 +50,7 @@
             </iframe>
         </div>
 
-        <div style=" display:flex; justify-content: space-between; margin-top:0.5rem">
+        <div style=" display:flex; justify-content: space-between; margin-top:1rem">
             <p>STATE...</p>
             <p id="updatable-mod-state">...UNRELEASED</p>
         </div>
@@ -70,24 +70,23 @@
             <p id="updatable-mod-development">...OK</p>
         </div>
 
-        <div style=" display:flex; justify-content: space-between; margin-bottom:0.5rem">
+        <div style=" display:flex; justify-content: space-between; margin-bottom:1rem">
             <p>PLAYTESTING...</p>
             <p id="updatable-mod-playtesting">...OK</p>
         </div>
 
         <div id="links" class="center">
             <button title="unreleased. this button will be usable later when it is, to download it. ok? okay" class="button-link" style="--button-link-col: gray; --button-link-border: 1px solid gray">Steam Workshop</button>
+
             <button onclick="opendiscordlink()" class="button-link"
                     style="cursor:pointer;
                     --button-link-col: white;
                     --button-link-border: 1px solid #bac0ff;
                     background-image: linear-gradient(#5865F2, #7885ee)">
-                Discord<span
-                        style="font-size:small;
-                        font-weight: bold;
-                        vertical-align: top">↗</span>
+                Community Discord
             </button>
-            <button onclick="openfaqlink()" class="button-link"
+
+            <button onclick="window.open('faq', '_blank')" class="button-link"
                     style="cursor:pointer;">
                 FAQ
             </button>
@@ -96,18 +95,13 @@
     </div>
 </div>
 <script>
-    function checkMobile(){
-        return innerWidth > 600
+    function features(){
+        // mobile doesn't get separate window functionality so only desktop should
+        return innerWidth > 600 ? "width=500, height=600" : ""
     }
 
     function opendiscordlink(){
-        let features = checkMobile() ? "width=500, height=600" : ""
-        window.open("https://discord.gg/7sUpM4HMzZ", "_blank", features);
-    }
-
-    function openfaqlink(){
-        let features = checkMobile() ? "width=500, height=600" : ""
-        window.open("https://crouton.net", "_blank", features)
+        window.open("https://discord.gg/7sUpM4HMzZ", "_blank", features());
     }
 </script>
 </body>
