@@ -15,7 +15,7 @@
         --button-link-border: 1px solid white;
     }
 
-    #links {
+    .links {
         display:grid;
         width: 15rem;
         margin:auto;
@@ -30,6 +30,10 @@
             padding:1rem;
         }
     }
+
+    .section{
+        margin: 1rem auto
+    }
 </style>
 <body>
 
@@ -38,7 +42,7 @@
 
         <p class="center"><span class="mute">// rain world :</span><b>pitch black</b></p>
 
-        <div id="trailer-player" style="display:flex; justify-content: center;">
+        <div id="trailer-player" class="section" style="display:flex; justify-content: center;">
             <!--suppress HtmlDeprecatedAttribute -->
             <iframe style="border: 1px solid var(--mute)"
                     width="560"
@@ -51,32 +55,34 @@
             </iframe>
         </div>
 
-        <div style=" display:flex; justify-content: space-between; margin-top:1rem">
-            <p>STATE...</p>
-            <p id="updatable-mod-state">...UNRELEASED</p>
+        <div class="section">
+            <div style=" display:flex; justify-content: space-between;">
+                <p>STATE...</p>
+                <p id="updatable-mod-state">...UNRELEASED</p>
+            </div>
+
+            <div style=" display:flex; justify-content: space-between">
+                <p>LAST UPDATE...</p>
+                <p id="updatable-last-update-time">...04/04/26</p>
+            </div>
+
+            <div style=" display:flex; justify-content: space-between">
+                <p>VERSION...</p>
+                <p id="updatable-mod-version">...0.6.8</p>
+            </div>
+
+            <div style=" display:flex; justify-content: space-between">
+                <p>DEVELOPMENT...</p>
+                <p id="updatable-mod-development">...OK</p>
+            </div>
+
+            <div style=" display:flex; justify-content: space-between;">
+                <p>PLAYTESTING...</p>
+                <p id="updatable-mod-playtesting">...OK</p>
+            </div>
         </div>
 
-        <div style=" display:flex; justify-content: space-between">
-            <p>LAST UPDATE...</p>
-            <p id="updatable-last-update-time">...04/04/26</p>
-        </div>
-
-        <div style=" display:flex; justify-content: space-between">
-            <p>VERSION...</p>
-            <p id="updatable-mod-version">...0.6.8</p>
-        </div>
-
-        <div style=" display:flex; justify-content: space-between">
-            <p>DEVELOPMENT...</p>
-            <p id="updatable-mod-development">...OK</p>
-        </div>
-
-        <div style=" display:flex; justify-content: space-between; margin-bottom:1rem">
-            <p>PLAYTESTING...</p>
-            <p id="updatable-mod-playtesting">...OK</p>
-        </div>
-
-        <div id="links" class="center">
+        <div class="links center section">
             <button title="unreleased. this button will be usable later when it is, to download it. ok? okay" class="button-link" style="--button-link-col: gray; --button-link-border: 1px solid gray">Steam Workshop</button>
 
             <button title="https://discord.gg/7sUpM4HMzZ" onclick="opendiscordlink()" class="button-link"
@@ -86,11 +92,10 @@
                     background-image: linear-gradient(#5865F2, #7885ee)">
                 Community Discord
             </button>
+        </div>
 
-            <button title="https:lurvixen.com/pitchblack/faq" onclick="window.open('pitchblack/faq', '_blank')" class="button-link"
-                    style="cursor:pointer;">
-                FAQ
-            </button>
+        <div>
+
         </div>
 
     </div>
