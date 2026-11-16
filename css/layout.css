@@ -2,7 +2,7 @@ body{
     --text: whitesmoke;
     color: var(--text);
     --font: 'Pixel', 'Arial';
-    --mute: gray;
+    --mute: #383838;
     background-color: var(--bg);
 }
 
