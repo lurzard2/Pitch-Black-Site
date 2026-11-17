@@ -8,11 +8,25 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/layout.css">
 </head>
+<script>
+    function appendHTML(id, rawHTML){
+        document.getElementById(id).innerHTML += rawHTML;
+    }
+
+    (async () => {
+        const jsonfetch = await fetch("/faq.json")
+        const jsondata = await jsonfetch.json();
+        console.log(jsondata)
+    })()
+</script>
 <body>
 
 <div id="wrapper" style="background-color: black">
     <div style="margin:0.5rem">
-        <p>wip</p>
+        <div id="bookmarks"></div>
+        <div id="faq">
+
+        </div>
     </div>
 </div>
 
