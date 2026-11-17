@@ -18,7 +18,7 @@
         const jsondata = await jsonfetch.json();
         console.log(jsondata)
 
-        for (let [key, value] in jsondata['root']){
+        for (let [key, value] in jsondata['sections']){
             console.log(key, value);
         }
         appendHTML('faq',"wip: " + jsondata)
