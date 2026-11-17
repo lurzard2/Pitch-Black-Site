@@ -17,6 +17,8 @@
         const jsonfetch = await fetch("/faq.json")
         const jsondata = await jsonfetch.json();
         console.log(jsondata)
+
+        appendHTML('faq', jsondata);
     })()
 </script>
 <body>
