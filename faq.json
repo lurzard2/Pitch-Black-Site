@@ -1,7 +1,24 @@
 {
-  "Content": [],
-  "Playtesting": [],
-  "Development": [],
-  "Versioning": [],
-  "Credits": []
+  "root": [
+    {
+      "id": 0,
+      "name": "Content",
+      "value": []
+    },
+    {
+      "id": 1,
+      "name": "Development",
+      "value": []
+    },
+    {
+      "id": 2,
+      "name": "Versioning",
+      "value": []
+    },
+    {
+      "id": 3,
+      "name": "Credits",
+      "value": []
+    }
+  ]
 }

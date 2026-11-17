@@ -18,7 +18,10 @@
         const jsondata = await jsonfetch.json();
         console.log(jsondata)
 
-        appendHTML('faq', jsondata);
+        for (let [key, value] in jsondata['root']){
+            console.log(key, value);
+        }
+        appendHTML('faq',"wip: " + jsondata)
     })()
 </script>
 <body>
@@ -26,9 +29,7 @@
 <div id="wrapper" style="background-color: black">
     <div style="margin:0.5rem">
         <div id="bookmarks"></div>
-        <div id="faq">
-
-        </div>
+        <div id="faq"></div>
     </div>
 </div>
 
