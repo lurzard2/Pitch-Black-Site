@@ -119,7 +119,7 @@ SendToFAQ('Development',
 SendToFAQ('Developers',
     [
         'Who are the lead developers of PB?',
-        'The lead devs are "Lurvixen", "Ovidia", "Tronsx", and "Matvis". In the past the project was Co-lead by solely "Lurvixen" and "Millisec"',
+        'The lead devs are "Lurvixen", "Ovidia", "Tronsx", and "Matvis". In the past the project was Co-lead by solely "Lurvixen" and "Millisec".',
     ],
     [
         'Lurvixen',
