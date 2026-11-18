@@ -72,7 +72,7 @@ SendToFAQ('About',
         'A day or a few days, to a week.'
     ],
     [
-        'Are there custom Echoes for Beacon?',
+        'Are there custom Echoes or Iterators in PB?',
         'No. But there is ???.'
     ],
     [
