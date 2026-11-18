@@ -206,7 +206,7 @@ SendToFAQ('Creations',
     ],
     [
         'Who created: the entity?',
-        'Kind of every lead dev post-rewrite...'
+        '"Lurvixen", "Ovidia", "Tronsx", "Matvis".'
     ],
     [
         'Who created: The Night Terror?',
