@@ -54,7 +54,7 @@ And the script will handle the rest for displaying the information properly on t
 
 // FAQ ----------------------------------------------------------------------
 
-SendToFAQ('Content',
+SendToFAQ('About',
     [
         'How many campaigns?',
         '1. The Beacon. In the past there were 2, but it\'s just one now.'
