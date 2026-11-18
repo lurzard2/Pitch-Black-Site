@@ -115,7 +115,7 @@ SendToFAQ('Developers',
     ],
     [
         'LEVEL EDITORS (All-time)',
-        '"Millisec", "Nikki", "Tryn", "Ovidia", "Tronsx", "Detrax", "Slithers"'
+        '"Millisec", "Nikki", "Tryn", "Ovidia", "Tronsx", "Detrax", "Slithers", "Dutch", "Lag"'
     ],
     [
         'PROGRAMMERS (All-time)',
@@ -130,7 +130,15 @@ SendToFAQ('Developers',
         '"Millisec", "Tryn", "Matvis"',
     ],
     [
-        'IDEAS (All-time)',
+        'WORLD DESIGN (All-time)',
+        '"Lurvixen", "Millisec", "Nikki", "Ovidia", "Tronsx", "Matvis", "Dutch", "Pur"'
+    ],
+    [
+        'DIALOGUE (All-time)',
+        '"Lurvixen", "Millisec", "Nikki", "Spinch", "Ovidia", "Tronsx", "Matvis", "scuglat"'
+    ],
+    [
+        'IDEAS',
         'EVERYONE!!!'
     ]
 )
