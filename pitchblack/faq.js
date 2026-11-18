@@ -195,14 +195,14 @@ SendToFAQ('Developers',
     ]
 )
 
-SendToFAQ('Creations',
+SendToFAQ('OC Credits',
     [
         'Who created: The Beacon?',
-        'Created by "Lurvixen".'
+        '"Lurvixen".'
     ],
     [
         'Who created: The Photomaniac?',
-        'Created by "Millisec".'
+        '"Millisec".'
     ],
     [
         'Who created: the entity?',
@@ -212,10 +212,6 @@ SendToFAQ('Creations',
         'Who created: The Night Terror?',
         'A mix of "Lurvixen" and "Nikki".'
     ],
-    [
-        'Who created: The weird regions?',
-        'A mix of "Ovidia" and "Tronsx" primarily.'
-    ]
 )
 
 SendToFAQ('Timeline',
