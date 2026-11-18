@@ -61,7 +61,7 @@ SendToFAQ('Content',
     ],
     [
         'What are the Daemon regions in the mod?',
-        'They are original concepts. Not tied to RWTW or the \"Daemon\" region in any way. The design choices of \"plain concrete with holes in it\" is inspired by a Starbound mod by the name of \"Vhos Avha\'las\" by "Aegonian"; Credit goes to them for the inspiration.'
+        'They are original concepts. Not tied to RWTW or the \"Daemon\" region in any way. The design choices of \"plain concrete with holes in it was inspired by a special world called "Vhos Avha\'las" from an ancient race from the Starbound mod "Elithian Races" by "Aegonian"; Credit goes to them for the inspiration.'
     ],
     [
       'What is the gameplay loop?',
@@ -91,7 +91,8 @@ SendToFAQ('Development',
         'The mod plans changed drastically as time passed and the vision changed. To give a basic rundown; We were burning out. After "Millisec" retired, the project was reinstated with new plans, clearer vision and direction. We\'re optimistic about completing the mod now.'
     ],
     [
-
+        'Beta?',
+        ''
     ]
 )
 
