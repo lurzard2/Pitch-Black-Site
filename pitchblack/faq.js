@@ -73,7 +73,7 @@ SendToFAQ('Content',
     ]
 )
 
-SendToFAQ('Slugcats',
+SendToFAQ('Slugcat Creators',
     [
         'The Beacon',
         'Created by "Lurvixen".'
