@@ -9,12 +9,43 @@
     <link rel="stylesheet" href="../css/layout.css">
     <script type="module" src="./faq.js"></script>
 </head>
+<style>
+    #text p {
+        margin-bottom: 3rem
+    }
+
+    #innerwrap {
+        @media screen and (min-width: 768px) {
+            display:grid;
+            grid-auto-flow: column;
+            gap: 3rem;
+
+            #bookmarks #text{
+                height: 100dvh;
+                overflow: scroll;
+            }
+        }
+    }
+
+    #bookmarks {
+        h1 a {
+            color: #bdbdbd;
+        }
+        h2 a {
+            color: #808080;
+        }
+    }
+</style>
 <body>
 
 <div id="wrapper" style="background-color: black">
-    <div style="margin:0.5rem">
-        <div id="bookmarks"></div>
-        <div id="text"></div>
+    <div id="innerwrap" style="margin:0.5rem;">
+        <div id="bookmarks">
+            <p>// faq</p>
+        </div>
+        <div id="text">
+            <p style="color:var(--bg);margin-bottom: auto">// faq</p>
+        </div>
     </div>
 </div>
 

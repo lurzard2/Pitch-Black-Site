@@ -56,13 +56,14 @@ And the script will handle the rest for displaying the information properly on t
 
 SendToFAQ('Content',
     [
-        'a',
-        'b'
+        'How many campaigns?',
+        '1. The Beacon. In the past there were 2, but it\'s just one now.'
     ],
     [
-        'c',
-        'd'
+        'Is there a planned ending for the mod?',
+        'Yes.'
     ],
+
 )
 
 // END FAQ ------------------------------------------------------------------
@@ -106,7 +107,8 @@ function createFAQEntry(entry, question, answer) {
     header.id = question
     header.innerHTML = question
     document.getElementById(entry).appendChild(header)
-    const text = document.createTextNode(answer)
+    const text = document.createElement('p')
+    text.innerHTML = answer
     document.getElementById(entry).appendChild(text)
 }
 
