@@ -81,6 +81,13 @@ SendToFAQ('Content',
     ],
 )
 
+SendToFAQ('Release',
+    [
+        'Where will PB be available for download?',
+        'Officially recognized resources only. We will primarily use Rain World\'s Steam Workshop. We\'ll also support non-Steam downloads. We see you.'
+    ],
+)
+
 SendToFAQ('Development',
     [
         'Who is working on PB?',
@@ -262,10 +269,6 @@ SendToFAQ('Misc',
     [
         'Why the name Pitch Black for the mod?',
         'It just stuck so well.'
-    ],
-    [
-        'How can the mod be distributed?',
-        'Officially recognized resources only. We will primarily use Rain World\'s Steam Workshop. We\'ll also support non-Steam downloads. We see you.'
     ],
     [
         'Should I be worried?',
