@@ -64,7 +64,7 @@ SendToFAQ('Content',
         'Yes.'
     ],
     [
-        'What are the \"Daemon\" regions in the mod?',
+        'What are the Daemon regions in the mod?',
         'They are original concepts. Not tied to RWTW or the \"Daemon\" region in any way. The design choices of \"plain concrete with holes in it\" is inspired by a Starbound mod by the name of \"Vhos Avha\'las\" by "Aegonian"; Credit goes to them for the inspiration.'
     ],
     [
@@ -76,7 +76,7 @@ SendToFAQ('Content',
         'I would love to go on and on about how by design maybe Rain World was never meant to be given a day-night cycle system. It is a flawed cosmology, it is vibesbased. Do not let that stop you from getting creative however. It didn\'t stop us.'
     ],
     [
-        'Is Pitch Black "Canon"?',
+        'Is Pitch Black Canon?',
         'I don\'t care what that means.'
     ],
 )
