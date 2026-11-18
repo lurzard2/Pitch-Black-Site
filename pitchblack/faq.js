@@ -75,10 +75,6 @@ SendToFAQ('Content',
 
 SendToFAQ('Development',
     [
-      'Who are the lead developers of PB?',
-      'The lead devs are "Lurvixen", "Ovidia", "Tronsx", and "Matvis". I "Lur" am considered a main organizer of PB.',
-    ],
-    [
         'Who is working on PB?',
         'A competent dev team. We don\'t have any official label (yet). We\'re a bunch of friends who like modding and everything involved with making games. Full credits for every developer on the project will be available when it is complete.'
     ],
@@ -90,6 +86,33 @@ SendToFAQ('Development',
         'Who created PB?',
         'The original concept for a mod named "Pitch Black" with a slugcat called "The Beacon" and a nighttime world with a twist was by me, "Lurzard"/"Lurvixen".'
     ]
+)
+
+SendToFAQ('Lead Developers',
+    [
+        'Who are the lead developers of PB?',
+        'The lead devs are "Lurvixen", "Ovidia", "Tronsx", and "Matvis".',
+    ],
+    [
+        'Lurvixen',
+        'Creator; Programmer, artist, storywriter, game design.'
+    ],
+    [
+        'Ovidia',
+        'Co-load; Leditor, programmer, artist, storywriting, game design.'
+    ],
+    [
+        'Tronsx',
+        'Co-lead; Leditor, storywriting, game design.'
+    ],
+    [
+        'Matvis',
+        'Co-lead; Music composer, artist, storywriting, game design.'
+    ],
+    [
+        'Millisec',
+        'Retired Co-lead, whom PB would not be here without her; Music composer, leditor, artist, storywriting, game design'
+    ],
 )
 
 SendToFAQ('Timeline',
