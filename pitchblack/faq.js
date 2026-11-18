@@ -56,8 +56,12 @@ And the script will handle the rest for displaying the information properly on t
 
 SendToFAQ('About',
     [
+        'What kind of mod is PB?',
+        'A content expansion akin to an official addition to the game like Downpour, Rain World: The Watcher, "Rain World: Drought" mod, etc. With custom regions, creatures, music, art, story, etc.'
+    ],
+    [
         'How many campaigns?',
-        '1. <span class="else">The Beacon</span>. In the past there were 2, but it\'s just one now.'
+        '1. The Beacon. In the past there were 2, but it\'s just one now.'
     ],
     [
         'What are the Daemon regions in the mod?',
@@ -79,16 +83,12 @@ SendToFAQ('About',
         'What is the ending?',
         '👀'
     ],
-    [
-        'What kind of mod is PB?',
-        'A content expansion akin to an official addition to the game like Downpour, Rain World: The Watcher, "Rain World: Drought" mod, etc. With custom regions, creatures, music, art, story, etc.'
-    ],
 )
 
 SendToFAQ('Release',
     [
         'Where will PB be available for download?',
-        'Officially recognized resources only. We will primarily use Rain World\'s Steam Workshop. We\'ll also support non-Steam downloads. We see you.'
+        'Officially recognized resources only. We will primarily use Rain World\'s Steam Workshop. We\'ll also support non-Steam downloads. <span class="else">We see you</span>.'
     ],
     [
         'When is PB expected to release?',
