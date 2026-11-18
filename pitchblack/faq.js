@@ -135,7 +135,8 @@ SendToFAQ('Developers',
     ],
     [
         'Matvis',
-        'Co-lead; Music composer, artist, storywriting, game design.'
+        'Co-lead; Music composer, artist, storywriting, game design.' +
+        '<br><a target="_blank" href="https://linktr.ee/matvis">Linktree</a>'
     ],
     [
         'Millisec',
