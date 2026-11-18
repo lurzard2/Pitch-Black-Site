@@ -87,7 +87,7 @@ SendToFAQ('Misc',
         'Making a custom campaign is hard work, making 2 is more. Making 2 unique ways to play a unique world and story makes for a little shallow of an experience. We\'re not looking for the Survivor-Monk treatment for the story. We\'re aiming for a campaign to tell The Beacon\'s story in full and not really push further than that in terms of \"custom campaigns\". This is an extremely ambitious project.'
     ],
     [
-        'PB feels like a fever dream, is it?',
+        'PB feels like a fever dream... Is it?',
         'That\'s funny. I\'d call it more like a bad therapy session. This isn\'t really definitive of what PB\'s about though. It\'s more than the vibes on the surface.'
     ],
     [
