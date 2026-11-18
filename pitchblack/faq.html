@@ -7,29 +7,14 @@
     <meta name="description" content="Frequently Asked Questions related to the Pitch Black mod.">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/layout.css">
+    <script type="module" src="./faq.js"></script>
 </head>
-<script>
-    function appendHTML(id, rawHTML){
-        document.getElementById(id).innerHTML += rawHTML;
-    }
-
-    (async () => {
-        const jsonfetch = await fetch("/faq.json")
-        const jsondata = await jsonfetch.json();
-        console.log(jsondata)
-
-        for (let [key, value] in jsondata['sections']){
-            console.log(key, value);
-        }
-        appendHTML('faq',"wip: " + jsondata)
-    })()
-</script>
 <body>
 
 <div id="wrapper" style="background-color: black">
     <div style="margin:0.5rem">
         <div id="bookmarks"></div>
-        <div id="faq"></div>
+        <div id="text"></div>
     </div>
 </div>
 
