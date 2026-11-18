@@ -86,6 +86,10 @@ SendToFAQ('Release',
         'Where will PB be available for download?',
         'Officially recognized resources only. We will primarily use Rain World\'s Steam Workshop. We\'ll also support non-Steam downloads. We see you.'
     ],
+    [
+        'When is PB expected to release?',
+        'IDK.'
+    ],
 )
 
 SendToFAQ('Development',
@@ -222,10 +226,6 @@ SendToFAQ('Timeline',
     [
         'When was the rewrite of mod plans?',
         '08 February 2025. This is also referred to as "rewrite" era.'
-    ],
-    [
-        'When is PB expected to release?',
-        'IDK.'
     ],
 )
 
