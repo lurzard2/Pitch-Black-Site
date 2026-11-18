@@ -10,10 +10,6 @@
     <script type="module" src="./faq.js"></script>
 </head>
 <style>
-    #text p {
-        margin-bottom: 3rem
-    }
-
     #innerwrap {
         @media screen and (min-width: 768px) {
             display:grid;
@@ -35,8 +31,12 @@
     }
 
     #bookmarks {
-        h1 a {
-            color: #b0aabd;
+        h1 {
+            margin-top: 3rem;
+
+            a {
+                color: #b0aabd;
+            }
         }
         h2 a {
             color: #797680;
@@ -47,6 +47,10 @@
         h1 {
             color: var(--mute);
         }
+    }
+
+    #text p {
+        margin-bottom: 3rem;
     }
 </style>
 <body>
