@@ -96,8 +96,8 @@ SendToFAQ('Development',
     ],
     [
         'Beta?',
-        'The mod was originally released as a "public beta" to Steam Workshop, it was unifnished, but people loved it. Originally it contained a unique Downpour-centric world where different regions at different timelines existed in the same campaign: The Beacon, and The Photomaniac. The Slugcats were considered "Flashcats" because of adaptations to the night. It was a very different and fun time to be involved with the project.'
-    ]
+        'The mod was originally released as a "public beta" to Steam Workshop. It was unifnished, but people loved it. Originally it contained a unique Downpour-centric world where different regions at different timelines existed in the same campaign: The Beacon, and The Photomaniac. The Slugcats were considered "Flashcats" because of adaptations to the night. It was a very different and fun time to be involved with the project.'
+    ],
 )
 
 SendToFAQ('Developers',
