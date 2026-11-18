@@ -92,7 +92,7 @@ SendToFAQ('Development',
     ],
     [
         'Rewrite?',
-        'The mod plans changed drastically as time passed and the vision changed. To give a basic rundown; We were burning out. After "Millisec" retired, the project was reinstated with new plans by "Lurvixen" and "Ovidia", with clearer vision and direction. We\'re optimistic about completing the mod now.'
+        'The mod plans changed drastically as time passed and the vision changed. To give a basic rundown; We were burning out. After "Millisec" retired, the project was reinstated with new plans by "Lurvixen" and "Ovidia"; With clearer vision and direction. We\'re optimistic about completing the mod now.'
     ],
     [
         'Beta?',
