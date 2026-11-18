@@ -233,7 +233,7 @@ SendToFAQ('Misc',
     [
         'Why the name Pitch Black for the mod?',
         'It just stuck so well.'
-    ]
+    ],
     [
         'Is this FAQ done?',
         'Noup,, check for updates frequently!'
