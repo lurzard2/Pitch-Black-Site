@@ -83,7 +83,7 @@ SendToFAQ('Misc',
         'That\'s funny. I\'d call it more like a bad therapy session. This isn\'t really definitive of what PB\'s about though. It\'s more than the vibes on the surface.'
     ],
     [
-        'Is Pitch Black Canon?',
+        'Is PB Canon?',
         'I don\'t care what that means.'
     ],
 )
