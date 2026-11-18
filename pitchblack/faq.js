@@ -88,7 +88,7 @@ SendToFAQ('Development',
     ]
 )
 
-SendToFAQ('Lead Developers',
+SendToFAQ('Developers',
     [
         'Who are the lead developers of PB?',
         'The lead devs are "Lurvixen", "Ovidia", "Tronsx", and "Matvis". In the past the project was Co-lead by solely "Lurvixen" and "Millisec"',
@@ -113,6 +113,26 @@ SendToFAQ('Lead Developers',
         'Millisec',
         'Retired Co-lead, whom PB would not be here without her; Music composer, leditor, artist, storywriting, game design.'
     ],
+    [
+        'LEVEL EDITORS (All-time)',
+        '"Millisec", "Nikki", "Tryn", "Ovidia", "Tronsx", "Detrax", "Slithers"'
+    ],
+    [
+        'PROGRAMMERS (All-time)',
+        '"Lurvixen", "Ovidia", "Moon615", "Nikki", "URUFUDOGGO", "spinch", "Haizlbliek"'
+    ],
+    [
+        'ARTISTS (All-time)',
+        '"Lurvixen", "Millisec" "Storm", "Matvis"'
+    ],
+    [
+        'MUSIC COMPOSERS (All-time)',
+        '"Millisec", "Tryn", "Matvis"',
+    ],
+    [
+        'IDEAS (All-time)',
+        'EVERYONE!!!'
+    ]
 )
 
 SendToFAQ('Slugcat Creators',
