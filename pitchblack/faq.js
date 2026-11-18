@@ -85,6 +85,10 @@ SendToFAQ('Development',
     [
         'Who created PB?',
         'The original concept for a mod named "Pitch Black" with a slugcat called "The Beacon" and a nighttime world with a twist was by me, "Lurzard"/"Lurvixen".'
+    ],
+    [
+        'Rewrite?',
+        'The mod plans changed drastically as time passed and the vision changed. To give a basic rundown, we were burning out.'
     ]
 )
 
