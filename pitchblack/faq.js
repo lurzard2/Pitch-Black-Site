@@ -77,7 +77,7 @@ SendToFAQ('Content',
     ],
     [
         'What kind of mod is PB?',
-        'A content expansion akin to an official addition to the game like Downpour, RWTW, "Rain World: Drought" mod, etc. With custom regions, creatures, music, art, story, etc.'
+        'A content expansion akin to an official addition to the game like Downpour, Rain World: The Watcher, "Rain World: Drought" mod, etc. With custom regions, creatures, music, art, story, etc.'
     ],
 )
 
