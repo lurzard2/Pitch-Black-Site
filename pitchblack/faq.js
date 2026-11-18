@@ -138,7 +138,7 @@ SendToFAQ('Developers',
         '"Lurvixen", "Millisec", "Nikki", "spinch", "Ovidia", "Tronsx", "Matvis"'
     ],
     [
-        'GAME DEISGN (All-time)',
+        'GAME DESIGN (All-time)',
         '"Lurvixen", "Millisec", "Nikki", "Ovidia", "Tronsx", "Matvis"'
     ],
     [
