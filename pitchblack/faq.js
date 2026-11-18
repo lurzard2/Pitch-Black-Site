@@ -210,7 +210,7 @@ SendToFAQ('OCs',
     ],
     [
         'Who created: The Night Terror?',
-        'A mix of "Lurvixen" and "Nikki".'
+        '"Lurvixen" and "Nikki".'
     ],
 )
 
