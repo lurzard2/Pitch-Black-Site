@@ -83,7 +83,7 @@ SendToFAQ('Development',
         'A competent dev team. We don\'t have any official label (yet). We\'re a bunch of friends who like modding and everything involved with making games. Full credits for every developer on the project will be available when it is complete.'
     ],
     [
-        'Has the dev teams changed in the years PB has been in development?',
+        'Has the dev team changed in the years PB has been in development?',
         'A lot. In the time of its development the project has become dependent on mutual leadership between friends. Originally it was a Co-lead project by me and "Millisec", who has since retired from modding. Now it\'s around 3-4 people with creative control besides me. We all share ideas, design, and progress for it and are very cooperative.'
     ],
     [
