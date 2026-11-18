@@ -264,7 +264,7 @@ SendToFAQ('Misc',
         'It just stuck so well.'
     ],
     [
-        'How can Pitch Black be distributed?',
+        'How can the mod be distributed?',
         'Officially recognized resources only. We will primarily use Rain World\'s Steam Workshop. We\'ll also support non-Steam downloads. We see you.'
     ],
     [
