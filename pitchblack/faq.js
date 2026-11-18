@@ -205,7 +205,7 @@ SendToFAQ('OCs',
         '"Millisec".'
     ],
     [
-        'Who created: the entity?',
+        'Who created: ???',
         '"Lurvixen", "Ovidia", "Tronsx", "Matvis".'
     ],
     [
