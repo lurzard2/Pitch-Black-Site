@@ -99,7 +99,7 @@ SendToFAQ('Developers',
     ],
     [
         'Ovidia',
-        'Co-load; Leditor, programmer, artist, storywriting, game design.'
+        'Co-lead; Leditor, programmer, artist, storywriting, game design.'
     ],
     [
         'Tronsx',
