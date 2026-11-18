@@ -84,7 +84,7 @@ SendToFAQ('Misc',
     ],
     [
         'Why only one campaign?',
-        'Making a custom campaign is hard work, making 2 is more. Making 2 unique ways to play a unique world and story makes for a little shallow of an experience. We\'re not looking for the Survivor-Monk treatment for the story. We\'re aiming for a campaign to tell The Beacon\'s story in full and not push further than that. This is an extremely ambitious project.'
+        'Making a custom campaign is hard work, making 2 is more. Making 2 unique ways to play a unique world and story makes for a little shallow of an experience. We\'re not looking for the Survivor-Monk treatment for the story. We\'re aiming for a campaign to tell The Beacon\'s story in full and not really push further than that in terms of \"custom campaigns\". This is an extremely ambitious project.'
     ],
     [
         'PB feels like a fever dream, is it?',
