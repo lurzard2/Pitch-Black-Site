@@ -212,7 +212,7 @@ SendToFAQ('Misc',
     ],
     [
         'PB feels like a fever dream... Is it?',
-        'That\'s funny. I\'d call it more like a bad therapy session. "Ovidia" says it\'s mad high and trip. This isn\'t really definitive of what PB\'s about though. It\'s more than the vibes on the surface.'
+        'That\'s funny. I\'d call it more like a bad therapy session. "Ovidia" says it\'s a mad high and trip. This isn\'t really definitive of what PB\'s about though. It\'s more than the vibes on the surface.'
     ],
     [
         'Is PB Canon?',
