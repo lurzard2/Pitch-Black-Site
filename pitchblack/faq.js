@@ -73,6 +73,17 @@ SendToFAQ('Content',
     ]
 )
 
+SendToFAQ('Slugcats',
+    [
+        'The Beacon',
+        'Created by "Lurvixen".'
+    ],
+    [
+        'The Photomaniac',
+        'Created by "Millisec".'
+    ]
+)
+
 SendToFAQ('Development',
     [
         'Who is working on PB?',
