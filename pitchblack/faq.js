@@ -60,8 +60,12 @@ SendToFAQ('Content',
         '1. The Beacon. In the past there were 2, but it\'s just one now.'
     ],
     [
-        'Is there a planned ending for the mod?',
+        'Is there a planned ending?',
         'Yes.'
+    ],
+    [
+        'What are the Daemon regions in the mod?',
+        'They are not Daemon. They are original concepts. And the regions are very involved with the story. The design choices of \"plain concrete with holes in it\" is inspired by a Starbound mod by the name of \"Vhos Avha\'las\" by "Aegonian"; Credit goes to them for the inspiration.'
     ],
 
 )
