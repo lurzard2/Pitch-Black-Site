@@ -265,7 +265,7 @@ SendToFAQ('Misc',
     ],
     [
         'How can Pitch Black be distributed?',
-        'Officially only, we will use Steam Workshop primarily and upkeep on non-Steam download resources as well. We see you.'
+        'Officially recognized resources only. We will primarily use Rain World\'s Steam Workshop. We\'ll also support non-Steam downloads. We see you.'
     ],
     [
         'Should I be worried?',
