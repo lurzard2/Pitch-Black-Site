@@ -195,14 +195,26 @@ SendToFAQ('Developers',
     ]
 )
 
-SendToFAQ('Slugcat Creators',
+SendToFAQ('Creations',
     [
-        'The Beacon',
+        'Who created: The Beacon?',
         'Created by "Lurvixen".'
     ],
     [
-        'The Photomaniac',
+        'Who created: The Photomaniac?',
         'Created by "Millisec".'
+    ],
+    [
+        'Who created: the entity?',
+        'Kind of every lead post-rewrite...'
+    ],
+    [
+        'Who created: The Night Terror',
+        'A mix of "Lurvixen" and "Nikki".'
+    ],
+    [
+        'Who created: The weird regions?',
+        'A mix of "Ovidia" and "Tronsx" primarily.'
     ]
 )
 
