@@ -131,7 +131,7 @@ SendToFAQ('Developers',
     ],
     [
         'WORLD DESIGN (All-time)',
-        '"Lurvixen", "Millisec", "Nikki", "Ovidia", "Tronsx", "Matvis", "Dutch", "Pur"'
+        '"Lurvixen", "Millisec", "Nikki", "Opey", "Ovidia", "Tronsx", "Matvis", "Dutch", "Pur"'
     ],
     [
         'DIALOGUE (All-time)',
