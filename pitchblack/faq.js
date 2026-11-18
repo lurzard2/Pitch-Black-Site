@@ -73,6 +73,21 @@ SendToFAQ('Content',
     ]
 )
 
+SendToFAQ('Development',
+    [
+      'Who are the lead developers of PB?',
+      'I (Lur) have been with the project since its inception, being a creative lead and organizer of PB while working on it. In the time of its development the project has become dependent on mutual leadership between friends. Originally it was a Co-lead project by me and "Millisec", who has since retired from modding. Now it\'s around 3-4 people with creative control besides me. We all share ideas, design, and progress for it and are very cooperative.',
+    ],
+    [
+        'Who is working on PB?',
+        'A competent dev team. We don\'t have any official label (yet). We\'re a bunch of friends who like modding and everything involved with making games.'
+    ],
+    [
+        'Who created PB?',
+        'The original concept for a mod named "Pitch Black" with a slugcat called "The Beacon" and a nighttime world with a twist was by me, Lur.'
+    ]
+)
+
 SendToFAQ('Timeline',
     [
         'When did PB start development?',
