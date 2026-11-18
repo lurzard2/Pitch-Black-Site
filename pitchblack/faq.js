@@ -79,6 +79,10 @@ SendToFAQ('Content',
         'Is Pitch Black Canon?',
         'I don\'t care what that means.'
     ],
+    [
+        'Does this mod contain generative AI content?',
+        'NO! NONE! NEVER WILL! FUCK THAT! FUUUUUUUUCK THAT!'
+    ]
 )
 
 // END FAQ ------------------------------------------------------------------
