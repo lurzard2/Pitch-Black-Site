@@ -64,6 +64,10 @@ SendToFAQ('Content',
         'They are original concepts. Not tied to RWTW or the \"Daemon\" region in any way. The design choices of \"plain concrete with holes in it\" is inspired by a Starbound mod by the name of \"Vhos Avha\'las\" by "Aegonian"; Credit goes to them for the inspiration.'
     ],
     [
+      'What is the gameplay loop?',
+      'Die, restart, die. If you like Rain World but want something challenging like Hunter, PB is here!'
+    ],
+    [
         'What is the ending?',
         '👀'
     ]
