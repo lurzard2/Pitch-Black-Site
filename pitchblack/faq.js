@@ -80,7 +80,7 @@ SendToFAQ('Timeline',
     ],
     [
         'When did the original Beta of PB release?',
-        '15 September 2025'
+        '15 September 2025. This is also referred to as "beta" era.'
     ],
     [
       'When was the original Beta of PB taken down?',
@@ -92,7 +92,7 @@ SendToFAQ('Timeline',
     ],
     [
         'When was the rewrite of mod plans?',
-        '08 February 2025'
+        '08 February 2025. This is also referred to as "rewrite" era.'
     ],
     [
         'When is PB expected to release?',
