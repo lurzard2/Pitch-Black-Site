@@ -209,7 +209,7 @@ SendToFAQ('Creations',
         'Kind of every lead post-rewrite...'
     ],
     [
-        'Who created: The Night Terror',
+        'Who created: The Night Terror?',
         'A mix of "Lurvixen" and "Nikki".'
     ],
     [
