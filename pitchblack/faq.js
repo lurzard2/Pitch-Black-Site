@@ -11,7 +11,7 @@ function SendToFAQ(section, ...qna) {
         faq[section].push({"q":entry[0], "a":entry[1]})
     }
 }
-
+// Never touch the code
 
 
 
@@ -122,24 +122,24 @@ SendToFAQ('Developers',
         'The lead devs are "Lurvixen", "Ovidia", "Tronsx", and "Matvis". In the past the project was Co-lead by solely "Lurvixen" and "Millisec".',
     ],
     [
-        'Lurvixen',
+        'Who is: Lurvixen?',
         'Creator; Programmer, artist, storywriter, game design.'
     ],
     [
-        'Ovidia',
+        'Who is: Ovidia?',
         'Co-lead; Leditor, programmer, artist, storywriting, game design.'
     ],
     [
-        'Tronsx',
+        'Who is: Tronsx?',
         'Co-lead; Leditor, storywriting, game design.'
     ],
     [
-        'Matvis',
+        'Who is: Matvis?',
         'Co-lead; Music composer, artist, storywriting, game design.' +
         '<br><a target="_blank" href="https://linktr.ee/matvis">Linktree</a>'
     ],
     [
-        'Millisec',
+        'Who is: Millisec?',
         'Retired Co-lead, whom PB would not be here without her; Music composer, leditor, artist, storywriting, game design.'
     ],
     [
@@ -292,7 +292,7 @@ SendToFAQ('Misc',
 
 
 
-
+// Never touch the code
 function createBookMark(name, level) {
     const header = document.createElement('h'+level)
     header.innerHTML = '<a href="#' + name + '">' + name + '</a>'
