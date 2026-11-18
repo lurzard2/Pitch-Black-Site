@@ -67,22 +67,25 @@ SendToFAQ('Content',
         'What are the Daemon regions in the mod?',
         'They are original concepts. Not tied to RWTW or the \"Daemon\" region in any way. The design choices of \"plain concrete with holes in it\" is inspired by a Starbound mod by the name of \"Vhos Avha\'las\" by "Aegonian"; Credit goes to them for the inspiration.'
     ],
+)
+
+SendToFAQ('Misc',
     [
-        'This mod feels like a fever dream, is it?',
-        'That\'s funny. I\'d call it more like a bad therapy session. This isn\'t really definitive of what PB\'s about though. It\'s more than the vibes on the surface.'
+        'Does this mod contain generative AI content?',
+        'NO! NONE! NEVER WILL! FUCK THAT! FUUUUUUUUCK THAT! All of our art, code, music, every asset (by us) is made by real terminally online nerds that have an insane knack for attention to detail and making COOL. FREAKING. EPIC bullshit. with our BARE HANDS! Okay yay'
     ],
     [
         'Nighttime... in Rain World?',
         'I would love to go on and on about how by design maybe Rain World was never meant to be given a day-night cycle system. It is a flawed cosmology, it is vibesbased. Do not let that stop you from getting creative however. It didn\'t stop us.'
     ],
     [
+        'PB feels like a fever dream, is it?',
+        'That\'s funny. I\'d call it more like a bad therapy session. This isn\'t really definitive of what PB\'s about though. It\'s more than the vibes on the surface.'
+    ],
+    [
         'Is Pitch Black Canon?',
         'I don\'t care what that means.'
     ],
-    [
-        'Does this mod contain generative AI content?',
-        'NO! NONE! NEVER WILL! FUCK THAT! FUUUUUUUUCK THAT! All of our art, code, music, every asset (by us) is made by real terminally online nerds that have an insane knack for attention to detail and making COOL. FREAKING. EPIC bullshit. with our BARE HANDS! Okay yay'
-    ]
 )
 
 // END FAQ ------------------------------------------------------------------
