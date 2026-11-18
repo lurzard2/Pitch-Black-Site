@@ -172,7 +172,7 @@ SendToFAQ('Developers',
     ],
     [
         'DIALOGUE (All-time)',
-        '"Lurvixen", "Millisec", "Nikki", "Spinch", "Ovidia", "Tronsx", "Matvis", "scuglat"'
+        '"Lurvixen", "Millisec", "Nikki", "Spinch", "Tryn", "Ovidia", "Tronsx", "Matvis", "scuglat"'
     ],
     [
         'IDEAS',
