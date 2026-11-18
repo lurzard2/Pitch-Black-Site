@@ -76,7 +76,7 @@ SendToFAQ('Content',
 SendToFAQ('Development',
     [
       'Who are the lead developers of PB?',
-      'I (Lur) have been with the project since its inception, being a creative lead and organizer of PB while working on it. In the time of its development the project has become dependent on mutual leadership between friends. Originally it was a Co-lead project by me and "Millisec", who has since retired from modding. Now it\'s around 3-4 people with creative control besides me. We all share ideas, design, and progress for it and are very cooperative. The lead devs are Lur, Ovidia, Tronsx, and Matvis.',
+      'I (Lur) have been with the project since its inception, being a creative lead and organizer of PB while working on it. In the time of its development the project has become dependent on mutual leadership between friends. Originally it was a Co-lead project by me and "Millisec", who has since retired from modding. Now it\'s around 3-4 people with creative control besides me. We all share ideas, design, and progress for it and are very cooperative. The lead devs are "Lurvixen", "Ovidia", "Tronsx", and "Matvis".',
     ],
     [
         'Who is working on PB?',
