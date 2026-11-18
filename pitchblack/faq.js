@@ -105,6 +105,10 @@ SendToFAQ('Misc',
         'The mod adds The Beacon\'s campaign and all its contents: custom regions, custom mechanics, uniquely designed esoterics. It is a mod that questions and comments on what it means to play Rain World, to modify it, and cherish it. A blind playthrough without spoilers is preferred. ' +
         'The Beacon is a lost soul, trying to integrate with the world. It is an esoteric campaign about life and death, trial and error, and escapism. You are born into an unforgiving reality and must grapple with the cards you were dealt, or, you could throw out the deck and play a different game if you wanted. You will find yourself doomed since you start, but death is not the end, the end is never the end. Not for you. ' +
         'PB is different. It is Rain World as art, bringing a narrative experience to the table. Not bathed in void fluid, but dreams.'
+    ],
+    [
+        'Is this FAQ done?',
+        'Noup,, check for updates frequently!'
     ]
 )
 
