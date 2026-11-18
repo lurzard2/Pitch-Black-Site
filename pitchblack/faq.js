@@ -76,10 +76,9 @@ SendToFAQ('Content',
         'I would love to go on and on about how by design maybe Rain World was never meant to be given a day-night cycle system. It is a flawed cosmology, it is vibesbased. Do not let that stop you from getting creative however. It didn\'t stop us.'
     ],
     [
-        'is Pitch Black "canon"?',
-        'I don\'t care.'
+        'Is Pitch Black "Canon"?',
+        'I don\'t care what that means.'
     ],
-
 )
 
 // END FAQ ------------------------------------------------------------------

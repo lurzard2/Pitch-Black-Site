@@ -20,10 +20,13 @@
             grid-auto-flow: column;
             gap: 3rem;
 
-            #bookmarks #text{
+            #bookmarks, #text{
                 height: 100dvh;
-                overflow: scroll;
+                overflow-y: auto;
             }
+        }
+        @media screen and (max-width: 767px) {
+            margin:0.5rem;
         }
     }
 
@@ -35,11 +38,17 @@
             color: #808080;
         }
     }
+
+    #text {
+        h1 {
+            color: #4b4b4b;
+        }
+    }
 </style>
 <body>
 
 <div id="wrapper" style="background-color: black">
-    <div id="innerwrap" style="margin:0.5rem;">
+    <div id="innerwrap">
         <div id="bookmarks">
             <p>// faq</p>
         </div>
