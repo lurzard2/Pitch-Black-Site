@@ -195,7 +195,7 @@ SendToFAQ('Developers',
     ]
 )
 
-SendToFAQ('OC Credits',
+SendToFAQ('OCs',
     [
         'Who created: The Beacon?',
         '"Lurvixen".'
