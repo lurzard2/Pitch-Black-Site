@@ -227,6 +227,10 @@ SendToFAQ('Misc',
         'PB is different. It is Rain World as art, bringing a narrative experience to the table. Not bathed in void fluid, but dreams.'
     ],
     [
+        'PB?',
+        'Pitch Black, Peanut Butter, Pure Beans.'
+    ],
+    [
         'Is this FAQ done?',
         'Noup,, check for updates frequently!'
     ]
