@@ -57,7 +57,7 @@ And the script will handle the rest for displaying the information properly on t
 SendToFAQ('About',
     [
         'How many campaigns?',
-        '1. The Beacon. In the past there were 2, but it\'s just one now.'
+        '1. <span class="else">The Beacon</span>. In the past there were 2, but it\'s just one now.'
     ],
     [
         'What are the Daemon regions in the mod?',
