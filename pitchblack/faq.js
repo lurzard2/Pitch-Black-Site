@@ -73,17 +73,6 @@ SendToFAQ('Content',
     ]
 )
 
-SendToFAQ('Slugcat Creators',
-    [
-        'The Beacon',
-        'Created by "Lurvixen".'
-    ],
-    [
-        'The Photomaniac',
-        'Created by "Millisec".'
-    ]
-)
-
 SendToFAQ('Development',
     [
         'Who is working on PB?',
@@ -124,6 +113,17 @@ SendToFAQ('Lead Developers',
         'Millisec',
         'Retired Co-lead, whom PB would not be here without her; Music composer, leditor, artist, storywriting, game design.'
     ],
+)
+
+SendToFAQ('Slugcat Creators',
+    [
+        'The Beacon',
+        'Created by "Lurvixen".'
+    ],
+    [
+        'The Photomaniac',
+        'Created by "Millisec".'
+    ]
 )
 
 SendToFAQ('Timeline',
