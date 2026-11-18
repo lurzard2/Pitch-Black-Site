@@ -95,7 +95,7 @@ SendToFAQ('Lead Developers',
     ],
     [
         'Lurvixen',
-        'Creator; Programmer, artist, storywriter, game design.'
+        'Creator; Programmer, artist, storywriter, game design. Creator of The Beacon'
     ],
     [
         'Ovidia',
@@ -111,7 +111,7 @@ SendToFAQ('Lead Developers',
     ],
     [
         'Millisec',
-        'Retired Co-lead, whom PB would not be here without her; Music composer, leditor, artist, storywriting, game design'
+        'Retired Co-lead, whom PB would not be here without her; Music composer, leditor, artist, storywriting, game design. Creator of The Photomaniac.'
     ],
 )
 
