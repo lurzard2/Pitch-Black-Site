@@ -64,12 +64,12 @@ SendToFAQ('Content',
         'They are original concepts. Not tied to RWTW or the \"Daemon\" region in any way. The design choices of \"plain concrete with holes in it\" regions are inspired by a special world called "Vhos Avha\'las" from an ancient race from the Starbound mod "Elithian Races" by "Aegonian"; Credit goes to them for the inspiration.'
     ],
     [
-      'What is the gameplay loop?',
-      'Die, restart, die. Hunter-coded torture nexus with hints of escapism here and there.'
+        'What is the gameplay loop?',
+        'Die, restart, die. Hunter-coded torture nexus with hints of escapism here and there.'
     ],
     [
-        '',
-        ''
+        'How long is the mod intended to take to fully complete?',
+        'A day to a few days.'
     ],
     [
         'What is the ending?',
@@ -100,10 +100,6 @@ SendToFAQ('Development',
     [
         'Has the dev team changed in the years PB has been in development?',
         'A lot. In the time of its development the project has become dependent on mutual leadership between friends. Originally it was a Co-lead project by me and "Millisec", who has since retired from modding. Now it\'s around 3-4 people with creative control besides me. We all share ideas, design, and progress for it and are very cooperative.'
-    ],
-    [
-        'Who created PB?',
-        'The original concept for a mod named "Pitch Black" with a slugcat called "The Beacon" and a nighttime world with a twist was by me, "Lurzard"/"Lurvixen".'
     ],
     [
         'Rewrite?',
@@ -211,6 +207,10 @@ SendToFAQ('OCs',
     [
         'Who created: The Night Terror?',
         '"Lurvixen" and "Nikki".'
+    ],
+    [
+        'Who created PB?',
+        'The original concept for a mod named "Pitch Black" with a slugcat called "The Beacon" and a nighttime world with a twist was by me, "Lurzard"/"Lurvixen".'
     ],
 )
 
