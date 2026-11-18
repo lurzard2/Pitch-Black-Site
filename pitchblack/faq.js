@@ -65,7 +65,7 @@ SendToFAQ('Content',
     ],
     [
       'What is the gameplay loop?',
-      'Die, restart, die. If you like Rain World but want something challenging like Hunter, PB is here!'
+      'Die, restart, die. Hunter-coded torture nexus with hints of escapism here and there.'
     ],
     [
         'What is the ending?',
