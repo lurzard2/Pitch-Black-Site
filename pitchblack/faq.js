@@ -72,7 +72,7 @@ SendToFAQ('About',
         'A day or a few days, to a week.'
     ],
     [
-        'Are there custom Echoes or Iterators or someone unqiue in PB?',
+        'Are there custom Echoes or Iterators or unique entities in PB?',
         '<span class="else">???</span>.'
     ],
     [
