@@ -81,7 +81,7 @@ SendToFAQ('Content',
     ],
     [
         'Does this mod contain generative AI content?',
-        'NO! NONE! NEVER WILL! FUCK THAT! FUUUUUUUUCK THAT! All of our art, code, and music is made by real terminally online nerds that have an insane knack for attention to detail and making COOL. FREAKING. EPIC bullshit. Okay yay'
+        'NO! NONE! NEVER WILL! FUCK THAT! FUUUUUUUUCK THAT! All of our art, code, music, every asset (by us) is made by real terminally online nerds that have an insane knack for attention to detail and making COOL. FREAKING. EPIC bullshit. Okay yay'
     ]
 )
 
