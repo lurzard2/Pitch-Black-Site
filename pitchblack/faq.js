@@ -151,7 +151,7 @@ SendToFAQ('Developers',
     ],
     [
         'DETRAX',
-        'That thing she did. <textarea>https://media.discordapp.net/attachments/995872894620020766/1520836723582701618/detrax.gif?ex=6afe82d2&is=6afd3152&hm=1cde5bfd0493e3caf9800f25ac4af31b3d94313abb632c7dacb58be4511b19f6</textarea>'
+        'That thing she did. <textarea style="height: 0.5rem; width: 5rem">https://media.discordapp.net/attachments/995872894620020766/1520836723582701618/detrax.gif?ex=6afe82d2&is=6afd3152&hm=1cde5bfd0493e3caf9800f25ac4af31b3d94313abb632c7dacb58be4511b19f6</textarea>'
     ]
 )
 
