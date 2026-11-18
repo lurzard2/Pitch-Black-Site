@@ -73,6 +73,33 @@ SendToFAQ('Content',
     ]
 )
 
+SendToFAQ('Timeline',
+    [
+        'When did PB start development?',
+        '07 April 2023'
+    ],
+    [
+        'When did the original Beta of PB release?',
+        '15 September 2025'
+    ],
+    [
+      'When was the original Beta of PB taken down?',
+      '25 December 2025'
+    ],
+    [
+        'When did playtesting start?',
+        '16 January 2024'
+    ],
+    [
+        'When was the rewrite of mod plans?',
+        '08 February 2025'
+    ],
+    [
+        'When is PB expected to release?',
+        'IDK.'
+    ],
+)
+
 SendToFAQ('Misc',
     [
         'Does this mod contain generative AI content?',
