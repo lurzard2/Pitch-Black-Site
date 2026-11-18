@@ -56,8 +56,12 @@ And the script will handle the rest for displaying the information properly on t
 
 SendToFAQ('Content',
     [
-        'q',
-        'a'
+        'a',
+        'b'
+    ],
+    [
+        'c',
+        'd'
     ],
 )
 
@@ -81,10 +85,37 @@ SendToFAQ('Content',
 
 
 
+function createBookMark(name, level) {
+    const header = document.createElement('h'+level)
+    header.innerHTML = '<a href="#' + name + '">' + name + '</a>'
+    document.getElementById('bookmarks').appendChild(header)
 
+    if (level > 1) {
+        return
+    }
+    const textSection = document.createElement('div')
+    textSection.id = name
+    const sectionHeader = document.createElement('h1')
+    sectionHeader.innerHTML = name
+    textSection.appendChild(sectionHeader)
+    document.getElementById('text').appendChild(textSection)
+}
+
+function createFAQEntry(entry, question, answer) {
+    const header = document.createElement('h2')
+    header.id = question
+    header.innerHTML = question
+    document.getElementById(entry).appendChild(header)
+    const text = document.createTextNode(answer)
+    document.getElementById(entry).appendChild(text)
+}
 
 for (let entry in faq) {
+
+    createBookMark(entry, 1)
+
     for (let bundle of faq[entry]) {
-        console.log(entry, bundle)
+        createFAQEntry(entry, bundle.q, bundle.a)
+        createBookMark(bundle.q, 2)
     }
 }
