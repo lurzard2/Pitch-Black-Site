@@ -134,6 +134,14 @@ SendToFAQ('Developers',
         '"Lurvixen", "Millisec", "Nikki", "Opey", "Ovidia", "Tronsx", "Matvis", "Dutch", "Pur"'
     ],
     [
+        'STORYWRITING (All-time)',
+        '"Lurvixen", "Millisec", "Nikki", "spinch", "Ovidia", "Tronsx", "Matvis"'
+    ],
+    [
+        'GAME DEISGN (All-time)',
+        '"Lurvixen", "Millisec", "Nikki", "Ovidia", "Tronsx", "Matvis"'
+    ],
+    [
         'DIALOGUE (All-time)',
         '"Lurvixen", "Millisec", "Nikki", "Spinch", "Ovidia", "Tronsx", "Matvis", "scuglat"'
     ],
