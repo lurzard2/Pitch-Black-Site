@@ -69,7 +69,7 @@ SendToFAQ('About',
     ],
     [
         'How long is a playthrough of PB?',
-        'A day to a few days to a week.'
+        'A day to a few days, to a week.'
     ],
     [
         'What is the ending?',
