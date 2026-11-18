@@ -88,7 +88,7 @@ SendToFAQ('About',
 SendToFAQ('Release',
     [
         'Where will PB be available for download?',
-        'Officially recognized resources only. We will primarily use Rain World\'s Steam Workshop. We\'ll also support non-Steam downloads. <span class="else">We see you</span>.'
+        'Officially recognized resources only. We will primarily use Rain World\'s Steam Workshop. We\'ll also support non-Steam downloads. We see you.'
     ],
     [
         'When is PB expected to release?',
