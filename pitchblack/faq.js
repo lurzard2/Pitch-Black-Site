@@ -74,7 +74,11 @@ SendToFAQ('Content',
     [
         'What is the ending?',
         '👀'
-    ]
+    ],
+    [
+        'What kind of mod is PB?',
+        'A content expansion akin to an official addition to the game like Downpour, RWTW, "Rain World: Drought" mod, etc. With custom regions, creatures, music, art, story, etc.'
+    ],
 )
 
 SendToFAQ('Development',
