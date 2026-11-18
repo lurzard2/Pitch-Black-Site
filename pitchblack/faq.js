@@ -88,7 +88,10 @@ SendToFAQ('Development',
     ],
     [
         'Rewrite?',
-        'The mod plans changed drastically as time passed and the vision changed. To give a basic rundown; We were burning out. The project was reinstated with new plans, clearer vision and direction. We\'re optimistic about completing the mod.'
+        'The mod plans changed drastically as time passed and the vision changed. To give a basic rundown; We were burning out. After "Millisec" retired, the project was reinstated with new plans, clearer vision and direction. We\'re optimistic about completing the mod now.'
+    ],
+    [
+
     ]
 )
 
