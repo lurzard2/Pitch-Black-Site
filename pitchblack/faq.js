@@ -264,6 +264,10 @@ SendToFAQ('Misc',
         'It just stuck so well.'
     ],
     [
+        'How can Pitch Black be distributed?',
+        'Officially only, we will use Steam Workshop primarily and upkeep on non-Steam download resources as well. We see you.'
+    ]
+    [
         'Should I be worried?',
         'You should be!'
     ],
