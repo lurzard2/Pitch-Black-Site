@@ -147,7 +147,7 @@ SendToFAQ('Developers',
     [
         'Who is: Matvis?',
         'Co-lead; Music composer, artist, storywriting, game design.' +
-        '<br><a target="_blank" href="https://linktr.ee/matvis">Linktree</a>'
+        '<br><a class="else" target="_blank" href="https://linktr.ee/matvis">Linktree</a>'
     ],
     [
         'Who is: Millisec?',
