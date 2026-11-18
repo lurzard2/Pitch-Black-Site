@@ -79,6 +79,10 @@ SendToFAQ('Misc',
         'I would love to go on and on about how by design maybe Rain World was never meant to be given a day-night cycle system. It is a flawed cosmology, it is vibesbased. Do not let that stop you from getting creative however. It didn\'t stop us.'
     ],
     [
+        'Where is The Photomaniac?',
+        'Our sweet chud son/daughter/thing is no longer with us, due to the vision for the mod going in a completely different direction than the original one with him in it. They simply did not survive that. But please don\'t forget her. The Beacon lives on in a new state for Pitch Black, while The Photomaniac will be revitalized.'
+    ],
+    [
         'PB feels like a fever dream, is it?',
         'That\'s funny. I\'d call it more like a bad therapy session. This isn\'t really definitive of what PB\'s about though. It\'s more than the vibes on the surface.'
     ],
