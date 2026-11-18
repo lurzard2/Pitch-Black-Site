@@ -104,11 +104,11 @@ SendToFAQ('Development',
     ],
     [
         '(Beta -> Rewrite) What plans never translated into the project?',
-        'A lot.'
+        'A lot... But we kept a lot too...'
     ],
     [
         '(Rewrite -> Release) What plans never translated into the project?',
-        'Woah slow down we\'re not there yet!'
+        'Woah slow down, we\'re not there yet!'
     ]
 )
 
