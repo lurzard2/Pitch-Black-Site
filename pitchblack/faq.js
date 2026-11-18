@@ -68,8 +68,8 @@ SendToFAQ('About',
         'Die, restart, die. Hunter-coded torture nexus with hints of escapism here and there.'
     ],
     [
-        'How long is the mod intended to take to fully complete?',
-        'A day to a few days.'
+        'How long is a playthrough of PB?',
+        'A day to a few days to a week.'
     ],
     [
         'What is the ending?',
