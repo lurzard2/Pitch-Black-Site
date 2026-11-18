@@ -72,6 +72,10 @@ SendToFAQ('About',
         'A day or a few days, to a week.'
     ],
     [
+        'Are there custom Echoes for Beacon?',
+        'No. But there is ???.'
+    ],
+    [
         'What is the ending?',
         '👀'
     ],
