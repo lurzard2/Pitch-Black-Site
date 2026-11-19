@@ -243,6 +243,13 @@ SendToFAQ('Timeline',
     ],
 )
 
+SendToFAQ('User-submitted',
+    [
+        'What would you say sets Beacon (the slugcat specifically) apart from Survivor or Watcher in what a cycle typically looks like? Is there any hurdles they may encounter?',
+        'The Beacon\'s a tough campaign to complete cycles in, at least, typically. It\'s a challenge for people well-versed with playing the game, I would think it\'s best experienced post-completiion of Rain World. The Beacon is a Survivor-stats character. You could thrive or suffer depending on the circumstances. One thing that sets it apart from the rest is its unique tie to not being welcome within the cycle of all living things. Unlike Hunter, whom pushes against its place in the ecosystem by its nature. The Beacon as it suffers, dying, over and over, refuses to give up. And in that journey it has, it is dissociated. One could call it a walking corpse.'
+    ]
+)
+
 SendToFAQ('Misc',
     [
         'Does this mod contain generative AI content?',
