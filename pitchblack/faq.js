@@ -246,7 +246,8 @@ SendToFAQ('Timeline',
 SendToFAQ('User-submitted',
     [
         'What would you say sets Beacon (the slugcat specifically) apart from Survivor or Watcher in what a cycle typically looks like? Is there any hurdles they may encounter?',
-        'The Beacon\'s a tough campaign to complete cycles in, at least, typically. it\'s a challenge at heart. The Beacon is a Survivor-stats character. You could thrive or suffer depending on the circumstances. One thing that sets it apart from the rest is its unique tie to not being welcome within the cycle of all living things. Unlike Hunter, As it suffers, dying, over and over, refuses to give up. And in its time "alive", it is dissociated. One could call it a walking corpse.'
+        'The Beacon\'s a tough campaign to complete cycles in, at least, typically. it\'s a challenge at heart. The Beacon is a Survivor-stats character. You could thrive or suffer depending on the circumstances. One thing that sets it apart from the rest is its unique tie to not being welcome within the cycle of all living things. Unlike Hunter, As it suffers, dying, over and over, refuses to give up. And in its time "alive", it is dissociated. One could call it a walking corpse. The Beacon\'s world is a mess, it\'s familiar but there\'s evidence of something greater throughout. The Beacon will frequently interact with the esoteric regions from PB.'
+
     ]
 )
 
