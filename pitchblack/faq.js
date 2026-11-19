@@ -134,7 +134,7 @@ SendToFAQ('Developers',
     ],
     [
         'Who is: Lurvixen?',
-        'Creator; Programmer, artist, storywriter, game design.'
+        'Creator; Programmer, artist, storywriting, game design.'
     ],
     [
         'Who is: Ovidia?',
