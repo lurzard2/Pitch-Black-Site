@@ -143,7 +143,8 @@ SendToFAQ('Developers',
     ],
     [
         'Who is: Tronsx?',
-        'Co-lead; Leditor, storywriting, game design.'
+        'Co-lead; Leditor, storywriting, game design.' +
+        '<br><a class="else" href="https://youtube.com/@tronsx8480">Youtube</a>'
     ],
     [
         'Who is: Matvis?',
