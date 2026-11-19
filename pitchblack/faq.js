@@ -139,7 +139,7 @@ SendToFAQ('Developers',
     [
         'Who is: Ovidia?',
         'Co-lead; Leditor, programmer, artist, storywriting, game design.' +
-        '<br><a target="_blank" href="https://ko-fi.com/gogurtyuri">ko-fi</a>'
+        '<br><a target="_blank" href="https://ko-fi.com/gogurtyuri">Ko-fi</a>'
     ],
     [
         'Who is: Tronsx?',
