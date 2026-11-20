@@ -29,6 +29,9 @@
             border: var(--button-link-border);
             padding:1rem;
         }
+        .clickable:hover{
+            opacity:0.8;
+        }
     }
 
     .section{
@@ -44,21 +47,13 @@
 
         <div id="trailer-player" class="section" style="display:flex; justify-content: center;">
             <!--suppress HtmlDeprecatedAttribute -->
-            <iframe style="border: 3px solid black"
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/1FXMEJQgM2M?si=lQX9t3xlAvdJ83QO"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen>
-            </iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Xes-nm7__zM?si=pibLpmiMlOXzXKSR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <div class="links center section">
             <button title="unreleased. this button will be usable later when it is, to download it. ok? okay" class="button-link" style="--button-link-col: var(--mute); --button-link-border: 1px solid var(--mute)">Steam Workshop</button>
 
-            <button title="https://discord.gg/7sUpM4HMzZ" onclick="opendiscordlink()" class="button-link"
+            <button title="https://discord.gg/7sUpM4HMzZ" onclick="opendiscordlink()" class="button-link clickable"
                     style="cursor:pointer;
                     --button-link-col: white;
                     --button-link-border: 1px solid #949eff;
@@ -66,21 +61,21 @@
                 Community Discord
             </button>
 
-            <button title="url" onclick="window.open('/pitchblack/ost', '_blank')" class="button-link"
+            <button title="url" onclick="window.open('/pitchblack/ost', '_blank')" class="button-link clickable"
                     style="cursor:pointer;
                     --button-link-col: white;
                     --button-link-border: 1px solid #cee5ff;
                     background-image: linear-gradient(#2c92ff, #85b9ff)">
                 Original Soundtrack</button>
 
-            <button title="url" onclick="window.open('/pitchblack/faq', '_blank')" class="button-link"
+            <button title="url" onclick="window.open('/pitchblack/faq', '_blank')" class="button-link clickable"
                     style="cursor:pointer;
                     --button-link-col:#9cffbf;
                     --button-link-border: 1px solid #522d67;
                     background-image: linear-gradient(#1b0d23, #0a050c);">
                 FAQ</button>
 
-            <button title="url" onclick="window.open('https://pitchblackrewrite.tumblr.com/', '_blank')" class="button-link"
+            <button title="url" onclick="window.open('https://pitchblackrewrite.tumblr.com/', '_blank')" class="button-link clickable"
                     style="cursor:pointer;
                     --button-link-col:#ffb6e8;
                     --button-link-border: 1px solid #8d325f;
