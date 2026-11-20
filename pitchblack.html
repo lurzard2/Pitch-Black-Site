@@ -22,7 +22,12 @@
         gap:1.5rem;
         font-size: large;
 
+        a {
+            width: 100%;
+        }
+
         .button-link{
+            width: 100%;
             font: var(--font);
             color:var(--button-link-col);
             background-color:var(--button-link-bg);
@@ -53,34 +58,43 @@
         <div class="links center section">
             <button title="unreleased. this button will be usable later when it is, to download it. ok? okay" class="button-link" style="--button-link-col: var(--mute); --button-link-border: 1px solid var(--mute)">Steam Workshop</button>
 
-            <button title="https://discord.gg/7sUpM4HMzZ" onclick="opendiscordlink()" class="button-link clickable"
-                    style="cursor:pointer;
+            <a href="https://discord.gg/7sUpM4HMzZ" target="_blank">
+                <button class="button-link clickable"
+                        style="cursor:pointer;
                     --button-link-col: white;
                     --button-link-border: 1px solid #949eff;
                     background-image: linear-gradient(#5865F2, #5f6ddc)">
-                Community Discord
-            </button>
+                    Community Discord
+                </button>
+            </a>
 
-            <button title="url" onclick="window.open('/pitchblack/ost', '_blank')" class="button-link clickable"
-                    style="cursor:pointer;
+            <a href="./ost" target="_blank">
+                <button title="url" onclick="window.open('/pitchblack/ost', '_blank')" class="button-link clickable"
+                        style="cursor:pointer;
                     --button-link-col: white;
                     --button-link-border: 1px solid #cee5ff;
                     background-image: linear-gradient(#2c92ff, #85b9ff)">
-                Original Soundtrack</button>
+                    Original Soundtrack</button>
+            </a>
 
-            <button title="url" onclick="window.open('/pitchblack/faq', '_blank')" class="button-link clickable"
-                    style="cursor:pointer;
+            <a href="./faq">
+                <button title="url" onclick="window.open('/pitchblack/faq', '_blank')" class="button-link clickable"
+                        style="cursor:pointer;
                     --button-link-col:#9cffbf;
                     --button-link-border: 1px solid #522d67;
                     background-image: linear-gradient(#1b0d23, #0a050c);">
-                FAQ</button>
+                    FAQ</button>
+            </a>
 
-            <button title="url" onclick="window.open('https://pitchblackrewrite.tumblr.com/', '_blank')" class="button-link clickable"
-                    style="cursor:pointer;
+            <a href="https://pitchblackrewrite.tumblr.com/" target="_blank">
+                <button title="url" onclick="window.open('https://pitchblackrewrite.tumblr.com/', '_blank')" class="button-link clickable"
+                        style="cursor:pointer;
                     --button-link-col:#ffb6e8;
                     --button-link-border: 1px solid #8d325f;
                     background-image: linear-gradient(#1e0e12, #460e23);">
-                Dev Blog</button>
+                    Dev Blog</button>
+            </a>
+
         </div>
 
         <div class="section">
@@ -118,16 +132,5 @@
 
     </div>
 </div>
-
-<script>
-    function features(){
-        // mobile doesn't get separate window functionality so only desktop should
-        return innerWidth > 600 ? "width=500, height=600" : ""
-    }
-
-    function opendiscordlink(){
-        window.open("https://discord.gg/7sUpM4HMzZ", "_blank", features());
-    }
-</script>
 </body>
 </html>
